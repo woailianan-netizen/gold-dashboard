@@ -30,6 +30,11 @@
       "time": "2026-10-14 16:47",
       "price": 4146.0,
       "source": "Hermes"
+    },
+    {
+      "time": "2026-10-14 17:12",
+      "price": 4146.0,
+      "source": "gold-api.com"
     }
   ],
   "calls": [
@@ -483,6 +488,13 @@
       "task": "突发新闻",
       "status": "无新内容",
       "summary": "近20分钟（16:50–17:11）：特朗普/美联储/白宫/财政部/DeItaone无新帖；路透BoE/ASML/Starlink、彭博澳LNG/镍、WSJ地产、zerohedge英脱欧均与金价无关；胡塞袭阿美为16:41已报旧闻。等待20:30 CPI。",
+      "notified": false
+    },
+    {
+      "time": "2026-10-14 17:12",
+      "task": "博主监控",
+      "status": "无新内容",
+      "summary": "7位博主作品均无新于基准；4个会员群无群主新消息；龙虾17:00观点已入表；爱马仕仍在自动重试（provider temporarily unavailable）；金价约4146",
       "notified": false
     }
   ],
