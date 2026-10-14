@@ -737,16 +737,6 @@
  ],
  "events": [
   {
-   "time": "2026-10-14 20:30",
-   "name": "美国9月CPI",
-   "actual": "同比3.7%/环比0.6%；核心环比0.3%/同比2.6%，全面高于预期；Kalshi 10月加息概率由21%升至33%；金价由约4150跌至约4116",
-   "expected": "约3.7%（大飞引用），核心环比0.2%",
-   "note": "来源：DeItaone/FirstSquawk/FinancialJuice 20:30 台北；https://x.com/DeItaone/status/2110348165534859320",
-   "impact": "利空",
-   "url": "https://x.com/DeItaone/status/2110348165534859320",
-   "source": "DeItaone"
-  },
-  {
    "time": "2026-10-14 16:41",
    "name": "胡塞武装宣称导弹+无人机袭击沙特阿美达兰设施、利雅得哈立德国王机场和利雅得炼油厂，并称未来几天继续打机场和石油设施（沙特24小时内空袭也门约104次）",
    "expected": "利多黄金（中东升级、油价与避险）",
@@ -754,16 +744,10 @@
    "note": "来源：First Squawk/FinancialJuice 16:41–16:46 台北；https://x.com/FirstSquawk/status/2110291125781340208 ；https://x.com/FirstSquawk/status/2110291149412024460",
    "source": "First Squawk",
    "url": "https://x.com/FirstSquawk/status/2110291125781340208",
-   "impact": "利多"
-  },
-  {
-   "time": "2026-10-14 17:00",
-   "name": "美国9月CPI预期（OpenClaw汇总）：总体同比3.6%（前3.4%）、环比0.6%；核心同比2.5%、核心环比0.2%（前0.3%）；DXY约102.18，10年美债约5.21%",
-   "expected": "核心环比是否超0.2%决定方向",
-   "actual": "",
-   "note": "沙特能源部称阿美园区一栋行政楼有限火灾、无人伤亡（AP），非大规模停产",
-   "source": "OpenClaw",
-   "impact": "中性"
+   "impact": "利多",
+   "category": "地缘",
+   "link": "https://x.com/FirstSquawk/status/2110291125781340208",
+   "reaction": "已发生；金价约4145暂未明显反应"
   },
   {
    "time": "2026-10-14 17:10",
@@ -773,7 +757,10 @@
    "note": "来源：First Squawk 17:10、FinancialJuice 17:13 台北；https://x.com/FirstSquawk/status/2110297211141775748 ；https://x.com/financialjuice/status/2110297933119987960",
    "source": "First Squawk",
    "url": "https://x.com/FirstSquawk/status/2110297211141775748",
-   "impact": "利多"
+   "impact": "利多",
+   "category": "地缘",
+   "link": "https://x.com/FirstSquawk/status/2110297211141775748",
+   "reaction": "已发生（伊朗官方媒体说法，尚待独立证实）；金价约4146暂无明显反应"
   },
   {
    "time": "2026-10-14 17:52",
@@ -783,7 +770,10 @@
    "note": "来源：DeItaone 17:52–17:54 台北；TechFlow/金十同步；https://x.com/DeItaone/status/2110307829076705475 ；https://x.com/DeItaone/status/2110308290744008929",
    "source": "DeItaone",
    "url": "https://x.com/DeItaone/status/2110307829076705475",
-   "impact": "利多"
+   "impact": "利多",
+   "category": "央行",
+   "link": "https://x.com/DeItaone/status/2110307829076705475",
+   "reaction": "快讯已出；与今日早些时候 Williams「今年或再加一次」并存，等待20:30 CPI"
   },
   {
    "time": "2026-10-14 20:36",
@@ -793,7 +783,10 @@
    "note": "来源：DeItaone/FirstSquawk/zerohedge 20:34–20:39 台北；https://x.com/DeItaone/status/2110348955523645940 ；https://x.com/DeItaone/status/2110349388166119582 ；https://x.com/DeItaone/status/2110349054815174737",
    "impact": "利空",
    "url": "https://x.com/DeItaone/status/2110348955523645940",
-   "source": "DeItaone"
+   "source": "DeItaone",
+   "category": "市场",
+   "link": "https://x.com/DeItaone/status/2110348955523645940",
+   "reaction": "已发生；金价由约4116续跌至约4096，跌破4100"
   },
   {
    "time": "2026-10-14 21:09",
@@ -803,7 +796,10 @@
    "note": "来源：DeItaone 21:01/21:03/21:09、zerohedge 21:02、First Squawk 20:52 台北；https://x.com/DeItaone/status/2110357224761536984 ；https://x.com/zerohedge/status/2110355490987217133 ；https://x.com/DeItaone/status/2110355275463143569 ；https://x.com/FirstSquawk/status/2110353006604792258",
    "source": "DeItaone",
    "url": "https://x.com/DeItaone/status/2110357224761536984",
-   "impact": "利空"
+   "impact": "利空",
+   "category": "市场",
+   "link": "https://x.com/DeItaone/status/2110357224761536984",
+   "reaction": "已发生；金价较CPI前跌约1.6%，现约4084，白银约56.9"
   }
  ],
  "activity": [
@@ -1274,7 +1270,8 @@
    "expected": "3.6%",
    "previous": "3.4%",
    "actual": "3.7%（高于预期，利空黄金）",
-   "source": "金十数据"
+   "source": "金十数据",
+   "gold_impact": "利空"
   },
   {
    "time": "2026-10-14 20:30",
@@ -1283,7 +1280,8 @@
    "expected": "0.6%",
    "previous": "0.4%",
    "actual": "0.6%",
-   "source": "金十数据"
+   "source": "金十数据",
+   "gold_impact": "利空"
   },
   {
    "time": "2026-10-14 20:30",
@@ -1292,7 +1290,8 @@
    "expected": "0.2%",
    "previous": "0.3%",
    "actual": "0.3%（未四舍五入0.335%）",
-   "source": "金十数据"
+   "source": "金十数据",
+   "gold_impact": "利空"
   },
   {
    "time": "2026-10-14 20:30",
@@ -1301,7 +1300,8 @@
    "expected": "2.5%",
    "previous": "2.4%",
    "actual": "2.6%",
-   "source": "金十数据"
+   "source": "金十数据",
+   "gold_impact": "利空"
   },
   {
    "time": "2026-10-15 02:00",
