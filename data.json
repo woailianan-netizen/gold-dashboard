@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14 18:08",
+  "updated": "2026-10-14 18:12",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -59,6 +59,11 @@
     {
       "time": "2026-10-14 18:08",
       "price": 4143.5,
+      "source": "gold-api.com"
+    },
+    {
+      "time": "2026-10-14 18:12",
+      "price": 4144.8,
       "source": "gold-api.com"
     }
   ],
@@ -477,6 +482,16 @@
       "source": "First Squawk",
       "url": "https://x.com/FirstSquawk/status/2110297211141775748",
       "impact": "利多"
+    },
+    {
+      "time": "2026-10-14 17:52",
+      "name": "美联储监管副主席 Bowman（IIF曼谷）：不认为有必要急于进一步调整利率；上次加息后需要时间观察金融状况与经济再决定下一步",
+      "expected": "偏利多黄金（偏鸽，压低近期再加息紧迫性）",
+      "actual": "快讯已出；与今日早些时候 Williams「今年或再加一次」并存，等待20:30 CPI",
+      "note": "来源：DeItaone 17:52–17:54 台北；TechFlow/金十同步；https://x.com/DeItaone/status/2110307829076705475 ；https://x.com/DeItaone/status/2110308290744008929",
+      "source": "DeItaone",
+      "url": "https://x.com/DeItaone/status/2110307829076705475",
+      "impact": "利多"
     }
   ],
   "activity": [
@@ -619,6 +634,13 @@
       "status": "无新内容",
       "summary": "7位博主与4个会员群均无新于基准/17:00后无群主消息；龙虾17:57/18:00刷新仍偏空（已入表）；爱马仕仍无完整结论（Provider 404）；金价约4143.5",
       "notified": false
+    },
+    {
+      "time": "2026-10-14 18:12",
+      "task": "突发新闻监控",
+      "status": "完成",
+      "summary": "Bowman：不急于再调息（已入表并通知）；特朗普/Fed/白宫/财政部无新帖；胡塞扬言再袭沙特（跟进已报阿美袭击）；等待20:30 CPI",
+      "notified": true
     }
   ],
   "agents": [
