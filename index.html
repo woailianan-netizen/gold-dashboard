@@ -149,8 +149,6 @@ $("sch").innerHTML=(D.schedule||[]).map(x=>`<tr><td>${E(x.name)}</td><td class="
 const lt={};C.forEach(c=>{if(!lt[c.source_name]||lt[c.source_name].time<c.time)lt[c.source_name]=c});const L=Object.values(lt),n={看多:0,看空:0,震荡:0,观望:0};L.forEach(c=>n[c.direction]=(n[c.direction]||0)+1);
 const sc=L.length?(n.看多-n.看空)/L.length:0;$("needle").style.transform=`rotate(${sc*90}deg)`;$("gtxt").textContent=sc>.5?"强烈偏多":sc>.15?"偏多":sc<-.5?"强烈偏空":sc<-.15?"偏空":"多空分歧";
 $("gsub").textContent=`${L.length} 个来源最新观点`;$("gl").innerHTML=`<span class="up">看多<b>${n.看多}</b></span><span style="color:var(--gd)">震荡<b>${n.震荡}</b></span><span class="mu">观望<b>${n.观望}</b></span><span class="dn">看空<b>${n.看空}</b></span>`;
-<div class="mu mono" style="font-size:11px">${E(c.time)} · ${E(c.source_type)} · <span class="${c.verdict=="正确"?"up":c.verdict=="错误"?"dn":""}">${E(c.verdict)}</span></div>
-${c.levels?`<p><em>点位 </em>${E(c.levels)}</p>`:""}${c.advice?`<p><em>建议 </em>${E(c.advice)}</p>`:""}${c.reason?`<p><em>理由 </em>${E(c.reason)}</p>`:""}${c.verdict_note?`<p><em>复盘 </em>${E(c.verdict_note)}</p>`:""}</div>`).join("");
 srcRender();
 const st={};C.forEach(c=>{const s=st[c.source_name]??={正确:0,错误:0,部分正确:0,待验证:0};s[c.verdict]=(s[c.verdict]||0)+1});
 $("rk").innerHTML=Object.entries(st).map(([k,s])=>{const j=s.正确+s.错误+s.部分正确;return[j?(s.正确+.5*s.部分正确)/j*100:-1,k,s]}).sort((a,b)=>b[0]-a[0]).map(([a,k,s])=>`<tr><td>${E(k)}</td><td>${s.正确}</td><td>${s.错误}</td><td>${s.部分正确}</td><td>${s.待验证}</td><td class="mono" style="color:var(--gd2)">${a<0?"—":a.toFixed(0)+"%"}</td></tr>`).join("");
