@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14 18:21",
+  "updated": "2026-10-14 18:31",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -64,6 +64,11 @@
     {
       "time": "2026-10-14 18:12",
       "price": 4144.8,
+      "source": "gold-api.com"
+    },
+    {
+      "time": "2026-10-14 18:31",
+      "price": 4142.3,
       "source": "gold-api.com"
     }
   ],
@@ -648,6 +653,13 @@
       "status": "无新内容",
       "summary": "近20分钟无真正重要新内容；特朗普/Fed官号/白宫/财政部无新帖；DeItaone俄柴油出口恢复、伊朗警告中期选举前或再遭美袭等非金价突发；Bowman与胡塞已报；等待20:30 CPI",
       "notified": false
+    },
+    {
+      "time": "2026-10-14 18:31",
+      "task": "博主监控",
+      "status": "无新内容",
+      "summary": "7位博主与4个会员群均无新于基准/17:00后无群主消息；龙虾18:29刷新问未回（仍持18:00偏空）；爱马仕仍不可用（404，只读未发）；金价约4142.3",
+      "notified": false
     }
   ],
   "agents": [
@@ -721,17 +733,17 @@
       "name": "OpenClaw（龙虾）",
       "type": "TG机器人",
       "status": "在线",
-      "note": "18:00仍偏空（17:56刷新已回）；点位4125/4105、压力4150/4180/4225",
+      "note": "18:29已发刷新问，约2分钟未回；仍持18:00偏空（4125/4105，压力4150/4180/4225，CPI前不重仓）",
       "team": "外援",
       "role": "TG机器人：新闻、数据、独立判断",
       "call_source": "OpenClaw",
-      "last_active": "2026-10-14 18:00"
+      "last_active": "2026-10-14 18:29"
     },
     {
       "name": "Hermes（爱马仕）",
       "type": "TG机器人",
       "status": "不可用",
-      "note": "Provider unavailable（ChatGPT/Codex 404）；16:57问仍无完整结论；下轮只读不发",
+      "note": "Provider 404（ChatGPT/Codex）；16:57问仍无完整结论；本轮只读未发；下轮继续只读不发",
       "team": "外援",
       "role": "TG机器人：新闻、数据、独立判断",
       "call_source": "Hermes",
