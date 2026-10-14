@@ -15,6 +15,11 @@
       "time": "2026-10-14 16:43",
       "price": 4150.1,
       "source": "gold-api.com"
+    },
+    {
+      "time": "2026-10-14 16:50",
+      "price": 4145.0,
+      "source": "gold-api.com"
     }
   ],
   "calls": [
@@ -299,6 +304,16 @@
       "actual": "",
       "expected": "约3.7%（大飞引用），核心环比0.2%",
       "note": ""
+    },
+    {
+      "time": "2026-10-14 16:41",
+      "name": "胡塞武装宣称导弹+无人机袭击沙特阿美达兰设施、利雅得哈立德国王机场和利雅得炼油厂，并称未来几天继续打机场和石油设施（沙特24小时内空袭也门约104次）",
+      "expected": "利多黄金（中东升级、油价与避险）",
+      "actual": "已发生；金价约4145暂未明显反应",
+      "note": "来源：First Squawk/FinancialJuice 16:41–16:46 台北；https://x.com/FirstSquawk/status/2110291125781340208 ；https://x.com/FirstSquawk/status/2110291149412024460",
+      "source": "First Squawk",
+      "url": "https://x.com/FirstSquawk/status/2110291125781340208",
+      "impact": "利多"
     }
   ],
   "activity": [
@@ -357,6 +372,13 @@
       "status": "完成",
       "summary": "新增博主当铺财经、大宝上海金融",
       "notified": false
+    },
+    {
+      "time": "2026-10-14 16:50",
+      "task": "突发新闻",
+      "status": "完成",
+      "summary": "16:41 胡塞宣称袭击沙特阿美达兰、利雅得机场与炼油厂，扬言未来几天继续打机场和油设施（利多，已记事件）；特朗普/美联储/白宫/财政部无新帖；其余媒体新帖与金价无关。金价约4145。",
+      "notified": true
     }
   ],
   "agents": [
