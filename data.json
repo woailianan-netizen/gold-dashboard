@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14 17:52",
+  "updated": "2026-10-14 17:59",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -49,6 +49,11 @@
     {
       "time": "2026-10-14 17:40",
       "price": 4142.9,
+      "source": "gold-api.com"
+    },
+    {
+      "time": "2026-10-14 17:59",
+      "price": 4144.7,
       "source": "gold-api.com"
     }
   ],
@@ -582,6 +587,13 @@
       "status": "无新内容",
       "summary": "近20分钟（17:31–17:51）：特朗普/美联储/白宫/财政部无新帖；DeItaone 17:44特朗普或削减对乌情报共享、17:50克里姆林宫称能源停火条款未明确（均非金价突发）；FirstSquawk日本农相辞职、德债收益率例行数据；等待20:30 CPI。",
       "notified": false
+    },
+    {
+      "time": "2026-10-14 17:59",
+      "task": "博主监控",
+      "status": "无新内容",
+      "summary": "7位博主与4个会员群均无新于基准/17:00后无群主消息；龙虾17:56刷新问未回（仍持17:38偏空）；爱马仕仍无完整结论（auto-recovery）；金价约4144.7",
+      "notified": false
     }
   ],
   "agents": [
@@ -655,20 +667,21 @@
       "name": "OpenClaw（龙虾）",
       "type": "TG机器人",
       "status": "在线",
-      "note": "17:38短线仍偏空，CPI前不重仓",
+      "note": "17:38仍偏空；17:56刷新问未回",
       "team": "外援",
       "role": "TG机器人：新闻、数据、独立判断",
       "call_source": "OpenClaw",
-      "last_active": "2026-10-14 17:40"
+      "last_active": "2026-10-14 17:56"
     },
     {
       "name": "Hermes（爱马仕）",
       "type": "TG机器人",
-      "status": "在线",
-      "note": "新闻/数据/判断",
+      "status": "重试中",
+      "note": "16:57问仍无完整结论，17:46仍在auto-recovery",
       "team": "外援",
       "role": "TG机器人：新闻、数据、独立判断",
-      "call_source": "Hermes"
+      "call_source": "Hermes",
+      "last_active": "2026-10-14 17:46"
     },
     {
       "name": "Claude+codex",
