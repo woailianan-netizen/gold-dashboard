@@ -56,6 +56,19 @@ details.sc{border:1px solid var(--ln);border-radius:4px;background:#0a0d12;paddi
 .cp{background:var(--gd);color:#000;border:0;border-radius:3px;padding:5px 12px;font-weight:700;cursor:pointer;float:right}
 .srch{display:flex;gap:6px;margin-bottom:8px}.srch input,.srch select{background:#0a0d12;color:var(--tx);border:1px solid var(--ln);border-radius:3px;padding:6px 8px;font-size:13px}.srch input{flex:1;min-width:0}
 @media(max-width:900px){.ch{grid-template-columns:1fr}.tvw{height:340px}.lad{max-height:220px}}
+.sig{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.ban{border-radius:6px;padding:14px 16px;font-size:26px;font-weight:800;color:#fff;letter-spacing:.1em;display:flex;justify-content:space-between;align-items:center}
+.ban small{font-size:12px;font-weight:400;letter-spacing:0;opacity:.9}.b-卖出{background:linear-gradient(135deg,#7f1d1d,#ef4444)}.b-买入{background:linear-gradient(135deg,#14532d,#22c55e)}.b-观望{background:linear-gradient(135deg,#3a3320,#8a7a4a 60%,#d4af37)}
+.sm{font-size:12px;color:var(--mu);margin:8px 0}.sm b{color:var(--tx)}
+.gx{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.gx div{border-radius:6px;padding:8px;text-align:center;font-size:11px;background:#0a0d12;border:1px solid}
+.gx b{display:block;font-size:18px;margin-top:3px}.g-b{border-color:#3b82f6;color:#93c5fd;box-shadow:0 0 12px rgba(59,130,246,.35)}.g-g{border-color:#22c55e;color:#86efac;box-shadow:0 0 12px rgba(34,197,94,.3)}.g-r{border-color:#ef4444;color:#fca5a5;box-shadow:0 0 12px rgba(239,68,68,.35)}
+.cf{margin-top:10px;background:#141a24;border-radius:20px;height:26px;position:relative;overflow:hidden}.cf i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,#6366f1,#8b5cf6,#3b82f6);border-radius:20px;transition:width 1s}
+.cf span{position:relative;line-height:26px;padding-left:12px;font-size:13px;font-weight:700;color:#fff}
+.drv{margin:6px 0 0;padding-left:18px;font-size:12px;color:#aab3c0}.drv li{margin:3px 0}
+.lst{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:700;border:1px solid}
+.l-进行中{color:#60a5fa;border-color:#1e3a5f}.l-目标1,.l-目标2{color:var(--up);border-color:#1f5134}.l-止损{color:var(--dn);border-color:#5b1f1f}.l-失效{color:var(--mu);border-color:var(--ln)}
+#sigc{width:100%;height:190px;display:block;background:#0a0d12;border:1px solid var(--ln);border-radius:4px}
+@media(max-width:900px){.sig{grid-template-columns:1fr}}@media(max-width:520px){.gx b{font-size:15px}.ban{font-size:22px}}
 .foot{text-align:center:center;color:var(--mu);font-size:11px;padding:6px}
 @media(max-width:900px){.c8,.c4,.c6{grid-column:span 12}.px{font-size:48px}}
 @media(max-width:520px){.clk{grid-template-columns:repeat(2,1fr)}.px{font-size:42px}.top .hide{display:none}.pin .ts{display:none}.pin text{font-size:16px}.wrap{padding:8px;gap:8px}}
@@ -66,6 +79,11 @@ details.sc{border:1px solid var(--ln);border-radius:4px;background:#0a0d12;paddi
 <div class="h" style="margin-bottom:4px">XAU/USD 现货黄金 · 美元/盎司</div>
 <div class="px mono" id="px">—</div><div class="chg mono" id="chg">&nbsp;</div><div class="mu" style="font-size:12px;margin-top:4px" id="pxs"></div></div>
 <div class="clk mono" id="clk"></div></div><div class="mac mono" id="mac"></div><div id="tvtape" style="margin-top:8px"></div></section>
+<section class="pn c12" id="sigbox"><div class="h">AI 交易信号 · Signal<small id="sigsub"></small></div><div class="sig"><div>
+<div class="ban" id="sban"></div><div class="sm mono" id="smeta"></div><div class="gx mono" id="sgx"></div>
+<div class="cf"><i id="scf"></i><span id="scft"></span></div><div class="sm" style="margin-top:12px">实时状态：<span id="slive"></span> <span class="mono" id="slp"></span></div><div class="sm" id="snote"></div></div>
+<div><svg id="sigc" viewBox="0 0 600 190" preserveAspectRatio="none"></svg><div class="h" style="margin:10px 0 4px">信心驱动因子</div><ul class="drv" id="sdrv"></ul></div></div>
+<div class="h" style="margin-top:14px">历史信号 · History<small id="swr"></small></div><div style="overflow-x:auto"><table><thead><tr><th>时间</th><th>方向</th><th>参考</th><th>目标1/2</th><th>止损</th><th>信心</th><th>来源</th><th>状态</th></tr></thead><tbody id="shist"></tbody></table></div></section>
 <section class="pn c8"><div class="h">金价走势 · XAUUSD<small class="tabs"><button class="on" data-v="15">日内</button><button data-v="240">近几天</button></small></div>
 <div class="ch"><div class="tvw" id="tvc"></div><div class="lad mono" id="lad"></div></div></section>
 <section class="pn c4"><div class="h">财经日历 · Calendar<small>台北时间</small></div><div class="mu" style="font-size:12px" id="cdl">距下一个重要事件</div><div class="cdn mono" id="cdn">—</div>
@@ -102,7 +120,7 @@ function clocks(){$("clk").innerHTML=[["纽约 NY","America/New_York"],["伦敦 
 setInterval(clocks,1000);clocks();
 function snaps(){return (DATA.price_snapshots||[]).slice().sort((a,b)=>a.time.localeCompare(b.time))}
 function setPx(v,src){const el=$("px");if(last!=null&&v!==last){el.classList.remove("fu","fd");void el.offsetWidth;el.classList.add(v>last?"fu":"fd")}
-last=v;el.textContent=v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+last=v;try{const H=JSON.parse(localStorage.gp||"[]");const t=fm(tpe());const y=tpe().getUTCFullYear()+"-"+t;if(!H.length||H[H.length-1].t!=y){H.push({t:y,v});localStorage.gp=JSON.stringify(H.slice(-600))}}catch(e){}el.textContent=v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
 if(base){const d=v-base.price,pc=d/base.price*100;$("chg").className="chg mono "+(d>=0?"up":"dn");$("chg").textContent=`${d>=0?"▲ +":"▼ "}${d.toFixed(2)}  (${d>=0?"+":""}${pc.toFixed(2)}%)`;}
 $("pxs").textContent=src}
 async function price(){const s=snaps();base=s.find(x=>x.time.startsWith(fm(tpe()).slice(0,5).replace(/^/,tpe().getUTCFullYear()+"-")))||s[s.length-1]||null;
@@ -166,6 +184,23 @@ $("tvc").innerHTML=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:100%">
 document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("on"));b.classList.add("on");chart(b.dataset.v)});
 chart("15");
 tv("tvtape","https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js",{symbols:[{proName:"TVC:DXY",title:"美元指数"},{proName:"TVC:US10Y",title:"美债10年"},{proName:"TVC:UKOIL",title:"布伦特原油"},{proName:"TVC:SILVER",title:"白银"},{proName:"OANDA:XAUUSD",title:"黄金"}],showSymbolLogo:false,colorTheme:"dark",isTransparent:true,displayMode:"adaptive",locale:"zh_CN"});
-async function reload(){try{const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"});if(r.ok){DATA=await r.json();render();extra()}}catch(e){}}
-["q","qd"].forEach(i=>$(i).addEventListener("input",render));render();extra();price().then(()=>{extra();macro()});setInterval(()=>price().then(()=>{extra();macro()}),60e3);setInterval(reload,60e3);
+function sigLive(g,p){if(p==null)return null;const sh=g.tp1<g.entry;if(sh){if(p>=g.sl)return"已止损";if(g.tp2&&p<=g.tp2)return"已达目标2";if(p<=g.tp1)return"已达目标1"}else{if(p<=g.sl)return"已止损";if(g.tp2&&p>=g.tp2)return"已达目标2";if(p>=g.tp1)return"已达目标1"}return"进行中"}
+function signal(){const S=(DATA.signals||[]).slice().sort((a,b)=>b.time.localeCompare(a.time));if(!S.length){$("sigbox").style.display="none";return}$("sigbox").style.display="";const g=S[0];
+$("sigsub").textContent=`来源：${g.source} · #${g.id}`;const bias=g.direction=="观望"?(g.tp1<g.entry?"（偏空）":"（偏多）"):"";
+$("sban").className="ban b-"+g.direction;$("sban").innerHTML=`<span>方向：${E(g.direction)}${bias}</span><small>${E(g.status)}</small>`;
+$("smeta").innerHTML=`推理时间 <b>${E(g.time)}</b> · 推理价格 <b>${g.price_at}</b>`;
+$("sgx").innerHTML=`<div class="g-b">参考价<b>${g.entry}</b></div><div class="g-g">目标1<b>${g.tp1}</b></div><div class="g-g">目标2<b>${g.tp2??"—"}</b></div><div class="g-r">止损<b>${g.sl}</b></div>`;
+$("scf").style.width=g.confidence+"%";$("scft").textContent=`信心指数 ${g.confidence}%`;$("sdrv").innerHTML=(g.drivers||[]).map(x=>`<li>${E(x)}</li>`).join("");$("snote").textContent=g.note||"";
+const lv=sigLive(g,last);$("slive").className="lst l-"+(lv?lv.replace("已达",""):"").replace("已","");$("slive").textContent=lv||"等待实时价格";$("slp").textContent=last?`现价 ${last.toFixed(2)}`:"";
+// 小图：快照 + 本浏览器记录的实时价
+let H=[];try{H=JSON.parse(localStorage.gp||"[]")}catch(e){}const pts=[...snaps().map(x=>({t:x.time,v:+x.price})),...H].filter(x=>x.t>=g.time.slice(0,10)).sort((a,b)=>a.t.localeCompare(b.t));
+const ys=[g.entry,g.tp1,g.tp2,g.sl,...pts.map(x=>x.v)].filter(v=>v!=null),mn=Math.min(...ys)-5,mx=Math.max(...ys)+5,W=600,Ht=190,Y=v=>(Ht-8-(v-mn)/(mx-mn)*(Ht-16)).toFixed(1);
+const ln=(v,c,l)=>v==null?"":`<line x1="0" x2="${W}" y1="${Y(v)}" y2="${Y(v)}" stroke="${c}" stroke-dasharray="6 5" stroke-width="1.3"/><text x="${W-4}" y="${Y(v)-4}" fill="${c}" font-size="12" text-anchor="end">${l} ${v}</text>`;
+const pl=pts.length>1?`<polyline points="${pts.map((x,i)=>`${(i/(pts.length-1)*(W-90)).toFixed(1)},${Y(x.v)}`).join(" ")}" fill="none" stroke="#d4af37" stroke-width="2"/>`:"";
+const cur=last?`<circle cx="${pts.length>1?W-90:20}" cy="${Y(last)}" r="4" fill="#fff"/>`:"";
+$("sigc").innerHTML=ln(g.entry,"#3b82f6","参考")+ln(g.tp1,"#22c55e","目标1")+ln(g.tp2,"#22c55e","目标2")+ln(g.sl,"#ef4444","止损")+pl+cur+`<text x="6" y="16" fill="#6b7684" font-size="11">今日快照 + 本页实时价（${pts.length} 点）</text>`;
+const done=S.filter(x=>/目标|止损/.test(x.status)),win=done.filter(x=>/目标/.test(x.status)).length;$("swr").textContent=done.length?`胜率 ${(win/done.length*100).toFixed(0)}%（${win}/${done.length} 已结束）`:"胜率：暂无已结束信号";
+$("shist").innerHTML=S.map(x=>`<tr><td class="mono">${E(x.time.slice(5))}</td><td class="dir ${x.direction=="买入"?"up":x.direction=="卖出"?"dn":"mu"}">${E(x.direction)}</td><td class="mono">${x.entry}</td><td class="mono">${x.tp1}/${x.tp2??"—"}</td><td class="mono">${x.sl}</td><td>${x.confidence}%</td><td>${E(x.source)}</td><td><span class="lst l-${E(x.status)}">${E(x.status)}</span></td></tr>`).join("")}
+async function reload(){try{const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"});if(r.ok){DATA=await r.json();render();extra();signal()}}catch(e){}}
+["q","qd"].forEach(i=>$(i).addEventListener("input",render));render();extra();signal();price().then(()=>{extra();macro();signal()});setInterval(()=>price().then(()=>{extra();macro();signal()}),60e3);setInterval(reload,60e3);
 </script></body></html>
