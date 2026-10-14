@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14 16:43",
+  "updated": "2026-10-14 16:50",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -264,6 +264,32 @@
       "link": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/10",
       "verdict": "待验证",
       "verdict_note": ""
+    },
+    {
+      "id": 20,
+      "time": "2026-10-12 19:41",
+      "source_type": "博主",
+      "source_name": "当铺财经",
+      "direction": "震荡",
+      "levels": "4150–4350",
+      "advice": "短期看CPI，区间震荡偏强；长期震荡向上",
+      "reason": "油价影响最大，美元、美股次之；美债问题和货币超发支撑长期",
+      "link": "https://www.douyin.com/video/7695745144351460658",
+      "verdict": "待验证",
+      "verdict_note": ""
+    },
+    {
+      "id": 21,
+      "time": "2026-10-14 08:51",
+      "source_type": "博主",
+      "source_name": "大宝上海金融",
+      "direction": "震荡",
+      "levels": "上方压力大",
+      "advice": "坚持波段，数据利好逢高减仓，控制仓位",
+      "reason": "CPI前震荡，预计核心CPI符合预期后有反弹机会",
+      "link": "https://www.douyin.com/video/7696319791472409472",
+      "verdict": "待验证",
+      "verdict_note": ""
     }
   ],
   "events": [
@@ -324,6 +350,13 @@
       "status": "出错",
       "summary": "浏览器经代理访问抖音与Telegram均ERR_TIMED_OUT（本机直连正常）；五博主作品未能复核；阿然1群15:21两张长图仍待可读OCR；未向龙虾/爱马仕发新问。现价约4150（gold-api）。",
       "notified": true
+    },
+    {
+      "time": "2026-10-14 16:50",
+      "task": "博主监控",
+      "status": "完成",
+      "summary": "新增博主当铺财经、大宝上海金融",
+      "notified": false
     }
   ],
   "agents": [
