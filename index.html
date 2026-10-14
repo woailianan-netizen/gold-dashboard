@@ -69,6 +69,17 @@ details.sc{border:1px solid var(--ln);border-radius:4px;background:#0a0d12;paddi
 .l-进行中{color:#60a5fa;border-color:#1e3a5f}.l-目标1,.l-目标2{color:var(--up);border-color:#1f5134}.l-止损{color:var(--dn);border-color:#5b1f1f}.l-失效{color:var(--mu);border-color:var(--ln)}
 #sigc{width:100%;height:190px;display:block;background:#0a0d12;border:1px solid var(--ln);border-radius:4px}
 @media(max-width:900px){.sig{grid-template-columns:1fr}}@media(max-width:520px){.gx b{font-size:15px}.ban{font-size:22px}}
+.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
+.sc2{border:1px solid var(--ln);border-left:3px solid var(--mu);border-radius:4px;background:#0a0d12;padding:10px;font-size:12px;cursor:pointer;transition:border-color .2s,transform .2s;animation:fi .5s both}
+.sc2:hover{border-color:var(--gd);transform:translateY(-1px)}.sc2.看多{border-left-color:var(--up)}.sc2.看空{border-left-color:var(--dn)}.sc2.震荡,.sc2.偏弱震荡{border-left-color:var(--gd)}
+.sc2 .hd{display:flex;justify-content:space-between;gap:6px;align-items:flex-start}.sc2 .hd b{color:#fff;font-size:14px}.sc2 .st{font-size:11px;color:var(--up);white-space:nowrap}.sc2 .st:before{content:"● "}
+.sc2 p{margin:4px 0;color:#aab3c0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.sc2 p em{color:var(--mu);font-style:normal}.sc2 .ft{display:flex;justify-content:space-between;color:var(--mu);font-size:11px;margin-top:6px}
+.dw-bg{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:20;display:none}.dw{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:#0b0f14;border-left:1px solid var(--gd);z-index:21;transform:translateX(100%);transition:transform .3s;overflow-y:auto;padding:0 14px 60px}
+.dw.on{transform:none}.dw-bg.on{display:block}.dwh{position:sticky;top:0;background:#0b0f14;display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--ln);z-index:1}.dwh b{font-size:17px;color:var(--gd2)}
+.dwh button{background:none;border:1px solid var(--ln);color:var(--tx);border-radius:4px;width:34px;height:34px;font-size:16px;cursor:pointer}
+details.dy{margin-top:10px}details.dy>summary{cursor:pointer;color:var(--gd);font-size:13px;padding:6px 0;border-bottom:1px dashed var(--ln)}
+.hi{border:1px solid var(--ln);border-radius:4px;padding:9px;margin-top:8px;font-size:13px;background:#0a0d12}.hi p{margin:4px 0;color:#c4cbd5}.hi em{color:var(--mu);font-style:normal}
+.qr{border:1px solid #5a4a16;border-radius:4px;padding:8px;margin-bottom:10px;max-height:340px;overflow-y:auto}.qr .hi{cursor:pointer}
 .foot{text-align:center:center;color:var(--mu);font-size:11px;padding:6px}
 @media(max-width:900px){.c8,.c4,.c6{grid-column:span 12}.px{font-size:48px}}
 @media(max-width:520px){.clk{grid-template-columns:repeat(2,1fr)}.px{font-size:42px}.top .hide{display:none}.pin .ts{display:none}.pin text{font-size:16px}.wrap{padding:8px;gap:8px}}
@@ -99,12 +110,14 @@ details.sc{border:1px solid var(--ln);border-radius:4px;background:#0a0d12;paddi
 <div id="gtxt" style="font-size:20px;font-weight:700;color:var(--gd2)"></div><div class="gl mono" id="gl"></div></div>
 <div class="h" style="margin-top:14px">定时任务 · Schedule</div><table><thead><tr><th>任务</th><th>频率</th><th>下次</th></tr></thead><tbody id="sch"></tbody></table></section>
 
-<section class="pn c6"><div class="h">工作动态 · Activity<small>最新在前</small></div><ul class="tl" id="act"></ul></section>
-<section class="pn c6"><div class="h">数据来源 · Sources<small id="agn"></small></div><div class="ags" id="ags"></div></section>
+<section class="pn c12"><div class="h">工作动态 · Activity<small>最新在前</small></div><ul class="tl" id="act"></ul></section>
+<section class="pn c12"><div class="h">来源与观点 · Sources &amp; Views<small id="agn"></small></div>
+<div class="srch"><input id="q" placeholder="搜索全部历史观点…"><select id="qd"><option value="">全部日期</option></select></div><div class="flt" id="flt"></div>
+<div id="qres"></div><div class="sg" id="ags"></div></section>
+<div class="dw-bg" id="dwbg" onclick="closeDw()"></div><aside class="dw" id="dw"><div class="dwh"><div><b id="dwt"></b><div class="mu" id="dws" style="font-size:12px"></div></div><button onclick="closeDw()">✕</button></div><div id="dwb"></div></aside>
 
 <section class="pn c12"><div class="h">助手团队 · Team<small id="tmn"></small></div><div class="tm" id="team"></div></section>
 <section class="pn c12"><div class="h">今日视频稿 · Scripts<small id="scn"></small></div><div id="scr"></div></section>
-<section class="pn c12"><div class="h">各方观点 · Views<small id="vn"></small></div><div class="srch"><input id="q" placeholder="搜索观点全文…"><select id="qd"><option value="">全部日期</option></select></div><div class="flt" id="flt"></div><div class="cards" id="cards"></div></section>
 <section class="pn c6"><div class="h">准确率排行 · Accuracy</div><div style="overflow-x:auto"><table><thead><tr><th>来源</th><th>对</th><th>错</th><th>部分</th><th>待验</th><th>准确率</th></tr></thead><tbody id="rk"></tbody></table></div></section>
 <section class="pn c6"><div class="h">重要事件 · Events</div><div style="overflow-x:auto"><table><thead><tr><th>时间</th><th>事件</th><th>预期</th><th>实际</th></tr></thead><tbody id="ev"></tbody></table></div>
 <div class="h" style="margin-top:14px">价格快照 · Snapshots</div><ul class="mono" id="sn" style="margin:0;padding-left:16px;font-size:12px;color:#aab3c0"></ul></section>
@@ -131,19 +144,14 @@ function nextRun(x){const now=tpe();if(x.once){const t=new Date(x.once.replace("
 for(let k=1;k<2*1440;k++){const t=new Date(now.getTime()+k*60e3),h=t.getUTCHours(),m=t.getUTCMinutes();if(x.times?x.times.includes(p2(h)+":"+p2(m)):(h>=x.hours[0]&&h<=x.hours[1]&&x.minutes.includes(m)))return fm(t)}return"—"}
 function render(){const D=DATA,C=D.calls||[];$("upd").textContent="数据更新 "+(D.updated||"");
 $("act").innerHTML=(D.activity||[]).slice().sort((a,b)=>b.time.localeCompare(a.time)).slice(0,50).map(a=>`<li><span class="t mono">${E(a.time.slice(5))}</span><div><span class="tg k">${E(a.task)}</span><span class="tg s-${E(a.status)}">${E(a.status)}</span>${a.notified?'<span class="tg nt">已通知</span>':""}<div style="margin-top:4px">${E(a.summary)}</div></div></li>`).join("")||'<li class="mu">暂无</li>';
-$("ags").innerHTML=(D.agents||[]).map(a=>`<div class="ag"><i style="color:${/出错|离线/.test(a.status)?"var(--dn)":""}">${E(a.status)}</i><b>${E(a.name)}</b><span>${E(a.type)} · ${E(a.note)}</span></div>`).join("");$("agn").textContent=(D.agents||[]).length+" 个";
 $("sch").innerHTML=(D.schedule||[]).map(x=>`<tr><td>${E(x.name)}</td><td class="mu" style="font-size:12px">${E(x.desc)}</td><td class="mono" style="color:var(--gd2)">${nextRun(x)}</td></tr>`).join("");
 // 共识：每个来源取最新一条
 const lt={};C.forEach(c=>{if(!lt[c.source_name]||lt[c.source_name].time<c.time)lt[c.source_name]=c});const L=Object.values(lt),n={看多:0,看空:0,震荡:0,观望:0};L.forEach(c=>n[c.direction]=(n[c.direction]||0)+1);
 const sc=L.length?(n.看多-n.看空)/L.length:0;$("needle").style.transform=`rotate(${sc*90}deg)`;$("gtxt").textContent=sc>.5?"强烈偏多":sc>.15?"偏多":sc<-.5?"强烈偏空":sc<-.15?"偏空":"多空分歧";
 $("gsub").textContent=`${L.length} 个来源最新观点`;$("gl").innerHTML=`<span class="up">看多<b>${n.看多}</b></span><span style="color:var(--gd)">震荡<b>${n.震荡}</b></span><span class="mu">观望<b>${n.观望}</b></span><span class="dn">看空<b>${n.看空}</b></span>`;
-const ty=[...new Set(C.map(c=>c.source_type))];$("flt").innerHTML=["",...ty].map(t=>`<button class="${t==flt?"on":""}" data-t="${E(t)}">${t||"全部"}</button>`).join("");
-$("flt").querySelectorAll("button").forEach(b=>b.onclick=()=>{flt=b.dataset.t;render()});
-const q=$("q").value.trim().toLowerCase(),qd=$("qd").value;const ds=[...new Set(C.map(c=>c.time.slice(0,10)))].sort().reverse();if($("qd").options.length!=ds.length+1){$("qd").innerHTML='<option value="">全部日期</option>'+ds.map(d=>`<option>${d}</option>`).join("");$("qd").value=qd}
-const cs=C.filter(c=>(!flt||c.source_type==flt)&&(!qd||c.time.startsWith(qd))&&(!q||JSON.stringify(c).toLowerCase().includes(q))).sort((a,b)=>b.time.localeCompare(a.time));$("vn").textContent=cs.length+" 条";
-$("cards").innerHTML=cs.map((c,i)=>`<div class="cd ${E(c.direction)}" style="animation-delay:${Math.min(i,20)*.05}s"><div class="hd"><b>${c.link?`<a href="${E(c.link)}" target="_blank">${E(c.source_name)}</a>`:E(c.source_name)}</b><span class="dir d-${E(c.direction)}">${E(c.direction)}</span></div>
 <div class="mu mono" style="font-size:11px">${E(c.time)} · ${E(c.source_type)} · <span class="${c.verdict=="正确"?"up":c.verdict=="错误"?"dn":""}">${E(c.verdict)}</span></div>
 ${c.levels?`<p><em>点位 </em>${E(c.levels)}</p>`:""}${c.advice?`<p><em>建议 </em>${E(c.advice)}</p>`:""}${c.reason?`<p><em>理由 </em>${E(c.reason)}</p>`:""}${c.verdict_note?`<p><em>复盘 </em>${E(c.verdict_note)}</p>`:""}</div>`).join("");
+srcRender();
 const st={};C.forEach(c=>{const s=st[c.source_name]??={正确:0,错误:0,部分正确:0,待验证:0};s[c.verdict]=(s[c.verdict]||0)+1});
 $("rk").innerHTML=Object.entries(st).map(([k,s])=>{const j=s.正确+s.错误+s.部分正确;return[j?(s.正确+.5*s.部分正确)/j*100:-1,k,s]}).sort((a,b)=>b[0]-a[0]).map(([a,k,s])=>`<tr><td>${E(k)}</td><td>${s.正确}</td><td>${s.错误}</td><td>${s.部分正确}</td><td>${s.待验证}</td><td class="mono" style="color:var(--gd2)">${a<0?"—":a.toFixed(0)+"%"}</td></tr>`).join("");
 $("ev").innerHTML=(D.events||[]).slice().sort((a,b)=>b.time.localeCompare(a.time)).map(x=>`<tr><td class="mono">${E(x.time.slice(5))}</td><td>${E(x.name)}</td><td>${E(x.expected)}</td><td>${x.actual?E(x.actual):'<span class="mu">待公布</span>'}</td></tr>`).join("");
@@ -151,6 +159,37 @@ $("sn").innerHTML=snaps().reverse().map(s=>`<li>${E(s.time)} · <b style="color:
 const items=[...(D.events||[]).map(x=>({t:x.time,k:"事件",s:x.name+(x.actual?" 实际 "+x.actual:" 预期 "+(x.expected||""))})),...(D.activity||[]).map(a=>({t:a.time,k:a.task,s:a.summary})),
 ...C.filter(c=>c.source_type!="机构").map(c=>({t:c.time,k:c.source_name,s:c.direction+"｜"+(c.levels||c.advice||"")}))].sort((a,b)=>b.t.localeCompare(a.t)).slice(0,20);
 const h=items.map(i=>`<span><b>${E(i.t.slice(5))} ${E(i.k)}</b>${E(i.s)}</span>`).join("");$("tk").innerHTML=h+h;$("tk").style.setProperty("--d",Math.max(40,items.length*7)+"s");}
+const nm=s=>String(s||"").replace(/[（(].*?[)）]/g,"").replace(/\s/g,"").toLowerCase();
+const cat=a=>/博主|群/.test(a.type)?"博主":/机器人/.test(a.type)?"机器人":/机构/.test(a.type)?"机构":/新闻/.test(a.type)?"新闻":"助手";
+function cells(){const D=DATA,ag=(D.agents||[]).slice(),C=D.calls||[];const out=ag.map(a=>({...a,cat:cat(a),key:a.name}));
+const ix=out.findIndex(a=>a.type=="新闻监控");out.splice(ix<0?out.length:ix,0,{name:"全球机构",type:"机构",status:"已调研",note:"投行 + 世界黄金协会",cat:"机构",key:"全球机构",inst:true});
+out.forEach(a=>{const k=nm(a.call_source||a.name);a.calls=a.inst?C.filter(c=>c.source_type=="机构"):a.type=="新闻监控"?[]:C.filter(c=>{const s=nm(c.source_name);return s&&k&&(s==k||s.startsWith(k)||k.startsWith(s))});
+a.calls.sort((x,y)=>y.time.localeCompare(x.time));if(a.type=="新闻监控")a.events=(D.events||[]).slice().sort((x,y)=>y.time.localeCompare(x.time))});return out}
+const vtag=v=>`<span class="tg ${v=="正确"?"s-完成":v=="错误"?"s-出错":v=="部分正确"?"k":"s-无新内容"}">${E(v||"待验证")}</span>`;
+function acc(cs){const s={正确:0,错误:0,部分正确:0};cs.forEach(c=>s[c.verdict]!=null&&s[c.verdict]++);const j=s.正确+s.错误+s.部分正确;return j?`准确率 ${((s.正确+.5*s.部分正确)/j*100).toFixed(0)}%（${s.正确}对/${s.错误}错/${s.部分正确}部分，共判定${j}条）`:"准确率：暂无已判定观点"}
+function hiHtml(c,showSrc){return`<div class="hi" ${showSrc?`onclick="openDw('${E(c._k)}')"`:""}><div style="display:flex;justify-content:space-between;gap:6px"><span><span class="dir d-${E(c.direction)}">${E(c.direction)}</span> <span class="mono mu">${E(c.time)}</span>${showSrc?` · <b>${E(c.source_name)}</b>`:""}</span>${vtag(c.verdict)}</div>
+${c.levels?`<p><em>点位 </em>${E(c.levels)}</p>`:""}${c.advice?`<p><em>建议 </em>${E(c.advice)}</p>`:""}${c.reason?`<p><em>理由 </em>${E(c.reason)}</p>`:""}${c.verdict_note?`<p><em>复盘 </em>${E(c.verdict_note)}</p>`:""}${c.link?`<p><a href="${E(c.link)}" target="_blank">原文链接 ↗</a></p>`:""}</div>`}
+function evHtml(x){return`<div class="hi"><div><span class="tg ${x.impact=="利多"?"s-完成":x.impact=="利空"?"s-出错":"k"}">${E(x.impact||"事件")}</span><span class="mono mu">${E(x.time)}</span></div><p>${E(x.name)}</p>${x.expected?`<p><em>影响 </em>${E(x.expected)}</p>`:""}${x.actual?`<p><em>实际 </em>${E(x.actual)}</p>`:""}${x.url?`<p><a href="${E(x.url)}" target="_blank">来源 ↗</a></p>`:""}</div>`}
+function dayLabel(d){const t=tpe(),f=x=>x.toISOString().slice(0,10),y=new Date(t-864e5);return d==f(t)?"今天 "+d:d==f(y)?"昨天 "+d:d}
+let CELLS=[];
+function srcRender(){CELLS=cells();const C=DATA.calls||[],q=$("q").value.trim().toLowerCase(),qd=$("qd").value;
+const ds=[...new Set(C.map(c=>c.time.slice(0,10)))].sort().reverse();if($("qd").options.length!=ds.length+1){$("qd").innerHTML='<option value="">全部日期</option>'+ds.map(d=>`<option>${d}</option>`).join("");$("qd").value=qd}
+$("flt").innerHTML=["","博主","机器人","机构","助手","新闻"].map(t=>`<button class="${t==flt?"on":""}" data-t="${t}">${t||"全部"}</button>`).join("");$("flt").querySelectorAll("button").forEach(b=>b.onclick=()=>{flt=b.dataset.t;render()});
+const vis=CELLS.filter(a=>!flt||a.cat==flt);$("agn").textContent=`${vis.length} 个来源 · 点开看全部历史`;
+$("ags").innerHTML=vis.map((a,i)=>{let cs=a.calls.filter(c=>!qd||c.time.startsWith(qd));const c=cs[0],ev=a.events&&a.events.filter(x=>!qd||x.time.startsWith(qd))[0];
+const body=c?`<p><em>点位 </em>${E(c.levels||"—")}</p><p><em>建议 </em>${E(c.advice||"—")}</p>`:ev?`<p>${E(ev.name)}</p><p><em>影响 </em>${E(ev.expected||ev.impact||"")}</p>`:`<p class="mu">${a.cat=="助手"||a.cat=="机器人"?"待命":"暂无观点"}</p>`;
+return`<div class="sc2 ${c?E(c.direction):""}" style="animation-delay:${Math.min(i,24)*.03}s" onclick="openDw('${E(a.key)}')"><div class="hd"><b>${E(a.name)}</b><span class="st" style="${/出错|离线/.test(a.status)?"color:var(--dn)":""}">${E(a.status)}</span></div>
+<div class="mu" style="font-size:11px;margin:2px 0 4px">${E(a.type)} · ${E(a.note||"")}</div>${c?`<div><span class="dir d-${E(c.direction)}">${E(c.direction)}</span> <span class="mono mu">${E(c.time.slice(5))}</span>${a.inst?` · ${E(c.source_name)}`:""}</div>`:ev?`<div><span class="tg ${ev.impact=="利多"?"s-完成":"s-出错"}">${E(ev.impact||"事件")}</span><span class="mono mu">${E(ev.time.slice(5))}</span></div>`:""}
+${body}<div class="ft"><span>${c?"状态："+E(c.verdict):ev?"最新事件":""}</span><span>${a.events?a.events.length+" 条事件":a.calls.length+" 条历史"} ›</span></div></div>`}).join("");
+// 搜索结果
+if(q){const r=[];CELLS.forEach(a=>a.calls.forEach(c=>{if((!flt||a.cat==flt)&&(!qd||c.time.startsWith(qd))&&JSON.stringify(c).toLowerCase().includes(q))r.push({...c,_k:a.key})}));const u=[...new Map(r.map(c=>[c.id,c])).values()].sort((a,b)=>b.time.localeCompare(a.time));
+$("qres").innerHTML=`<div class="qr"><div class="mu" style="font-size:12px">搜索「${E(q)}」：${u.length} 条历史观点（点击打开该来源）</div>${u.map(c=>hiHtml(c,true)).join("")}</div>`}else $("qres").innerHTML="";}
+function openDw(k){const a=CELLS.find(x=>x.key==k);if(!a)return;$("dwt").textContent=a.name;$("dws").textContent=`${a.type} · ${a.status} · `+(a.events?`${a.events.length} 条事件`:`${a.calls.length} 条观点 · ${acc(a.calls)}`);
+const items=a.events||a.calls,g={};items.forEach(x=>(g[x.time.slice(0,10)]??=[]).push(x));const days=Object.keys(g).sort().reverse();
+$("dwb").innerHTML=days.length?days.map((d,i)=>`<details class="dy" ${i<2?"open":""}><summary>${dayLabel(d)} · ${g[d].length} 条</summary>${g[d].map(x=>a.events?evHtml(x):hiHtml(a.inst?{...x,_k:a.key}:x,false)).join("")}</details>`).join(""):`<p class="mu" style="padding:20px 0">${a.cat=="助手"||a.cat=="机器人"?"待命，暂无观点记录":"暂无观点记录"}</p>`;
+$("dw").classList.add("on");$("dwbg").classList.add("on");document.body.style.overflow="hidden"}
+function closeDw(){$("dw").classList.remove("on");$("dwbg").classList.remove("on");document.body.style.overflow=""}
+document.addEventListener("keydown",e=>{if(e.key=="Escape")closeDw()});
 function extra(){const D=DATA,C=D.calls||[];
 // 点位标尺：每个来源最新观点里的支撑/压力
 const lt={};C.forEach(c=>{if(!lt[c.source_name]||lt[c.source_name].time<c.time)lt[c.source_name]=c});const lv=[];
