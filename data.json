@@ -1269,66 +1269,165 @@
  "calendar": [
   {
    "time": "2026-10-14 20:30",
-   "name": "美国9月CPI",
+   "name": "美国9月CPI年率（未季调）",
    "importance": 5,
-   "expected": "同比3.6%（高盛3.7%），环比0.6%；核心同比2.5%、环比0.2%",
-   "previous": "同比3.4%，环比0.4%；核心同比2.4%、环比0.3%",
-   "actual": "同比3.7%（高于3.6%），环比0.6%（持平预期）；核心环比0.3%（高于0.2%，Timiraos称0.33%）、核心同比2.6%（高于2.5%）——偏热，利空黄金",
-   "source": "Investing.com / Newsquawk / Socius 周前瞻"
+   "expected": "3.6%",
+   "previous": "3.4%",
+   "actual": "3.7%（高于预期，利空黄金）",
+   "source": "金十数据"
+  },
+  {
+   "time": "2026-10-14 20:30",
+   "name": "美国9月CPI月率",
+   "importance": 4,
+   "expected": "0.6%",
+   "previous": "0.4%",
+   "actual": "0.6%",
+   "source": "金十数据"
+  },
+  {
+   "time": "2026-10-14 20:30",
+   "name": "美国9月核心CPI月率",
+   "importance": 3,
+   "expected": "0.2%",
+   "previous": "0.3%",
+   "actual": "0.3%（未四舍五入0.335%）",
+   "source": "金十数据"
+  },
+  {
+   "time": "2026-10-14 20:30",
+   "name": "美国9月核心CPI年率",
+   "importance": 3,
+   "expected": "2.5%",
+   "previous": "2.4%",
+   "actual": "2.6%",
+   "source": "金十数据"
   },
   {
    "time": "2026-10-15 02:00",
    "name": "美联储褐皮书",
    "importance": 3,
-   "expected": "",
-   "previous": "",
+   "expected": "—",
+   "previous": "—",
    "actual": "",
-   "source": "Socius 周前瞻（18:00 UTC）"
+   "source": "金十数据"
   },
   {
-   "time": "2026-10-15 20:30",
-   "name": "美国9月PPI",
-   "importance": 4,
-   "expected": "环比0.5%，同比5.3%；核心环比0.3%",
-   "previous": "环比0.4%，同比5.4%；核心环比0.2%",
-   "actual": "",
-   "source": "Investing.com / Socius"
-  },
-  {
-   "time": "2026-10-15 20:30",
-   "name": "美国9月零售销售",
-   "importance": 4,
-   "expected": "环比0.3%；核心0.5%",
-   "previous": "环比1.2%；核心1.4%",
-   "actual": "",
-   "source": "Investing.com / Socius"
-  },
-  {
-   "time": "2026-10-15 20:30",
-   "name": "美国初请失业金人数",
+   "time": "2026-10-15 10:55",
+   "name": "美联储理事鲍曼讲话（曼谷）",
    "importance": 3,
-   "expected": "19.5万",
-   "previous": "19.7万",
+   "expected": "—",
+   "previous": "—",
    "actual": "",
-   "source": "Investing.com"
+   "source": "金十数据"
+  },
+  {
+   "time": "2026-10-15 20:30",
+   "name": "美国初请失业金人数（万人）",
+   "importance": 4,
+   "expected": "20",
+   "previous": "19.7",
+   "actual": "",
+   "source": "金十数据"
+  },
+  {
+   "time": "2026-10-15 20:30",
+   "name": "美国9月零售销售月率",
+   "importance": 4,
+   "expected": "0.3%",
+   "previous": "1.1%",
+   "actual": "",
+   "source": "金十数据"
+  },
+  {
+   "time": "2026-10-15 20:30",
+   "name": "美国9月PPI年率",
+   "importance": 3,
+   "expected": "5.3%",
+   "previous": "5.4%",
+   "actual": "",
+   "source": "金十数据"
+  },
+  {
+   "time": "2026-10-15 20:30",
+   "name": "美国9月PPI月率",
+   "importance": 3,
+   "expected": "0.5%",
+   "previous": "0.4%",
+   "actual": "",
+   "source": "金十数据"
+  },
+  {
+   "time": "2026-10-15 20:30",
+   "name": "美国10月费城联储制造业指数",
+   "importance": 3,
+   "expected": "28.4",
+   "previous": "37.8",
+   "actual": "",
+   "source": "金十数据"
+  },
+  {
+   "time": "2026-10-15 待定",
+   "name": "G20财长和央行行长会议（曼谷）",
+   "importance": 3,
+   "expected": "—",
+   "previous": "—",
+   "actual": "",
+   "source": "金十数据"
+  },
+  {
+   "time": "2026-10-16 00:00",
+   "name": "美国EIA原油库存（万桶）",
+   "importance": 4,
+   "expected": "190",
+   "previous": "-318.6",
+   "actual": "",
+   "source": "金十数据"
+  },
+  {
+   "time": "2026-10-16 04:30",
+   "name": "克利夫兰联储哈玛克讲话（2026票委）",
+   "importance": 3,
+   "expected": "—",
+   "previous": "—",
+   "actual": "",
+   "source": "金十数据"
   },
   {
    "time": "2026-10-16 11:30",
-   "name": "美联储主席Warsh在IMF年会对话（曼谷）",
+   "name": "美联储主席沃什IMF年会炉边谈话（曼谷）",
    "importance": 5,
-   "expected": "",
-   "previous": "",
+   "expected": "—",
+   "previous": "—",
    "actual": "",
-   "source": "Socius / Investing.com（03:30 UTC）"
+   "source": "金十数据"
+  },
+  {
+   "time": "2026-10-16 17:00",
+   "name": "欧元区9月CPI年率终值",
+   "importance": 3,
+   "expected": "3.8%",
+   "previous": "3.8%",
+   "actual": "",
+   "source": "金十数据"
+  },
+  {
+   "time": "2026-10-16 20:30",
+   "name": "美国9月进口物价指数月率",
+   "importance": 3,
+   "expected": "0.7%",
+   "previous": "0.7%",
+   "actual": "",
+   "source": "金十数据"
   },
   {
    "time": "2026-10-16 21:15",
-   "name": "美国9月工业产出",
-   "importance": 2,
-   "expected": "环比0.4%",
+   "name": "美国9月工业产出月率",
+   "importance": 3,
+   "expected": "0.4%",
    "previous": "0.0%",
    "actual": "",
-   "source": "Investing.com"
+   "source": "金十数据"
   }
  ],
  "scripts": [
