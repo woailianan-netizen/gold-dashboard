@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14 17:12",
+  "updated": "2026-10-14 17:22",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -34,6 +34,11 @@
     {
       "time": "2026-10-14 17:12",
       "price": 4146.0,
+      "source": "gold-api.com"
+    },
+    {
+      "time": "2026-10-14 17:21",
+      "price": 4146.3,
       "source": "gold-api.com"
     }
   ],
@@ -403,6 +408,16 @@
       "note": "沙特能源部称阿美园区一栋行政楼有限火灾、无人伤亡（AP），非大规模停产",
       "source": "OpenClaw",
       "impact": "中性"
+    },
+    {
+      "time": "2026-10-14 17:10",
+      "name": "伊朗革命卫队海军称：一艘载约2500个集装箱的货船在霍尔木兹海峡南部触水雷起火沉没，称该船试图走“未经授权且危险”的航道，并提醒当地船只躲避漂浮集装箱",
+      "expected": "利多黄金（霍尔木兹航运风险升级，推升油价与避险）",
+      "actual": "已发生（伊朗官方媒体说法，尚待独立证实）；金价约4146暂无明显反应",
+      "note": "来源：First Squawk 17:10、FinancialJuice 17:13 台北；https://x.com/FirstSquawk/status/2110297211141775748 ；https://x.com/financialjuice/status/2110297933119987960",
+      "source": "First Squawk",
+      "url": "https://x.com/FirstSquawk/status/2110297211141775748",
+      "impact": "利多"
     }
   ],
   "activity": [
