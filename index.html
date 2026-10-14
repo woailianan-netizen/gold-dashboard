@@ -111,7 +111,7 @@ details.dy{margin-top:10px}details.dy>summary{cursor:pointer;color:var(--gd);fon
 <div class="h" style="margin-top:14px">定时任务 · Schedule</div><table><thead><tr><th>任务</th><th>频率</th><th>下次</th></tr></thead><tbody id="sch"></tbody></table></section>
 
 <section class="pn c12"><div class="h">工作动态 · Activity<small>最新在前</small></div><ul class="tl" id="act"></ul></section>
-<section class="pn c12"><div class="h">来源与观点 · Sources &amp; Views<small id="agn"></small></div>
+<section class="pn c12" id="sources"><div class="h">来源与观点 · Sources &amp; Views<small id="agn"></small></div>
 <div class="srch"><input id="q" placeholder="搜索全部历史观点…"><select id="qd"><option value="">全部日期</option></select></div><div class="flt" id="flt"></div>
 <div id="qres"></div><div class="sg" id="ags"></div></section>
 <div class="dw-bg" id="dwbg" onclick="closeDw()"></div><aside class="dw" id="dw"><div class="dwh"><div><b id="dwt"></b><div class="mu" id="dws" style="font-size:12px"></div></div><button onclick="closeDw()">✕</button></div><div id="dwb"></div></aside>
@@ -188,6 +188,7 @@ $("dwb").innerHTML=days.length?days.map((d,i)=>`<details class="dy" ${i<2?"open"
 $("dw").classList.add("on");$("dwbg").classList.add("on");document.body.style.overflow="hidden"}
 function closeDw(){$("dw").classList.remove("on");$("dwbg").classList.remove("on");document.body.style.overflow=""}
 document.addEventListener("keydown",e=>{if(e.key=="Escape")closeDw()});
+setTimeout(()=>{const h=decodeURIComponent(location.hash);if(h.startsWith("#src="))openDw(h.slice(5))},300);
 function extra(){const D=DATA,C=D.calls||[];
 // 点位标尺：每个来源最新观点里的支撑/压力
 const lt={};C.forEach(c=>{if(!lt[c.source_name]||lt[c.source_name].time<c.time)lt[c.source_name]=c});const lv=[];
