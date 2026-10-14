@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14 20:36",
+  "updated": "2026-10-14 20:42",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -119,6 +119,12 @@
     {
       "time": "2026-10-14 20:36",
       "price": 4115.8,
+      "source": "gold-api.com",
+      "note": "博主监控（CPI后）"
+    },
+    {
+      "time": "2026-10-14 20:42",
+      "price": 4096.4,
       "source": "gold-api.com",
       "note": "博主监控（CPI后）"
     }
@@ -720,6 +726,16 @@
       "source": "DeItaone",
       "url": "https://x.com/DeItaone/status/2110307829076705475",
       "impact": "利多"
+    },
+    {
+      "time": "2026-10-14 20:36",
+      "name": "CPI后市场急速重定价：彭博美元现货指数升至去年11月以来最高；2年期美债收益率日内升10个基点至4.89%；交易员加注到2027年底前再加息三次（未四舍五入核心CPI环比0.335%，远超预期0.21%）",
+      "expected": "利空黄金（美元走强、收益率上行、加息预期升温）",
+      "actual": "已发生；金价由约4116续跌至约4096，跌破4100",
+      "note": "来源：DeItaone/FirstSquawk/zerohedge 20:34–20:39 台北；https://x.com/DeItaone/status/2110348955523645940 ；https://x.com/DeItaone/status/2110349388166119582 ；https://x.com/DeItaone/status/2110349054815174737",
+      "impact": "利空",
+      "url": "https://x.com/DeItaone/status/2110348955523645940",
+      "source": "DeItaone"
     }
   ],
   "activity": [
