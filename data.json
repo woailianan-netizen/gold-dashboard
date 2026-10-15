@@ -1581,7 +1581,7 @@
       "task": "博主监控",
       "status": "出错",
       "summary": "本轮浏览器/桌面连续不可用（All screens in use / stale_window），7博主与4群未能检查；Telegram未再试；金价约4142.700195；已连续两轮computerUse失败",
-      "notified": false
+      "notified": true
     }
   ],
   "agents": [
