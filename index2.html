@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>黄金看板 · 玻璃版</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#10152b;--mut:#8a90a6;--blue:#3b82f6;--green:#12a374;--red:#ef4b5b;--amber:#f5a524;--purple:#8b6cf0}
+body{font-family:-apple-system,"SF Pro Display","PingFang SC","Helvetica Neue",sans-serif;color:var(--ink);min-height:100vh;
+background:radial-gradient(900px 500px at 12% -5%,#e9defc 0,transparent 60%),radial-gradient(800px 500px at 100% 10%,#d5e6ff 0,transparent 60%),radial-gradient(700px 600px at 50% 110%,#dff5ea 0,transparent 60%),#eef0fb;background-attachment:fixed}
+.wrap{max-width:640px;margin:0 auto;padding:18px 14px 60px}
+.glass{background:rgba(255,255,255,.62);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);border:1px solid rgba(255,255,255,.85);border-radius:28px;box-shadow:0 10px 40px rgba(110,120,190,.16),inset 0 1px 0 rgba(255,255,255,.9);padding:20px;margin-bottom:16px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(145deg,#2a2f45,#0e1220);display:grid;place-items:center;font-size:24px;box-shadow:0 6px 16px rgba(20,25,50,.3)}
+.brand h1{font-size:22px;font-weight:800;letter-spacing:-.3px}.brand small{display:block;font-size:11px;letter-spacing:1.5px;color:var(--mut);margin-top:2px}
+.live{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.7);border:1px solid #fff;border-radius:999px;padding:10px 16px;font-weight:700;font-size:13px;box-shadow:0 8px 24px rgba(139,108,240,.22)}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(18,163,116,.2);animation:p 1.6s infinite}
+@keyframes p{50%{box-shadow:0 0 0 8px rgba(18,163,116,0)}}
+.lab{font-size:11px;letter-spacing:1.5px;color:var(--mut);font-weight:700;text-transform:uppercase}
+.hero{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+.price{font-size:62px;font-weight:800;letter-spacing:-2px;line-height:1;margin-top:6px}
+.price small{font-size:30px;color:#b7bbd0;font-weight:700}
+.chg{margin-top:8px;font-weight:700;font-size:14px}.up{color:var(--green)}.dn{color:var(--red)}
+.spark{width:150px;height:70px;flex:none}
+.sub{display:flex;justify-content:space-between;color:var(--mut);font-size:12px;margin-top:6px}
+.pill{display:inline-block;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:800;color:#fff;background:var(--blue);box-shadow:0 4px 12px rgba(59,130,246,.35)}
+.pill.g{background:var(--green);box-shadow:0 4px 12px rgba(18,163,116,.35)}.pill.r{background:var(--red);box-shadow:0 4px 12px rgba(239,75,91,.35)}.pill.a{background:var(--amber);box-shadow:0 4px 12px rgba(245,165,36,.35)}.pill.x{background:#9aa0b8;box-shadow:none}
+.sighead{display:flex;justify-content:space-between;align-items:center}
+.dir{font-size:34px;font-weight:800;margin:8px 0 4px;letter-spacing:-1px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.cell{background:rgba(255,255,255,.7);border-radius:16px;padding:10px 8px;text-align:center;border:1px solid #fff}
+.cell b{display:block;font-size:17px;margin-top:3px}.cell .lab{font-size:10px}
+.conf{height:10px;border-radius:99px;background:rgba(120,130,180,.15);overflow:hidden;margin-top:6px}
+.conf i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#60a5fa,#8b6cf0)}
+.why{margin-top:12px;font-size:13px;line-height:1.7;color:#3a4160}
+.why li{margin-left:16px;margin-bottom:4px}
+h2{font-size:13px;letter-spacing:1.5px;font-weight:800;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+h2 span{color:var(--mut);font-weight:700;font-size:11px;letter-spacing:.5px}
+.stems{width:100%;height:auto}
+.bar{display:flex;border-radius:999px;overflow:hidden;height:34px;font-weight:800;font-size:13px;color:#fff;margin:6px 0 14px}
+.bar div{display:grid;place-items:center;min-width:44px}
+.avs{display:flex;justify-content:space-between;gap:6px;flex-wrap:wrap}
+.av{text-align:center;width:calc(16.6% - 6px);min-width:60px}
+.av .c{width:54px;height:54px;border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:17px;box-shadow:0 8px 18px rgba(80,90,150,.25);border:3px solid #fff}
+.av small{display:block;font-size:11px;color:var(--mut);font-weight:700;line-height:1.3}
+.item{padding:12px 0;border-top:1px solid rgba(120,130,180,.14)}.item:first-of-type{border-top:0;padding-top:0}
+.item .t{display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:14px;line-height:1.4}
+.item .m{font-size:12px;color:var(--mut);margin-top:4px;line-height:1.6}
+.stars{color:var(--amber);letter-spacing:1px;font-size:12px}
+.lead{font-size:14px;line-height:1.7;color:#2c3250}
+.src{margin-top:10px;font-size:12.5px;line-height:1.65;color:#3a4160}.src b{color:var(--ink)}
+.foot{text-align:center;color:var(--mut);font-size:11px;margin-top:8px;line-height:1.7}
+a{color:var(--blue);text-decoration:none}
+</style></head><body><div class="wrap">
+<div class="top"><div class="brand"><div class="logo">🥇</div><div><h1>黄金看板</h1><small>XAU/USD · 玻璃版</small></div></div><div class="live"><i></i>LIVE <span id="clk"></span></div></div>
+
+<div class="glass"><div class="hero"><div><div class="lab">现货金 XAU/USD</div><div class="price" id="px">—<small></small></div><div class="chg" id="chg"></div></div><svg class="spark" id="spark" viewBox="0 0 150 70"></svg></div>
+<div class="sub"><span id="subl"></span><span id="subr"></span></div></div>
+
+<div class="glass"><div class="sighead"><div><div class="lab">AI 交易信号 · 综合研判</div><div class="dir" id="dir">—</div></div><span class="pill" id="st">—</span></div>
+<div class="grid" id="lv"></div>
+<div class="sub"><span id="conf"></span><span id="exp"></span></div><div class="conf"><i id="cbar"></i></div>
+<ul class="why" id="why"></ul></div>
+
+<div class="glass"><h2>每个信号的结果 <span id="sc"></span></h2><svg class="stems" id="stems" viewBox="0 0 600 150" ></svg>
+<div class="sub"><span>🟢 到达目标　🔴 触止损　⚪ 到期未触</span><span>柱高 = 信心</span></div></div>
+
+<div class="glass"><h2>来源 <span id="avn"></span></h2><div class="bar" id="mix"></div><div class="avs" id="avs"></div></div>
+
+<div class="glass"><h2>综合研判 <span id="smt"></span></h2><div id="sm"></div></div>
+<div class="glass"><h2>财经日历 <span>金十数据 · 台北时间</span></h2><div id="cal"></div></div>
+<div class="glass"><h2>重要事件 <span>突发与市场反应</span></h2><div id="ev"></div></div>
+<div class="glass"><h2>最新观点 <span>博主 / 群主 / 机器人</span></h2><div id="cl"></div></div>
+<div class="foot">时间均为台北时间 · 金价来自 api.gold-api.com · 数据每60秒自动刷新<br>仅作记录与复盘，不构成投资建议 · <a href="./">返回完整看板</a></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);let D=null,live=null;
+const esc=s=>String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const col={"大":"#3b82f6","阿":"#f5a524","七":"#8b6cf0","飞":"#12a374","汪":"#ef4b5b","当":"#0ea5a4","龙":"#e11d48","爱":"#f97316","C":"#6366f1","金":"#d4a017","抖":"#ec4899"};
+function stCls(s){return /目标/.test(s)?"g":/止损/.test(s)?"r":/过期/.test(s)?"x":"a"}
+function render(){if(!D)return;
+ const sg=D.signals.slice(-1)[0],snaps=D.price_snapshots||[];
+ const p=live||(sg&&sg.price_at)||(snaps.length&&snaps[snaps.length-1].price);
+ if(p){const i=Math.floor(p),f=(p-i).toFixed(2).slice(1);$("px").innerHTML=i.toLocaleString()+"<small>"+f+"</small>"}
+ // spark
+ const pts=snaps.slice(-40).map(s=>s.price);if(p)pts.push(p);
+ if(pts.length>1){const mn=Math.min(...pts),mx=Math.max(...pts),r=(mx-mn)||1;
+  const xy=pts.map((v,i)=>[6+i*(138/(pts.length-1)),62-(v-mn)/r*54]);
+  const d=xy.map((q,i)=>(i?"L":"M")+q[0].toFixed(1)+" "+q[1].toFixed(1)).join(" ");const l=xy[xy.length-1];
+  $("spark").innerHTML=`<defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8b6cf0" stop-opacity=".25"/><stop offset="1" stop-color="#8b6cf0" stop-opacity="0"/></linearGradient></defs><path d="${d} L144 70 L6 70Z" fill="url(#g)"/><path d="${d}" fill="none" stroke="#6d6df0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="${l[0]}" cy="${l[1]}" r="9" fill="#f5a524" opacity=".25"/><circle cx="${l[0]}" cy="${l[1]}" r="4.5" fill="#fff" stroke="#f5a524" stroke-width="2.5"/>`;
+  const dif=pts[pts.length-1]-pts[0];$("chg").className="chg "+(dif>=0?"up":"dn");$("chg").textContent=(dif>=0?"▲ +":"▼ ")+dif.toFixed(1)+" 近"+pts.length+"次记录";
+  $("subl").textContent="区间 "+mn.toFixed(0)+" – "+mx.toFixed(0);}
+ $("subr").textContent="数据更新 "+(D.updated||"");
+ // signal
+ if(sg){const dn=sg.direction;$("dir").textContent=dn+(sg.note&&/偏多/.test(sg.note)?" · 偏多":sg.note&&/偏空/.test(sg.note)?" · 偏空":"");
+  $("dir").style.color=dn==="卖出"?"var(--red)":dn==="买入"?"var(--green)":"var(--ink)";
+  $("st").textContent=sg.status;$("st").className="pill "+stCls(sg.status);
+  const lv=[["参考价",sg.entry,""],["目标1",sg.tp1,"up"],["目标2",sg.tp2,"up"],["止损",sg.sl,"dn"]];
+  $("lv").innerHTML=lv.map(x=>`<div class="cell"><div class="lab">${x[0]}</div><b class="${x[2]}">${x[1]}</b></div>`).join("");
+  $("conf").textContent="信心指数 "+sg.confidence;$("exp").textContent=(sg.horizon||"")+" · #"+sg.id;$("cbar").style.width=Math.min(100,sg.confidence)+"%";
+  $("why").innerHTML=(sg.drivers||[]).slice(0,4).map(x=>"<li>"+esc(x)+"</li>").join("");}
+ // stems
+ const ss=D.signals.slice(-36),W=600,n=ss.length,bw=W/n;let h=`<line x1="0" x2="600" y1="75" y2="75" stroke="#c9cde0" stroke-width="1.5"/>`;
+ let ok=0,bad=0,ex=0;
+ ss.forEach((s,i)=>{const x=bw*i+bw/2,hh=s.confidence*0.65,g=/目标/.test(s.status),r=/止损/.test(s.status),c=g?"#12a374":r?"#ef4b5b":"#c3c7da";
+  g?ok++:r?bad++:ex++;const up=!r;const y2=up?75-hh:75+hh*.6;
+  h+=`<line x1="${x}" x2="${x}" y1="75" y2="${y2}" stroke="${c}" stroke-width="3" stroke-linecap="round"/><circle cx="${x}" cy="${y2}" r="${g||r?6:4}" fill="${c}" ${g||r?`style="filter:drop-shadow(0 0 6px ${c})"`:""}/>`});
+ $("stems").innerHTML=h;$("sc").textContent=`近${n}次 · 目标${ok} 止损${bad} 到期${ex}`;
+ // team
+ const ag=D.agents||[];$("avn").textContent=ag.length+" 位";
+ const types={};ag.forEach(a=>types[a.type]=(types[a.type]||0)+1);
+ const cs=["#f5a524","#3b82f6","#12a374","#8b6cf0","#ef4b5b"];const tt=Object.entries(types);
+ $("mix").innerHTML=tt.map((t,i)=>`<div style="flex:${t[1]};background:${cs[i%5]}">${esc(t[0])} ${t[1]}</div>`).join("");
+ $("avs").innerHTML=ag.slice(0,12).map(a=>{const k=a.name[0];const c=col[k]||"#6d6df0";return `<div class="av"><div class="c" style="background:linear-gradient(145deg,${c},${c}bb)">${esc(k)}</div><small>${esc(a.name.slice(0,6))}</small></div>`}).join("");
+ // summaries
+ const sm=D.summaries.slice(-1)[0];if(sm){$("smt").textContent="#"+sm.id+" · "+sm.time;
+  $("sm").innerHTML=`<div class="item"><div class="t">${esc(sm.title)}</div></div><div class="lead">${esc(sm.lead)}</div>`+(sm.items||[]).slice(0,7).map(x=>`<div class="src"><b>${esc(x.source)}</b>　${esc(x.text)}</div>`).join("")}
+ // calendar
+ const today=new Date(Date.now()+8*3600e3).toISOString().slice(0,10);
+ const cal=D.calendar.filter(c=>c.time.slice(0,10)>=today).sort((a,b)=>a.time<b.time?-1:1).slice(0,10);
+ $("cal").innerHTML=cal.map(c=>`<div class="item"><div class="t"><span>${esc(c.name)}</span><span class="stars">${"★".repeat(c.importance||0)}</span></div><div class="m">${esc(c.time)} · 预期 ${esc(c.expected||"—")} · 前值 ${esc(c.previous||"—")}${c.actual?" · 公布 "+esc(c.actual):""}</div></div>`).join("")||"<div class=m>暂无</div>";
+ // events
+ $("ev").innerHTML=D.events.slice(-5).reverse().map(e=>`<div class="item"><div class="t"><span>${esc(String(e.name).slice(0,60))}${String(e.name).length>60?"…":""}</span></div><div class="m">${esc(e.time)}　${esc(String(e.expected||"").slice(0,70))}</div></div>`).join("");
+ // calls
+ $("cl").innerHTML=D.calls.slice(-8).reverse().map(c=>{const bull=/多/.test(c.direction)&&!/空/.test(c.direction),bear=/空/.test(c.direction)&&!/多/.test(c.direction);
+  return `<div class="item"><div class="t"><span>${esc(c.source_name)}</span><span class="pill ${bull?"g":bear?"r":"x"}">${esc((c.direction||"").slice(0,8))}</span></div><div class="m">${esc(c.time)}　${esc(c.levels||c.advice||"")}</div></div>`}).join("");
+}
+async function load(){try{const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"});if(r.ok){D=await r.json();render()}}catch(e){}}
+async function px(){try{const r=await fetch("https://api.gold-api.com/price/XAU",{cache:"no-store"});const j=await r.json();if(j.price>0){live=j.price;render()}}catch(e){}}
+function clk(){$("clk").textContent=new Date(Date.now()+8*3600e3).toISOString().slice(11,16)}
+load();px();clk();setInterval(load,60000);setInterval(px,60000);setInterval(clk,15000);
+</script></body></html>
