@@ -1708,6 +1708,13 @@
       "status": "无新内容",
       "summary": "11:29–11:34 七博主与四群群主均无新（基准不变）；Telegram桌面版仍未登录（Too many tries），未能问龙虾/爱马仕；金价约4149.3",
       "notified": false
+    },
+    {
+      "time": "2026-10-15 11:43",
+      "task": "突发新闻",
+      "status": "完成",
+      "summary": "KOSPI跌超8%熔断停牌约20分钟；已入事件表并通知",
+      "notified": true
     }
   ],
   "agents": [
