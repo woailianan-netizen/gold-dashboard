@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15 20:29",
+  "updated": "2026-10-15 20:39",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -333,6 +333,10 @@
       "time": "2026-10-15 20:29",
       "price": 4151.8,
       "note": "突发新闻监控·美国要求IEA再放1亿桶油"
+    },
+    {
+      "time": "2026-10-15 20:39",
+      "price": 4148.1
     }
   ],
   "calls": [
@@ -1584,6 +1588,19 @@
       "source": "DeItaone / First Squawk",
       "url": "https://x.com/DeItaone/status/2110708931878158588",
       "link": "https://x.com/DeItaone/status/2110708931878158588"
+    },
+    {
+      "time": "2026-10-15 20:30",
+      "name": "美国9月PPI与零售销售全面超预期：PPI月率+1.3%（预期+0.6%）、年率+6.3%（预期+5.4%）；核心PPI月率+0.7%/年率+5.0%亦超预期；零售销售月率+0.8%（预期+0.3%），核心零售+0.9%",
+      "category": "宏观",
+      "impact": "利空",
+      "expected": "继昨日CPI偏热后，生产者物价与消费支出双双大幅超预期，强化通胀粘性与加息预期，利空黄金",
+      "actual": "快讯公布后现货金约4148（公布前约4151–4154），初请19.9万符合预期，费城联储20.9低于预期28左右",
+      "reaction": "快讯公布后现货金约4148（公布前约4151–4154），初请19.9万符合预期，费城联储20.9低于预期28左右",
+      "note": "来源：DeItaone 20:32、First Squawk / FinancialJuice 20:30–20:37 台北。核心PPI与核心零售来自FinancialJuice。https://x.com/DeItaone/status/2110710331668349403",
+      "source": "DeItaone / First Squawk / FinancialJuice",
+      "url": "https://x.com/DeItaone/status/2110710331668349403",
+      "link": "https://x.com/DeItaone/status/2110710331668349403"
     }
   ],
   "activity": [
@@ -2711,8 +2728,9 @@
       "importance": 4,
       "expected": "20",
       "previous": "19.7",
-      "actual": "",
-      "source": "金十数据"
+      "actual": "19.9",
+      "source": "金十数据",
+      "gold_impact": "中性"
     },
     {
       "time": "2026-10-15 20:30",
@@ -2720,8 +2738,9 @@
       "importance": 4,
       "expected": "0.3%",
       "previous": "1.1%",
-      "actual": "",
-      "source": "金十数据"
+      "actual": "0.8%",
+      "source": "金十数据",
+      "gold_impact": "利空"
     },
     {
       "time": "2026-10-15 20:30",
@@ -2729,8 +2748,9 @@
       "importance": 3,
       "expected": "5.3%",
       "previous": "5.4%",
-      "actual": "",
-      "source": "金十数据"
+      "actual": "6.3%",
+      "source": "金十数据",
+      "gold_impact": "利空"
     },
     {
       "time": "2026-10-15 20:30",
@@ -2738,8 +2758,9 @@
       "importance": 3,
       "expected": "0.5%",
       "previous": "0.4%",
-      "actual": "",
-      "source": "金十数据"
+      "actual": "1.3%",
+      "source": "金十数据",
+      "gold_impact": "利空"
     },
     {
       "time": "2026-10-15 20:30",
@@ -2747,8 +2768,9 @@
       "importance": 3,
       "expected": "28.4",
       "previous": "37.8",
-      "actual": "",
-      "source": "金十数据"
+      "actual": "20.9",
+      "source": "金十数据",
+      "gold_impact": "中性"
     },
     {
       "time": "2026-10-15 待定",
