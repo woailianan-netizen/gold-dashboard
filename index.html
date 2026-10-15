@@ -106,7 +106,11 @@ html{scroll-behavior:smooth}
 .pn.main:before{width:64px;box-shadow:0 0 12px var(--gd)}
 .pn.sub{background:#0b0f14;border-color:#171d26}.pn.sub:before{background:#5a4a16}
 td,th,.sm b,.gx b,.cdn,.px,.chg,.clk b,.lad,.mc b{font-variant-numeric:tabular-nums}
-.ovp .hero{flex-direction:column;align-items:stretch;gap:18px;height:100%}
+.ovp{display:flex;flex-direction:column}.ovp .hero{flex:1;flex-direction:column;align-items:stretch;justify-content:space-between;gap:18px}
+details.mapd svg.map{max-height:360px}
+.scy{overflow:auto;max-height:560px}.scy thead th{position:sticky;top:0;background:#0b0f14;z-index:1}.scy table{min-width:520px}.scy td:first-child,.scy td:nth-child(2){white-space:nowrap}
+#s-cal .g{align-items:start}
+.pn.c7 table{min-width:560px}.pn.c7 th,.pn.c7 td{white-space:nowrap}
 .ovp .px{font-size:72px}
 .ovp .clk{grid-template-columns:repeat(4,minmax(0,1fr))}
 #sigbox .ban{font-size:30px}
@@ -178,7 +182,7 @@ details.fold>.g{margin-top:14px}
 <section class="pn main c6"><div class="h">财经日历 · Calendar<small>台北时间 · 来源：金十数据</small></div><div class="mu" style="font-size:12px" id="cdl">距下一个重要事件</div><div class="cdn mono" id="cdn">—</div>
 <div class="caltg" id="caltg" onclick="CALOPEN=!CALOPEN;extra()"></div><table class="cal"><tbody id="calp" style="display:none"></tbody><tbody id="cal"></tbody></table></section>
 
-<section class="pn sub c6"><div class="h">重要事件 · Events</div><div style="overflow-x:auto"><table><thead><tr><th>时间</th><th>类型</th><th>事件</th><th>对黄金</th><th>金价反应</th></tr></thead><tbody id="ev"></tbody></table></div>
+<section class="pn sub c6"><div class="h">重要事件 · Events</div><div class="scy"><table><thead><tr><th>时间</th><th>类型</th><th>事件</th><th>对黄金</th><th>金价反应</th></tr></thead><tbody id="ev"></tbody></table></div>
 <ul id="sn" style="display:none"></ul></section>
 </div>
 </section>
@@ -320,6 +324,7 @@ async function reload(){try{const r=await fetch("data.json?t="+Date.now(),{cache
 (function(){const links=[...document.querySelectorAll('#nav a')],secs=links.map(a=>document.getElementById(a.dataset.t));
 function on(id){links.forEach(a=>{const h=a.dataset.t==id;a.classList.toggle('on',h);if(h&&a.scrollIntoView){const n=a.parentNode;n.scrollTo({left:a.offsetLeft-n.clientWidth/2+a.clientWidth/2,behavior:'smooth'})}})}
 links.forEach(a=>a.addEventListener('click',()=>{const t=document.getElementById(a.dataset.t);if(a.dataset.t=='s-team')document.getElementById('foldteam').open=true;t.scrollIntoView({behavior:'smooth',block:'start'});on(a.dataset.t)}));
-if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)on(e.target.id)})},{rootMargin:'-20% 0px -65% 0px'});secs.forEach(s=>io.observe(s))}
+if(scrollY<60)on('s-overview');addEventListener('scroll',()=>{if(scrollY<60)on('s-overview')},{passive:true});
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>{if(scrollY<60)return;es.forEach(e=>{if(e.isIntersecting)on(e.target.id)})},{rootMargin:'-20% 0px -65% 0px'});secs.forEach(s=>io.observe(s))}
 if(innerWidth<=520){const m=document.querySelector('details.mapd');if(m)m.open=false}})();
 </script></body></html>
