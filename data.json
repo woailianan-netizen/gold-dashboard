@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15 11:46",
+  "updated": "2026-10-15 11:58",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -1276,14 +1276,14 @@
       "time": "2026-10-15 11:38",
       "name": "韩国KOSPI跌超8%触发全市场熔断，暂停交易约20分钟；同日KOSDAQ亦因跌约8%短暂停牌；韩股近7个交易日累计约跌21%",
       "expected": "偏利多黄金（亚股恐慌推升避险情绪；根因仍是美CPI后加息担忧与AI半导体抛售）",
-      "actual": "已发生；现货金约4152.8，日内自CPI低点反弹中",
+      "actual": "已发生；现货金约4152.8，日内自CPI低点反弹中；11:45 避险买盘推美债全线走强，5年期收益率跌约10个基点（zerohedge/彭博），金价约4146",
       "note": "来源：zerohedge 11:25/11:38、FirstSquawk 11:40 台北；Spectator Index；联合新闻网/Yonhap早盘已发卖出侧边车。https://x.com/zerohedge/status/2110576087801704650 ；https://x.com/FirstSquawk/status/2110576421781516575",
       "source": "zerohedge / First Squawk",
       "url": "https://x.com/zerohedge/status/2110576087801704650",
       "impact": "利多",
       "category": "市场",
       "link": "https://x.com/zerohedge/status/2110576087801704650",
-      "reaction": "已发生；现货金约4152.8，日内自CPI低点反弹中"
+      "reaction": "已发生；现货金约4152.8，日内自CPI低点反弹中；11:45 避险买盘推美债全线走强，5年期收益率跌约10个基点（zerohedge/彭博），金价约4146"
     }
   ],
   "activity": [
@@ -1726,6 +1726,13 @@
       "task": "博主监控",
       "status": "无新内容",
       "summary": "7位博主与4个群主均无新；Telegram桌面版未登录未问龙虾/爱马仕；金价约4152",
+      "notified": false
+    },
+    {
+      "time": "2026-10-15 11:58",
+      "task": "突发新闻监控",
+      "status": "无新内容",
+      "summary": "近20分钟无真正重要新突发：特朗普/Fed/白宫/财政部无新帖；Daly加息言论为08:40已报；美债因全球股市抛售避险走强、5年期收益率跌约10bp（并入韩股熔断事件反应）；朝鲜试射潜射巡航导弹、美拟对西班牙船只收费等非主线；金价约4146",
       "notified": false
     }
   ],
