@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15 08:51",
+  "updated": "2026-10-15 08:59",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -1161,6 +1161,19 @@
       "category": "市场",
       "link": "https://x.com/DeItaone/status/2110357224761536984",
       "reaction": "已发生；金价较CPI前跌约1.6%，现约4084，白银约56.9"
+    },
+    {
+      "time": "2026-10-15 08:40",
+      "name": "路透独家：旧金山联储主席 Daly 称更可能需要进一步加息以压制过高通胀，但不急于在10月27–28日会议上行动；称通胀风险上升但风险≠现实，应留出时间深思熟虑",
+      "expected": "中性（中期路径偏鹰，但明确淡化10月紧急加息，缓和立刻加息紧迫感）",
+      "actual": "路透专访；市场当时约40%概率押注10月再加息",
+      "note": "来源：Reuters @Reuters 08:40 台北 EXCLUSIVE；Ann Saphir 专访。原话：more likely than not to need additional adjustments，但不觉得 urgent。链接：https://x.com/Reuters/status/2110531136308802025 ；https://wmbdradio.com/2026/10/14/exclusive-feds-daly-says-rate-hikes-likely-needed-but-not-urgently/",
+      "source": "Reuters",
+      "url": "https://x.com/Reuters/status/2110531136308802025",
+      "impact": "中性",
+      "category": "央行",
+      "link": "https://x.com/Reuters/status/2110531136308802025",
+      "reaction": "路透专访；市场当时约40%概率押注10月再加息"
     }
   ],
   "activity": [
