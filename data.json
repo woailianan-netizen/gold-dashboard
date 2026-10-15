@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15 19:16",
+  "updated": "2026-10-15 19:27",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -1499,6 +1499,19 @@
       "category": "地缘",
       "link": "https://x.com/FirstSquawk/status/2110678061951971485",
       "reaction": "已发生；消息后现货金约4155.4，暂无明显反应"
+    },
+    {
+      "time": "2026-10-15 19:12",
+      "name": "英国《金融时报》：俄罗斯被怀疑在北约水域（罗马尼亚黑海领海）袭击两艘油轮；此前罗马尼亚总统只证实无人机击船、未点名肇事方",
+      "category": "地缘",
+      "impact": "利多",
+      "expected": "偏利多黄金（若坐实为俄方袭击北约成员国领海内船只，俄与北约正面摩擦风险上升，推升避险需求；罗马尼亚官方尚未指认、北约暂无正式回应）",
+      "actual": "已发生；消息后现货金约4157，暂无明显反应",
+      "reaction": "已发生；消息后现货金约4157，暂无明显反应",
+      "source": "FT / First Squawk / LiveSquawk",
+      "link": "https://x.com/ftbrussels/status/2110690092566130959",
+      "url": "https://x.com/ftbrussels/status/2110690092566130959",
+      "note": "来源：FT Europe 19:11、LiveSquawk 19:12、First Squawk 19:18 台北。是18:23罗马尼亚无人机击船事件的升级跟进。https://x.com/ftbrussels/status/2110690092566130959 ；https://x.com/FirstSquawk/status/2110691667984703761"
     }
   ],
   "activity": [
