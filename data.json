@@ -1736,13 +1736,13 @@
     },
     {
       "time": "2026-10-15 20:30",
-      "name": "美国9月PPI与零售销售全面超预期：PPI月率+1.3%（预期+0.6%）、年率+6.3%（预期+5.4%）；核心PPI月率+0.7%/年率+5.0%亦超预期；零售销售月率+0.8%（预期+0.3%），核心零售+0.9%",
+      "name": "美国9月PPI与零售销售全面超预期：PPI月率+1.3%（预期+0.6%）、年率+6.3%（预期+5.4%）；核心PPI月率+0.7%/年率+5.0%亦超预期；零售销售月率+0.8%（预期+0.3%），不含汽车零售+0.9%，剔除加油站仅+0.2%、核心零售仅+0.1%（预期+0.3%），涨幅主要来自油价",
       "category": "宏观",
       "impact": "利空",
       "expected": "继昨日CPI偏热后，生产者物价与消费支出双双大幅超预期，强化通胀粘性与加息预期，利空黄金",
       "actual": "快讯公布后现货金约4148（公布前约4151–4154），初请19.9万符合预期，费城联储20.9低于预期28左右",
       "reaction": "快讯公布后现货金约4148（公布前约4151–4154），初请19.9万符合预期，费城联储20.9低于预期28左右",
-      "note": "来源：DeItaone 20:32、First Squawk / FinancialJuice 20:30–20:37 台北。核心PPI与核心零售来自FinancialJuice。https://x.com/DeItaone/status/2110710331668349403",
+      "note": "来源：DeItaone 20:32、First Squawk / FinancialJuice 20:30–20:37 台北。核心PPI与核心零售来自FinancialJuice。https://x.com/DeItaone/status/2110710331668349403 更正（黄金新闻助手 09:10，据BLS/CNBC）：前值上修至+1.3%；原写“核心零售+0.9%”不准确。",
       "source": "DeItaone / First Squawk / FinancialJuice",
       "url": "https://x.com/DeItaone/status/2110710331668349403",
       "link": "https://x.com/DeItaone/status/2110710331668349403"
@@ -2762,6 +2762,13 @@
       "status": "完成",
       "summary": "早盘3段口播已写入scripts：沃什观望/PPI抗跌/机构长短线；现价约4158.6；已请新闻/机构/Claude/文案助手；Telegram桌面检查进行中",
       "notified": true
+    },
+    {
+      "time": "2026-10-16 09:12",
+      "task": "数据更正",
+      "status": "完成",
+      "summary": "零售销售前值上修1.3%；核心零售实为+0.1%（剔加油站+0.2%），昨晚事件里写的+0.9%已更正",
+      "notified": false
     }
   ],
   "agents": [
@@ -3060,7 +3067,7 @@
       "name": "美国9月零售销售月率",
       "importance": 4,
       "expected": "0.3%",
-      "previous": "1.1%",
+      "previous": "1.3%（上修）",
       "actual": "0.8%",
       "source": "金十数据",
       "gold_impact": "利空"
