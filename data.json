@@ -640,6 +640,11 @@
       "time": "2026-10-16 22:37",
       "price": 4190.5,
       "source": "gold-api.com"
+    },
+    {
+      "time": "2026-10-16 23:12",
+      "price": 4184.9,
+      "source": "gold-api"
     }
   ],
   "calls": [
