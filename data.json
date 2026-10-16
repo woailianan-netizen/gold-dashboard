@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16 22:07",
+  "updated": "2026-10-16 22:15",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -626,6 +626,11 @@
       "time": "2026-10-16 21:58",
       "price": 4185.5,
       "source": "博主监控"
+    },
+    {
+      "time": "2026-10-16 22:14",
+      "price": 4189.5,
+      "source": "gold-api.com"
     }
   ],
   "calls": [
@@ -2150,6 +2155,20 @@
       "category": "美联储",
       "link": "https://x.com/FirstSquawk/status/2110940621783593307",
       "reaction": "已发生；金价约4168升至约4182"
+    },
+    {
+      "time": "2026-10-16 22:02",
+      "name": "沙特领导的联军官方证实：过去数小时拦截并摧毁一枚射向红海石油出口港延布(Yanbu)的弹道导弹、红海上空两枚巡航导弹，以及利雅得地区和沙特南部三架无人机（胡塞武装新一轮多路袭击）",
+      "title": "沙特联军证实拦截射向延布的弹道导弹及利雅得无人机",
+      "category": "地缘",
+      "impact": "利多",
+      "expected": "小幅利多黄金（傍晚延布警报获官方证实，胡塞把袭击扩大到沙特首都和红海石油出口枢纽，海湾石油供应与避险风险升温；但全部被拦截、未见设施受损，力度有限）",
+      "actual": "已发生；消息后现货金约4189.5，暂无明显反应（同时段纳指跌1%至盘中低点）",
+      "reaction": "已发生；消息后现货金约4189.5，暂无明显反应（同时段纳指跌1%至盘中低点）",
+      "note": "来源：First Squawk 22:02 台北 https://x.com/FirstSquawk/status/2111095559432122704 ；联军发言人马勒基（Al Arabiya 22:08）https://x.com/AlArabiya_Eng/status/2111097040587415678 ；路透：亚洲巡回赛因利雅得遇袭推迟沙特国际赛 https://x.com/Reuters/status/2111094906827468996",
+      "source": "First Squawk / Saudi-led coalition",
+      "url": "https://x.com/FirstSquawk/status/2111095559432122704",
+      "link": "https://x.com/FirstSquawk/status/2111095559432122704"
     }
   ],
   "activity": [
