@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16 11:38",
+  "updated": "2026-10-16 11:41",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -452,6 +452,12 @@
       "price": 4166.1,
       "source": "gold-api.com",
       "note": "AI信号"
+    },
+    {
+      "time": "2026-10-16 11:41",
+      "price": 4168.1,
+      "source": "gold-api.com",
+      "note": "突发新闻"
     }
   ],
   "calls": [
@@ -1833,6 +1839,19 @@
       "source": "First Squawk / N12 / JPost",
       "url": "https://x.com/FirstSquawk/status/2110726794878021884",
       "link": "https://x.com/FirstSquawk/status/2110726794878021884"
+    },
+    {
+      "time": "2026-10-16 11:40",
+      "name": "特朗普被问及是否对伊朗使用「炸弹之母」(MOAB) 时未予排除，称在考虑投下「一枚超大炸弹，像一枚小型核弹」，可能在美国中期选举后，还说「可能得去打镐山（Pickaxe Mountain，伊朗地下核设施）」；同时表示不会用核武器",
+      "expected": "利多黄金（美伊打击风险由媒体报道升级为总统亲口表态，避险升温）",
+      "actual": "已发生（讲话约08:53台北，彭博11:40台北发布）；金价约4168，暂无明显反应",
+      "note": "来源：Bloomberg 11:40 台北 https://x.com/business/status/2110938826797445608 ；原话转述 https://x.com/HormuzLetter/status/2110896915881586900 ；此前CNN 10-15 12:05 已报美军MOAB打击方案",
+      "source": "Bloomberg",
+      "url": "https://x.com/business/status/2110938826797445608",
+      "impact": "利多",
+      "category": "地缘",
+      "link": "https://x.com/business/status/2110938826797445608",
+      "reaction": "已发生；金价约4168，暂无明显反应"
     }
   ],
   "activity": [
