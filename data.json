@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16 11:55",
+  "updated": "2026-10-16 11:56",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -464,6 +464,12 @@
       "price": 4182.3,
       "source": "gold-api.com",
       "note": "突发新闻"
+    },
+    {
+      "time": "2026-10-16 11:56",
+      "price": 4182.0,
+      "source": "gold-api.com",
+      "note": "AI信号"
     }
   ],
   "calls": [
