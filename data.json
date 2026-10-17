@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17 09:28",
+  "updated": "2026-10-17 09:43",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -2214,6 +2214,20 @@
       "source": "First Squawk / Saudi-led coalition",
       "url": "https://x.com/FirstSquawk/status/2111095559432122704",
       "link": "https://x.com/FirstSquawk/status/2111095559432122704"
+    },
+    {
+      "time": "2026-10-17 09:30",
+      "name": "特朗普签署行政令：在《格雷厄姆制裁俄伊法》多项关税与制裁生效前予以豁免（含对俄商品及俄油主要进口国的二次关税），称符合美国国家利益；既有对俄行政令制裁仍保留",
+      "title": "特朗普豁免格雷厄姆法多项对俄关税与制裁",
+      "category": "地缘",
+      "impact": "利空",
+      "expected": "偏利空黄金（豁免生效可避免对俄油大买家征收最高100%二次关税、以及对俄商品大幅加征关税，短期降低贸易战/地缘升级风险，避险需求降温；同时有助压低柴油价格叙事，能源溢价与通胀担忧或缓和。既有对俄制裁仍在，力度非全面松绑）",
+      "actual": "已发生；路透X 09:30台北报道；现货金约4166.100098，亚洲周末时段反应待观察",
+      "reaction": "已发生；路透X 09:30台北报道；现货金约4166.100098，亚洲周末时段反应待观察",
+      "note": "白宫行政令日期2026-10-16 https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/ ；路透 https://x.com/Reuters/status/2111268560899015124 ；彭博：中期选举前压低柴油价背景 https://news.bgov.com/tariff-news/trump-waives-russia-energy-tariffs-sanctions-in-graham-law",
+      "source": "White House / Reuters / Bloomberg",
+      "url": "https://x.com/Reuters/status/2111268560899015124",
+      "link": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
     }
   ],
   "activity": [
