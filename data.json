@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17 20:24",
+  "updated": "2026-10-17 20:28",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -2297,6 +2297,20 @@
       "source": "White House / Reuters / Bloomberg",
       "url": "https://x.com/Reuters/status/2111268560899015124",
       "link": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
+    },
+    {
+      "time": "2026-10-17 20:13",
+      "title": "伊朗革命卫队称霍尔木兹又一艘油轮触雷，一天内第二艘；埃及塞西称必要时出兵保卫沙特",
+      "name": "伊朗革命卫队称霍尔木兹海峡又一艘油轮触雷（距今晨超级油轮触雷起火仅数小时，一天第二艘）；UKMTO周报称截至10/16一周霍尔木兹周边袭船12起、为3月以来最密；20:26 埃及总统塞西称必要时准备保卫沙特",
+      "category": "地缘",
+      "impact": "利多",
+      "expected": "偏利多黄金（霍尔木兹航运风险和海湾冲突外溢升级，埃及表态把冲突范围扩到更多国家，推升避险和油价风险溢价；但触雷仍是伊朗单方说法、未获独立证实，油价走高也会强化通胀和加息担忧，压制一部分涨幅）",
+      "actual": "已发生；周末休市，现货金约4166.1无报价变化，下周一开盘或有避险跳空，需观察",
+      "reaction": "已发生；周末休市，现货金约4166.1无报价变化，下周一开盘或有避险跳空，需观察",
+      "note": "来源：First Squawk 20:13 台北 https://x.com/FirstSquawk/status/2111430468176630022 ；OSINTdefender 20:27 https://x.com/sentdefender/status/2111433806846509294 ；今晨超级油轮触雷（半岛电视台 09:50） https://x.com/AJEnglish/status/2111273707083817356 ；UKMTO周报 https://x.com/sentdefender/status/2111422799931674924 ；埃及 First Squawk 20:26 https://x.com/FirstSquawk/status/2111433710977589727 。小号称伊朗宣布海峡关闭、美油破101，主流未证实，未采信",
+      "source": "First Squawk / OSINTdefender / Al Jazeera / UKMTO",
+      "url": "https://x.com/FirstSquawk/status/2111430468176630022",
+      "link": "https://x.com/FirstSquawk/status/2111430468176630022"
     }
   ],
   "activity": [
@@ -4063,6 +4077,13 @@
       "status": "无新内容",
       "summary": "7博主主页连续第14轮服务异常无法读取，基准不变；4群群主无新（大飞仍10/16 21:21隔夜不入多，阿然仍17:26新作推送）",
       "notified": false
+    },
+    {
+      "time": "2026-10-17 20:28",
+      "task": "突发新闻监控",
+      "status": "完成",
+      "summary": "新增1条：霍尔木兹一天内第二艘油轮触雷（IRGC说法）+埃及称必要时保卫沙特，偏利多；特朗普/Fed/白宫/财政部无新帖",
+      "notified": true
     }
   ],
   "agents": [
