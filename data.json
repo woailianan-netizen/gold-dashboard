@@ -660,6 +660,11 @@
       "time": "2026-10-17 10:05",
       "price": 4166.1,
       "source": "gold-api"
+    },
+    {
+      "time": "2026-10-17 11:01",
+      "price": 4166.1,
+      "source": "gold-api"
     }
   ],
   "calls": [
