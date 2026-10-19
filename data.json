@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19 18:56",
+  "updated": "2026-10-19 18:58",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -2590,6 +2590,20 @@
       "source": "IRGC / SNN / CNBC / Bloomberg / WSJ",
       "url": "https://x.com/DeItaone/status/2111920821870485697",
       "link": "https://x.com/DeItaone/status/2111920821870485697"
+    },
+    {
+      "time": "2026-10-19 18:47",
+      "title": "传美伊本周或宣布突破性协议，以遏制冲突升级",
+      "name": "阿拉伯新闻网站 Al-Araby Al-Jadeed 援引知情调停人士：美国与伊朗之间的突破性协议可能本周内宣布，谈判方正努力缩小分歧，目的是阻止双方冲突再度升级（仅单一媒体匿名消息源，美伊官方均未证实）",
+      "category": "地缘",
+      "impact": "利空",
+      "expected": "偏利空黄金（美伊战事若达成协议，霍尔木兹和海湾的避险溢价会退潮，油价回落也会压低通胀和加息担忧，后者对金价略有支撑；但目前只是匿名消息源报道、未获官方证实，影响先看市场是否跟进）",
+      "actual": "已发生；消息后现货金约4171.6（18:58台北），较18:42约4166.2未跌反小涨，暂无明显反应",
+      "reaction": "已发生；消息后现货金约4171.6（18:58台北），较18:42约4166.2未跌反小涨，暂无明显反应",
+      "note": "来源：Al-Araby Al-Jadeed（经 DeItaone 18:47、First Squawk 18:48 台北转发）https://x.com/DeItaone/status/2112133649101357310 ；https://x.com/FirstSquawk/status/2112133756513640791",
+      "source": "Al-Araby Al-Jadeed / DeItaone / First Squawk",
+      "url": "https://x.com/DeItaone/status/2112133649101357310",
+      "link": "https://x.com/DeItaone/status/2112133649101357310"
     }
   ],
   "activity": [
