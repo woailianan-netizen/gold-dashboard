@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20 20:48",
+  "updated": "2026-10-20 20:55",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -999,6 +999,11 @@
     {
       "time": "2026-10-20 20:47",
       "price": 4125.9,
+      "source": "gold-api.com"
+    },
+    {
+      "time": "2026-10-20 20:54",
+      "price": 4120.9,
       "source": "gold-api.com"
     }
   ],
@@ -3196,6 +3201,20 @@
       "source": "FinancialJuice / LiveSquawk（伊朗革命卫队）",
       "url": "https://x.com/LiveSquawk/status/2112475706366271635",
       "link": "https://x.com/LiveSquawk/status/2112475706366271635"
+    },
+    {
+      "time": "2026-10-20 20:44",
+      "title": "卡塔尔与巴基斯坦提出美伊「妥协方案」，据称获美伊双方认可，由巴陆军参谋长携带",
+      "name": "阿拉伯新报（Al-Araby Al-Jadeed）援引知情人士称：卡塔尔和巴基斯坦提出一份能同时满足美国和伊朗诉求的「妥协方案」，旨在防止局势升级并恢复谈判，方案包含对伊朗解冻资金要求的部分回应；巴基斯坦陆军参谋长穆尼尔（目前在德黑兰）携带该方案，据称已获美伊双方认可。LiveSquawk、FirstSquawk 20:44–20:45台北快讯，阿拉比亚电视台也有类似报道；卡塔尔外交部同时重申坚持斡旋。美伊官方暂未证实",
+      "category": "地缘",
+      "impact": "利空",
+      "expected": "偏利空（美伊停火谈判若有实质进展，避险需求下降，油价风险溢价回吐；不过油价回落会缓和通胀和加息担忧，对金价有一定对冲，所以短线偏空但幅度有限。属单方信源，需等美伊官方表态和油价反应确认）",
+      "actual": "已发生（阿拉伯新报单方信源，美伊官方未证实）；20:44消息前后现货金由20:47约4125.9小幅回落至20:54约4120.9（约跌5美元），反应温和",
+      "reaction": "已发生（阿拉伯新报单方信源，美伊官方未证实）；20:44消息前后现货金由20:47约4125.9小幅回落至20:54约4120.9（约跌5美元），反应温和",
+      "note": "来源：LiveSquawk 20:44台北 https://x.com/LiveSquawk/status/2112525332729495783 ；FirstSquawk 20:44–20:45台北 https://x.com/FirstSquawk/status/2112525451222745517 、https://x.com/FirstSquawk/status/2112525501403435519 、https://x.com/FirstSquawk/status/2112525520512651513",
+      "source": "阿拉伯新报（经 LiveSquawk / FirstSquawk）",
+      "url": "https://x.com/LiveSquawk/status/2112525332729495783",
+      "link": "https://x.com/LiveSquawk/status/2112525332729495783"
     }
   ],
   "activity": [
