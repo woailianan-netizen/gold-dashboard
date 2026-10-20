@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20 17:33",
+  "updated": "2026-10-20 17:39",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -939,6 +939,11 @@
     {
       "time": "2026-10-20 17:23",
       "price": 4126.7,
+      "source": "gold-api.com"
+    },
+    {
+      "time": "2026-10-20 17:39",
+      "price": 4121.2,
       "source": "gold-api.com"
     }
   ],
@@ -3122,6 +3127,20 @@
       "source": "半岛电视台 / First Squawk / 彭博",
       "url": "https://x.com/FirstSquawk/status/2112350364905426982",
       "link": "https://x.com/FirstSquawk/status/2112350364905426982"
+    },
+    {
+      "time": "2026-10-20 17:22",
+      "title": "伊朗革命卫队称霍尔木兹两艘油轮触雷起火被拦停，并称击落美军第54架MQ-9无人机",
+      "name": "伊朗革命卫队（Sepah通讯社/塔斯尼姆，FinancialJuice 17:22、LiveSquawk 17:27台北快讯）称：革命卫队海军在霍尔木兹海峡南部「未经授权航道」布设的水雷爆炸，两艘「违规」油轮起火并被拦停；同时称其防空系统昨夜在海峡上空击落美军第54架MQ-9「死神」无人机（华盛顿邮报统计至少45架）。均为伊朗单方说法，未获美方或独立证实；同一时段沙特联军拦截胡塞射向利雅得的导弹，巴基斯坦陆军参谋长抵达德黑兰",
+      "category": "地缘",
+      "impact": "中性",
+      "expected": "中性略偏多（霍尔木兹袭船和美伊直接军事摩擦再升级，避险和油价风险溢价有支撑；但近期市场传导是油价走高→通胀与加息担忧→美债收益率和美元偏强，压过避险，且触雷是伊朗单方说法、本月已多次发生，市场边际反应在减弱。需盯布伦特和10年期美债）",
+      "actual": "已发生（伊朗官方说法，待证实）；消息前后现货金约4121–4127横盘，17:39约4121.2，暂无明显反应",
+      "reaction": "已发生（伊朗官方说法，待证实）；消息前后现货金约4121–4127横盘，17:39约4121.2，暂无明显反应",
+      "note": "来源：FinancialJuice 17:22台北 https://x.com/financialjuice/status/2112474570028355984 ；LiveSquawk 17:27台北 https://x.com/LiveSquawk/status/2112475706366271635 ；巴陆军参谋长抵德黑兰 LiveSquawk 17:35 https://x.com/LiveSquawk/status/2112477917418856924",
+      "source": "FinancialJuice / LiveSquawk（伊朗革命卫队）",
+      "url": "https://x.com/LiveSquawk/status/2112475706366271635",
+      "link": "https://x.com/LiveSquawk/status/2112475706366271635"
     }
   ],
   "activity": [
