@@ -87,7 +87,7 @@ function renderBScores(){const note=$("bscnote"),box=$("bsc"),upd=$("bscupd");if
 if(!BS||!(BS.summary&&BS.summary.rows&&BS.summary.rows.length)){note.textContent="首份排行 10-29 早上 6:30 前后出";box.innerHTML="";return;}
 const sm=BS.summary;if(upd)upd.textContent=sm.updated?("更新 "+sm.updated):"";
 note.textContent=sm.note||"";
-const rows=sm.rows.slice().sort((a,b)=>{const wa=a.winAll==null?-1:a.winAll,wb=b.winAll==null?-1:b.winAll;if(wb!==wa)return wb-wa;return (b.samples||0)-(a.samples||0);});
+const rows=sm.rows.slice().sort((a,b)=>{const wa=a.win7d==null?-1:a.win7d,wb=b.win7d==null?-1:b.win7d;if(wb!==wa)return wb-wa;return (b.samples||0)-(a.samples||0);});
 box.innerHTML=rows.map(r=>{const name=blogLabel(r.name);const samp=r.samples||0;const note2=samp<5?"样本不足":(r.note||"—");
 const w7=r.win7d==null?"—":((r.win7d*100).toFixed(0)+"%");
 const wall=r.winAll==null?"—":((r.winAll*100).toFixed(0)+"%");
