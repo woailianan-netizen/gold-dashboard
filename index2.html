@@ -71,11 +71,29 @@ a{color:var(--blue);text-decoration:none}
 <div class="glass"><h2>财经日历 <span>金十数据 · 台北时间</span></h2><div id="cal"></div></div>
 <div class="glass"><h2>重要事件 <span>突发与市场反应</span></h2><div id="ev"></div></div>
 <div class="glass"><h2>最新观点 <span>博主 / 群主 / 机器人</span></h2><div id="cl"></div></div>
+<div class="glass"><h2>博主准确度排行 <span id="bscupd">样本不足时标注</span></h2>
+<div class="m" id="bscnote" style="font-size:12px;color:var(--mut);margin-bottom:10px"></div>
+<div id="bsc"></div></div>
 <div class="foot">时间均为台北时间 · 金价来自 api.gold-api.com · 数据每60秒自动刷新<br>仅作记录与复盘，不构成投资建议 · <a href="./">返回完整看板</a></div>
 </div>
 <script>
 const $=id=>document.getElementById(id);let D=null,live=null;
 const esc=s=>String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const BNO={"大飞论长短":1,"七王爷":2,"阿然爱囤金":3,"飞哥说财":4,"财经汪院长":5,"当铺财经":6,"大宝上海金融":7};
+function blogLabel(n){const s=String(n||"");const m=s.match(/^(\d+)号\s*(.+)$/);if(m)return m[1]+"号 "+m[2];
+for(const [k,no] of Object.entries(BNO)){if(s===k||s.startsWith(k))return no+"号 "+s;}return s;}
+let BS=null;
+function renderBScores(){const note=$("bscnote"),box=$("bsc"),upd=$("bscupd");if(!note||!box)return;
+if(!BS||!(BS.summary&&BS.summary.rows&&BS.summary.rows.length)){note.textContent="首份排行 10-29 早上 6:30 前后出";box.innerHTML="";return;}
+const sm=BS.summary;if(upd)upd.textContent=sm.updated?("更新 "+sm.updated):"";
+note.textContent=sm.note||"";
+const rows=sm.rows.slice().sort((a,b)=>{const wa=a.winAll==null?-1:a.winAll,wb=b.winAll==null?-1:b.winAll;if(wb!==wa)return wb-wa;return (b.samples||0)-(a.samples||0);});
+box.innerHTML=rows.map(r=>{const name=blogLabel(r.name);const samp=r.samples||0;const note2=samp<5?"样本不足":(r.note||"—");
+const w7=r.win7d==null?"—":((r.win7d*100).toFixed(0)+"%");
+const wall=r.winAll==null?"—":((r.winAll*100).toFixed(0)+"%");
+return `<div class="item"><div class="t"><span>${esc(name)}</span><span>${wall}</span></div><div class="m">近7天 ${w7} · 对/错 ${r.right7d||0}/${r.wrong7d||0} · 样本 ${samp} · ${esc(note2)}</div></div>`;}).join("");}
+async function loadScores(){try{const r=await fetch("blogger-scores.json?t="+Date.now(),{cache:"no-store"});if(r.ok){BS=await r.json();renderBScores()}}catch(e){renderBScores()}}
+
 const col={"大":"#3b82f6","阿":"#f5a524","七":"#8b6cf0","飞":"#12a374","汪":"#ef4b5b","当":"#0ea5a4","龙":"#e11d48","爱":"#f97316","C":"#6366f1","金":"#d4a017","抖":"#ec4899"};
 function stCls(s){return /目标/.test(s)?"g":/止损/.test(s)?"r":/过期/.test(s)?"x":"a"}
 function render(){if(!D)return;
@@ -111,7 +129,7 @@ function render(){if(!D)return;
  const types={};ag.forEach(a=>types[a.type]=(types[a.type]||0)+1);
  const cs=["#f5a524","#3b82f6","#12a374","#8b6cf0","#ef4b5b"];const tt=Object.entries(types);
  $("mix").innerHTML=tt.map((t,i)=>`<div style="flex:${t[1]};background:${cs[i%5]}">${esc(t[0])} ${t[1]}</div>`).join("");
- $("avs").innerHTML=ag.slice(0,12).map(a=>{const k=a.name[0];const c=col[k]||"#6d6df0";return `<div class="av"><div class="c" style="background:linear-gradient(145deg,${c},${c}bb)">${esc(k)}</div><small>${esc(a.name.slice(0,6))}</small></div>`}).join("");
+ $("avs").innerHTML=ag.slice(0,12).map(a=>{const bare=(a.call_source||a.name||"").replace(/^\d+号\s*/,"");const k=bare[0]||a.name[0];const c=col[k]||"#6d6df0";const short=blogLabel(a.name).replace(/^(\d+)号\s*/,"$1·").slice(0,8);return `<div class="av"><div class="c" style="background:linear-gradient(145deg,${c},${c}bb)">${esc(k)}</div><small>${esc(short)}</small></div>`}).join("");
  // summaries
  const sm=D.summaries.slice(-1)[0];if(sm){$("smt").textContent="#"+sm.id+" · "+sm.time;
   $("sm").innerHTML=`<div class="item"><div class="t">${esc(sm.title)}</div></div><div class="lead">${esc(sm.lead)}</div>`+(sm.items||[]).slice(0,7).map(x=>`<div class="src"><b>${esc(x.source)}</b>　${esc(x.text)}</div>`).join("")}
@@ -123,10 +141,10 @@ function render(){if(!D)return;
  $("ev").innerHTML=D.events.slice(-5).reverse().map(e=>`<div class="item"><div class="t"><span>${esc(String(e.name).slice(0,60))}${String(e.name).length>60?"…":""}</span></div><div class="m">${esc(e.time)}　${esc(String(e.expected||"").slice(0,70))}</div></div>`).join("");
  // calls
  $("cl").innerHTML=D.calls.slice(-8).reverse().map(c=>{const bull=/多/.test(c.direction)&&!/空/.test(c.direction),bear=/空/.test(c.direction)&&!/多/.test(c.direction);
-  return `<div class="item"><div class="t"><span>${esc(c.source_name)}</span><span class="pill ${bull?"g":bear?"r":"x"}">${esc((c.direction||"").slice(0,8))}</span></div><div class="m">${esc(c.time)}　${esc(c.levels||c.advice||"")}</div></div>`}).join("");
+  return `<div class="item"><div class="t"><span>${esc(blogLabel(c.source_name))}</span><span class="pill ${bull?"g":bear?"r":"x"}">${esc((c.direction||"").slice(0,8))}</span></div><div class="m">${esc(c.time)}　${esc(c.levels||c.advice||"")}</div></div>`}).join("");
 }
 async function load(){try{const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"});if(r.ok){D=await r.json();render()}}catch(e){}}
 async function px(){try{const r=await fetch("https://api.gold-api.com/price/XAU",{cache:"no-store"});const j=await r.json();if(j.price>0){live=j.price;render()}}catch(e){}}
 function clk(){$("clk").textContent=new Date(Date.now()+8*3600e3).toISOString().slice(11,16)}
-load();px();clk();setInterval(load,60000);setInterval(px,60000);setInterval(clk,15000);
+load();loadScores();px();clk();setInterval(load,60000);setInterval(loadScores,60000);setInterval(px,60000);setInterval(clk,15000);
 </script></body></html>
