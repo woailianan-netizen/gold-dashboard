@@ -645,6 +645,23 @@
     "source": "Investing.com XAU/USD 日线（交易日北京时间06:00至次日05:00）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高12美元）；发布时价格为看板 gold-api.com 快照"
    },
    "judged_at": "2026-10-29 06:30"
+  },
+  {
+   "id": 25,
+   "no": 2,
+   "name": "七王爷",
+   "time": "2026-10-29 04:23",
+   "direction": "多",
+   "entry": null,
+   "stop": null,
+   "target": null,
+   "price_at_call": null,
+   "price_note": "发布时金价未取到（04:23无快照）；08:14 gold-api.com 4045.8",
+   "source": "https://www.douyin.com/video/7701801599865549669",
+   "result": "待判定",
+   "call_id": 226,
+   "raw_direction": "微微利多；危险期度过，11月3号有望上涨",
+   "raw_levels": "未提"
   }
  ],
  "summary": {
