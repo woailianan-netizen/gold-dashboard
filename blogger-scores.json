@@ -713,6 +713,23 @@
    "call_id": 232,
    "raw_direction": "目前行情偏空头，反弹高空",
    "raw_levels": "黄关注4060-4070附近，目标4000，止损4085"
+  },
+  {
+   "id": 29,
+   "no": 1,
+   "name": "大飞论长短",
+   "time": "2026-10-29 09:54",
+   "direction": "多",
+   "entry": null,
+   "stop": null,
+   "target": "4100",
+   "price_at_call": 4060.8,
+   "price_note": "2026-10-29 10:09 gold-api.com 4060.8（发现时）",
+   "source": "https://www.douyin.com/video/7701902249068449449",
+   "result": "待判定",
+   "call_id": 234,
+   "raw_direction": "整体趋势良好，冲上4100只是时间问题",
+   "raw_levels": "今日低位看30附近，高点看80；金价冲上4100只是时间问题"
   }
  ],
  "summary": {
