@@ -730,6 +730,23 @@
    "call_id": 234,
    "raw_direction": "整体趋势良好，冲上4100只是时间问题",
    "raw_levels": "今日低位看30附近，高点看80；金价冲上4100只是时间问题"
+  },
+  {
+   "id": 30,
+   "no": 3,
+   "name": "阿然爱囤金",
+   "time": "2026-10-29 11:55",
+   "direction": "多",
+   "entry": "4000下方（建议等待）",
+   "stop": null,
+   "target": null,
+   "price_at_call": 4038.3,
+   "price_note": "2026-10-29 12:03 gold-api.com 4038.3",
+   "source": "https://www.douyin.com/video/7701933373941402920",
+   "result": "待判定",
+   "call_id": 236,
+   "raw_direction": "反弹接近尾声，或二次探底，4000下方买盘支撑概率大，11月或强势反弹",
+   "raw_levels": "4100为压力位；建议等待4000下方位置"
   }
  ],
  "summary": {
