@@ -747,6 +747,23 @@
    "call_id": 236,
    "raw_direction": "反弹接近尾声，或二次探底，4000下方买盘支撑概率大，11月或强势反弹",
    "raw_levels": "4100为压力位；建议等待4000下方位置"
+  },
+  {
+   "id": 31,
+   "no": 7,
+   "name": "大宝上海金融",
+   "time": "2026-10-29 12:38",
+   "direction": "多",
+   "entry": "回踩4025-4030区域",
+   "stop": null,
+   "target": null,
+   "price_at_call": 4039.6,
+   "price_note": "2026-10-29 12:53 gold-api.com 4039.6（发现时快照）",
+   "source": "https://www.douyin.com/video/7701944522561520768",
+   "result": "待判定",
+   "call_id": 238,
+   "raw_direction": "4025-4030区域是多的区域，不是追空的区域，建议等待回踩后再操作",
+   "raw_levels": "支撑4025-4030；数据偏强可能测试4028甚至4000；压力/止损/目标未提"
   }
  ],
  "summary": {
