@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30 21:14",
+  "updated": "2026-10-30 21:16",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -5239,6 +5239,18 @@
       "actual": "已发生；现货约3965.3（gold-api 20:25），未见避险拉升",
       "link": "https://x.com/zerohedge/status/2116144183442612287",
       "note": "来源：zerohedge 20:24 台北 https://x.com/zerohedge/status/2116144183442612287 ；LiveSquawk 20:23 https://x.com/LiveSquawk/status/2116144072809173049 ；油价 https://x.com/zerohedge/status/2116143691538604324 ；白银 https://x.com/DeItaone/status/2116141644043194710"
+    },
+    {
+      "time": "2026-10-30 21:08",
+      "title": "现货黄金日内跌2%至3939.65美元，创2025年11月以来最低；白银跌5.3%至49.63",
+      "name": "DeItaone 21:08台北：现货金跌2%至3939.65美元/盎司，为2025年11月以来最低；21:09现货银跌5.3%至49.63。同时德国10月CPI初值同比2.8%低于预期3.0%（21:01），欧洲通胀降温",
+      "category": "市场",
+      "impact": "利空",
+      "expected": "利空（关键价位失守、贵金属集体抛售，技术面卖压延续；霍尔木兹局势未带来避险买盘）",
+      "actual": "已发生；低点后小幅反弹，现货约3946.1（gold-api 21:15）",
+      "reaction": "已发生；低点后小幅反弹，现货约3946.1（gold-api 21:15）",
+      "link": "https://x.com/DeItaone/status/2116155230870286712",
+      "note": "来源：DeItaone 21:08 https://x.com/DeItaone/status/2116155230870286712 ；白银 https://x.com/DeItaone/status/2116155481030840560 ；德国CPI https://x.com/DeItaone/status/2116153643720167727"
     }
   ],
   "activity": [
