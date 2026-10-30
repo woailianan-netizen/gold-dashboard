@@ -5201,6 +5201,19 @@
       "actual": "现货金约3974（gold-api.com 15:50），较15:37的约3981续跌",
       "reaction": "现货金约3974（gold-api.com 15:50），较15:37的约3981续跌",
       "note": "来源：路透 https://x.com/Reuters/status/2116073360572420140 ；乌克兰 https://x.com/Reuters/status/2116071385919295798"
+    },
+    {
+      "time": "2026-10-30 16:33",
+      "name": "WSJ：乌克兰袭击俄罗斯萨马拉州炼油厂，结束了两周的炼油厂袭击暂停（此前15:35报道乌克兰在特朗普施压下暂停打击）",
+      "expected": "多空交织（俄供油风险推升油价、通胀与加息预期压金，地缘避险托底）",
+      "actual": "已发生；现货约3988暂无明显反应（gold-api 16:40）",
+      "note": "来源：WSJ 16:33 台北；https://x.com/WSJ/status/2116086079119929484",
+      "source": "WSJ",
+      "url": "https://x.com/WSJ/status/2116086079119929484",
+      "impact": "多空交织",
+      "category": "地缘",
+      "link": "https://x.com/WSJ/status/2116086079119929484",
+      "reaction": "已发生；现货约3988暂无明显反应（gold-api 16:40）"
     }
   ],
   "activity": [
