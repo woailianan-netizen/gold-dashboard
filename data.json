@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30 20:15",
+  "updated": "2026-10-30 20:27",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -5228,6 +5228,17 @@
       "link": "https://x.com/DeItaone/status/2116134094169903443",
       "note": "来源：DeItaone 19:44/19:42/19:53 台北；https://x.com/DeItaone/status/2116134094169903443",
       "reaction": "已发生；现货约3968.4，较19:39约3978.7走低，暂无避险拉升（gold-api 19:55）；同期纳指期货跌超2%（WSJ 19:41）"
+    },
+    {
+      "time": "2026-10-30 20:21",
+      "title": "伊朗革命卫队海军：一艘载油超200万桶的超级油轮在霍尔木兹触雷爆炸起火，称是今天第3艘；同时现货白银跌破50美元",
+      "name": "伊朗革命卫队海军（Sepahnews/IRIB，约20:21台北起被转发；zerohedge 20:24援引Fars）：一艘载油超过200万桶的超级油轮在霍尔木兹海峡「未经授权航线」触雷爆炸起火，已在海峡口被弃船，称是今天第3艘爆炸起火的油轮（伊朗单方说法，未获独立证实）。zerohedge 20:22称油价因霍尔木兹油轮遇袭上涨。另：DeItaone 20:14称现货白银自2025年11月以来首次跌破50美元/盎司，贵金属整体承压",
+      "category": "地缘",
+      "impact": "多空交织",
+      "expected": "多空交织（霍尔木兹航运风险再升级抬升避险 vs 油价上涨推高通胀和加息预期压金；白银破50显示贵金属卖压仍重）",
+      "actual": "已发生；现货约3965.3（gold-api 20:25），未见避险拉升",
+      "link": "https://x.com/zerohedge/status/2116144183442612287",
+      "note": "来源：zerohedge 20:24 台北 https://x.com/zerohedge/status/2116144183442612287 ；LiveSquawk 20:23 https://x.com/LiveSquawk/status/2116144072809173049 ；油价 https://x.com/zerohedge/status/2116143691538604324 ；白银 https://x.com/DeItaone/status/2116141644043194710"
     }
   ],
   "activity": [
