@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02 17:37",
+  "updated": "2026-11-02 17:39",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -23419,6 +23419,13 @@
       "task": "博主监控",
       "status": "无新",
       "summary": "17:33 搜索最大aweme均等于基准无新作品；4会员群无新群主消息；现货约3899.7 gold-api；未通知",
+      "notified": false
+    },
+    {
+      "time": "2026-11-02 17:39",
+      "task": "突发新闻",
+      "status": "无新内容",
+      "summary": "17:24–17:38：特朗普X无新帖、Truth Social为中期拉票旧帖；Fed/白宫/财政部/DeItaone无新帖；FirstSquawk英国PMI次要、布伦特跌4%为上轮已报旧线；CNBC美债收益率/油价为同线延伸；路透/彭博为一般稿；金价约3899.7 gold-api 17:38；没写events",
       "notified": false
     }
   ],
