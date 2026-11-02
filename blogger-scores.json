@@ -1043,6 +1043,23 @@
       "call_id": 264,
       "raw_direction": "短期下跌可能持续，黄金短期受压（中长期偏多）",
       "raw_levels": "进场、支撑、压力、止损、目标未提"
+    },
+    {
+      "id": 43,
+      "no": 3,
+      "name": "阿然爱囤金",
+      "time": "2026-11-02 12:32",
+      "direction": "空",
+      "entry": null,
+      "stop": null,
+      "target": null,
+      "price_at_call": 3900.0,
+      "price_note": "gold-api 2026-11-02 12:55 约3900.0",
+      "source": "https://www.douyin.com/video/7703427323642662182",
+      "result": "待判定",
+      "call_id": 265,
+      "raw_direction": "大趋势是空头，所有上涨都是反弹；3800挂不住人，离底不远，但大趋势未变；反弹到4300或4500仍可能是反弹而非反转",
+      "raw_levels": "进场/止损/目标未提；提及3800、4300、4500"
     }
   ],
   "summary": {
