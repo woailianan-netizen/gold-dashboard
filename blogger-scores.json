@@ -1077,6 +1077,23 @@
       "call_id": 266,
       "raw_direction": "黄白弱反弹是不好信号，可能继续下探；当前不要有多头思维；多看少动等更好点位",
       "raw_levels": "进场/止损/目标未提；原油侧此前103附近空"
+    },
+    {
+      "id": 45,
+      "no": 2,
+      "name": "七王爷",
+      "time": "2026-11-02 17:49",
+      "direction": "中性（变盘观望，消息面微利多）",
+      "entry": null,
+      "stop": null,
+      "target": null,
+      "price_at_call": 3898.3,
+      "price_note": "发布约17:49；入库时 gold-api 约3898.3",
+      "source": "https://www.douyin.com/video/7703509167966220473",
+      "result": "待判定",
+      "call_id": 267,
+      "raw_direction": "消息面偏微利多；盘面压缩待变盘；重仓少看少动等低；考虑明天周五买第三批实物，内盘不再入手",
+      "raw_levels": "伦敦金未站稳4000；止损、目标、进场区间未提"
     }
   ],
   "summary": {
