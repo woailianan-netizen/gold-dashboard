@@ -5520,6 +5520,30 @@
       "reaction": "休市中，待周一开盘",
       "link": "https://x.com/DeItaone/status/2116518332568347132",
       "source": "DeItaone转述半岛电视台"
+    },
+    {
+      "time": "2026-11-02 04:06",
+      "title": "伊朗官媒：两艘油轮在霍尔木兹「未经授权航道」触雷爆炸",
+      "name": "DeItaone 04:06台北转伊朗官媒：两艘油轮在霍尔木兹海峡「未经授权航道」触雷；Reuters 04:20台北：伊朗革命卫队海军称两艘油轮触雷后「爆炸」。伊朗单方说法，船名、伤亡未公布，暂无独立证实",
+      "category": "地缘",
+      "impact": "多空交织",
+      "expected": "多空交织：霍尔木兹航运风险再升级推升避险买盘；但油价风险溢价抬升通胀和加息预期，压制黄金",
+      "actual": "周一亚市开盘，现货约3901.5（gold-api 08:10台北），较周五约3876上涨约25",
+      "reaction": "开盘金价约3901.5，较周末报价高约25美元",
+      "link": "https://x.com/Reuters/status/2116988698508005466",
+      "note": "来源：DeItaone https://x.com/DeItaone/status/2116985225024504163 ；Reuters https://x.com/Reuters/status/2116988698508005466"
+    },
+    {
+      "time": "2026-11-02 05:50",
+      "title": "特朗普：伊朗战事「很快了结，要么达成协议，要么我们直接结束它」",
+      "name": "特朗普在爱荷华州迪比克集会间隙接受RSBN采访称：对伊朗「已取得巨大胜利，很快会了结，不管用哪种方式，要么他们达成协议，要么我们直接结束它」；同时卡塔尔斡旋的伊朗谈判已进行第三天（Reuters 03:20台北），美军加油机集结以色列拉蒙机场，中期选举周二举行",
+      "category": "地缘",
+      "impact": "多空交织",
+      "expected": "多空交织：对伊动武风险上升利多避险；但战事推油价、抬通胀和加息预期利空；若达成协议则避险回落利空",
+      "actual": "周一亚市开盘现货约3901.5（gold-api 08:10台北）",
+      "reaction": "开盘金价约3901.5",
+      "link": "https://x.com/FaytuksNetwork/status/2117011476536025369",
+      "note": "来源：RSBN采访，经 Faytuks Network 05:50台北转述 https://x.com/FaytuksNetwork/status/2117011476536025369 ；Reuters 伊卡谈判第三天 https://x.com/Reuters/status/2116973585717678429"
     }
   ],
   "activity": [
