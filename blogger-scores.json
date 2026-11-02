@@ -1094,6 +1094,24 @@
       "call_id": 267,
       "raw_direction": "消息面偏微利多；盘面压缩待变盘；重仓少看少动等低；考虑明天周五买第三批实物，内盘不再入手",
       "raw_levels": "伦敦金未站稳4000；止损、目标、进场区间未提"
+    },
+    {
+      "id": 46,
+      "no": 2,
+      "name": "七王爷",
+      "time": "2026-11-02 20:22",
+      "direction": "中性（观望等数据；实物分批买）",
+      "entry": null,
+      "stop": null,
+      "target": null,
+      "price_at_call": 3902.7,
+      "price_note": "发布约20:22；入库时 gold-api 约3902.7",
+      "source": "https://www.douyin.com/video/7703548600354630841",
+      "result": "待判定",
+      "call_id": 268,
+      "raw_direction": "等ADP/大非农后再跟进；分批买入实物黄金；不要盲目梭哈",
+      "raw_levels": "黄金重回3900美元上方；头肩颈颈部位置；止损/目标未提",
+      "basis": ""
     }
   ],
   "summary": {
