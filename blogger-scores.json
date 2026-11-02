@@ -1009,6 +1009,40 @@
       "call_id": 262,
       "raw_direction": "金银走势不乐观，关注亚洲开盘买盘是否回归，若不回归将继续承压；建议高位减仓或空单",
       "raw_levels": "进场、支撑、压力、止损、目标未提"
+    },
+    {
+      "id": 41,
+      "no": 1,
+      "name": "大飞论长短",
+      "time": "2026-11-02 09:37",
+      "direction": "偏多",
+      "entry": "未提",
+      "stop": null,
+      "target": null,
+      "price_at_call": 3911.100098,
+      "price_note": "gold-api 09:51 约3911.1（发布后数分钟取价）",
+      "source": "https://www.douyin.com/video/7703382322573362276",
+      "result": "待判定",
+      "call_id": 263,
+      "raw_direction": "伊朗释放善意，今天行情偏向震荡上行",
+      "raw_levels": "进场、支撑、压力、止损、目标未提"
+    },
+    {
+      "id": 42,
+      "no": 7,
+      "name": "大宝上海金融",
+      "time": "2026-11-02 09:48",
+      "direction": "偏空",
+      "entry": "未提",
+      "stop": null,
+      "target": null,
+      "price_at_call": 3911.100098,
+      "price_note": "gold-api 09:51 约3911.1（发布后数分钟取价）",
+      "source": "https://www.douyin.com/video/7703385143193083712",
+      "result": "待判定",
+      "call_id": 264,
+      "raw_direction": "短期下跌可能持续，黄金短期受压（中长期偏多）",
+      "raw_levels": "进场、支撑、压力、止损、目标未提"
     }
   ],
   "summary": {
