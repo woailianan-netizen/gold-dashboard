@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02 20:46",
+  "updated": "2026-11-02 20:52",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -5702,6 +5702,18 @@
       "reaction": "消息后金价维持3907–3912区间横盘",
       "link": "https://x.com/zerohedge/status/2117080755570434425",
       "note": "来源：zerohedge https://x.com/zerohedge/status/2117080755570434425 ；UKMTO WARNING 192-26 经 ME_Observer_ 转述 https://x.com/ME_Observer_/status/2117070898729504812"
+    },
+    {
+      "time": "2026-11-02 20:47",
+      "title": "路透：伊朗谈判代表已离开多哈，美伊停火草案正在传阅，后续会议仍可能",
+      "name": "路透周一援引知情官员：伊朗谈判代表周日离开与卡塔尔斡旋的多哈会谈，并非因谈判破裂；一份美伊停火相关草案正在传阅，后续会议仍可能。伊外长发言人称基础仍是9月七步方案（重开霍尔木兹、结束美海军封锁），并称可加快执行；阿拉克奇此前称协议下霍尔木兹或可两天内重开。特朗普初稿曾拒伊方方案，称选前不新开打但未排除后续动武。zerohedge 20:47台北转发（原标NY Post）。",
+      "category": "地缘",
+      "impact": "多空交织",
+      "expected": "多空交织：外交草案传阅强化停火预期、油价承压→缓和通胀与加息预期偏利多金；同时避险买盘回落偏利空；选后仍有再升级风险，方向未定",
+      "actual": "现货约3902.4（gold-api 20:50台北）",
+      "reaction": "日内油价已因外交希望回落、金价反弹至约3900上方；本条为草案细节确认，暂未见新一轮剧烈波动",
+      "link": "https://x.com/zerohedge/status/2117237110788731070",
+      "note": "来源：Reuters via Al-Monitor https://www.al-monitor.com/originals/2026/11/iranians-have-left-doha-talks-draft-proposal-us-deal-being-circulated-official ；zerohedge https://x.com/zerohedge/status/2117237110788731070"
     }
   ],
   "activity": [
