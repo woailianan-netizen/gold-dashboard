@@ -19,9 +19,9 @@
   --gold:#d4a84b;
   --text:#f2f2f8;
   --muted:#8b8799;
-  --glass:rgba(10,10,18,.55);
-  --glass2:rgba(14,12,24,.62);
-  --stroke:rgba(255,45,149,.38);
+  --glass:rgba(7,7,14,.78);
+  --glass2:rgba(10,10,18,.78);
+  --stroke:rgba(255,45,149,.42);
   --stroke2:rgba(0,229,255,.22);
   --radius:18px;
   --shadow:0 20px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.06);
@@ -34,16 +34,20 @@ body{overflow-x:hidden}
 
 .bg{
   position:fixed;inset:0;z-index:0;
-  background:#05050a center/cover no-repeat;
-  background-image:linear-gradient(180deg,rgba(5,5,10,.55),rgba(5,5,10,.78) 55%,rgba(5,5,10,.92)),
+  background:#05050a center 42%/cover no-repeat;
+  background-image:linear-gradient(180deg,rgba(5,5,12,.28),rgba(5,5,12,.45) 40%,rgba(5,5,12,.78)),
     url('assets/hero/hero.webp');
-  transform:scale(1.02);
-  animation:bgDrift 28s ease-in-out infinite alternate;
+  filter:saturate(1.2) contrast(1.08);
+  transform:scale(1.04);
+  animation:bgDrift 32s ease-in-out infinite alternate;
 }
 .bg::after{
   content:"";position:absolute;inset:0;
-  background:radial-gradient(ellipse 70% 55% at 50% 48%, transparent 20%, rgba(5,5,10,.55) 100%);
+  background:
+    radial-gradient(ellipse 60% 55% at 52% 48%, transparent 0%, rgba(5,5,12,.2) 50%, rgba(5,5,12,.55) 100%),
+    linear-gradient(90deg, rgba(5,5,12,.35), transparent 22%, transparent 78%, rgba(5,5,12,.35));
   pointer-events:none;
+  filter:none;
 }
 @keyframes bgDrift{from{transform:scale(1.02) translateY(0)}to{transform:scale(1.06) translateY(-1.2%)}}
 
@@ -82,8 +86,8 @@ body{overflow-x:hidden}
 .panel{
   position:relative;
   background:var(--glass);
-  backdrop-filter:blur(18px) saturate(1.25);
-  -webkit-backdrop-filter:blur(18px) saturate(1.25);
+  backdrop-filter:blur(22px) saturate(1.3);
+  -webkit-backdrop-filter:blur(22px) saturate(1.3);
   border:1px solid var(--stroke);
   border-radius:var(--radius);
   box-shadow:var(--shadow), 0 0 0 1px rgba(0,229,255,.04);
@@ -113,12 +117,12 @@ body{overflow-x:hidden}
 /* grid */
 .grid{
   display:grid;
-  grid-template-columns:1.15fr .95fr;
+  grid-template-columns:1.12fr .98fr;
   grid-template-rows:auto auto auto;
-  gap:16px;
+  gap:18px;
   flex:1;
 }
-.chief{grid-column:1;grid-row:1 / span 2;display:flex;flex-direction:column;justify-content:center;min-height:280px}
+.chief{grid-column:1;grid-row:1 / span 2;display:flex;flex-direction:column;justify-content:center;min-height:300px;padding:22px 24px}
 .price{grid-column:2;grid-row:1}
 .bots{grid-column:2;grid-row:2}
 .stats{grid-column:1;grid-row:3}
@@ -140,8 +144,9 @@ body{overflow-x:hidden}
 .meta .kv{min-width:0}
 .meta .k{font-size:11px;letter-spacing:.12em;color:var(--muted);margin-bottom:4px;font-family:Rajdhani,sans-serif;text-transform:uppercase}
 .meta .v{
-  font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--text);
-  line-height:1.45;word-break:break-word;
+  font-family:"JetBrains Mono","Noto Sans SC",monospace;font-size:12.5px;color:var(--text);
+  line-height:1.5;word-break:break-word;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
 }
 .conf-bar{
   margin-top:18px;height:4px;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden;
@@ -178,9 +183,9 @@ body{overflow-x:hidden}
 }
 .bot .n{font-size:12px;color:var(--muted);margin-bottom:6px;font-family:Rajdhani,sans-serif;letter-spacing:.06em}
 .bot .d{font-family:Orbitron,sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em}
-.bot.long{border-color:rgba(57,255,20,.35);box-shadow:0 0 16px rgba(57,255,20,.08)}
+.bot.long{border-color:rgba(57,255,20,.55);box-shadow:0 0 18px rgba(57,255,20,.14);background:rgba(57,255,20,.06)}
 .bot.long .d{color:var(--green)}
-.bot.short{border-color:rgba(255,51,85,.35);box-shadow:0 0 16px rgba(255,51,85,.08)}
+.bot.short{border-color:rgba(255,51,85,.55);box-shadow:0 0 18px rgba(255,51,85,.14);background:rgba(255,51,85,.06)}
 .bot.short .d{color:var(--red)}
 .bot.wait{border-color:rgba(245,197,66,.3)}
 .bot.wait .d{color:var(--amber)}
@@ -227,15 +232,17 @@ body{overflow-x:hidden}
 
 /* mobile */
 @media (max-width:860px){
-  .wrap{padding:14px 12px 20px;gap:12px}
-  .grid{grid-template-columns:1fr;grid-template-rows:none}
+  .wrap{padding:14px 12px 22px;gap:12px}
+  .grid{grid-template-columns:1fr;grid-template-rows:none;gap:12px}
   .chief,.price,.bots,.stats,.rank{grid-column:auto;grid-row:auto}
-  .chief{min-height:0}
+  .chief{min-height:0;padding:18px 16px}
   .bots-grid{grid-template-columns:repeat(4,1fr)}
   .stats-row{grid-template-columns:1fr 1fr 1fr}
   .meta{grid-template-columns:1fr}
   .brand h1{font-size:15px}
-  .bg{background-position:center 30%}
+  .bg{background-position:center 28%;filter:saturate(1.2) brightness(.9)}
+  .dir{font-size:48px}
+  .panel{padding:16px}
 }
 @media (max-width:420px){
   .bots-grid{grid-template-columns:repeat(2,1fr)}
@@ -511,13 +518,26 @@ body{overflow-x:hidden}
     const chief=parseChief(log||'');
     const dc=dirClass(chief.dir);
     const dirEl=document.getElementById('chiefDir');
+    function short(s,n){
+      s=String(s||'').replace(/\s+/g,' ').trim();
+      if(!s) return '暂无数据';
+      // prefer first clause
+      const cut=s.split(/[；;。]/)[0];
+      const base=cut.length>=12 && cut.length<s.length ? cut : s;
+      return base.length>n ? base.slice(0,n-1)+'…' : base;
+    }
     if(chief.dir){
       dirEl.textContent=chief.dir;
       dirEl.className='dir '+dc;
-      document.getElementById('chiefEntry').textContent=chief.entry||'暂无数据';
-      document.getElementById('chiefSl').textContent=chief.sl||'暂无数据';
-      document.getElementById('chiefTp').textContent=chief.tp||'暂无数据';
-      document.getElementById('chiefConf').textContent=chief.conf||'—';
+      document.getElementById('chiefEntry').textContent=short(chief.entry,72);
+      document.getElementById('chiefEntry').title=chief.entry||'';
+      document.getElementById('chiefSl').textContent=short(chief.sl,56);
+      document.getElementById('chiefSl').title=chief.sl||'';
+      document.getElementById('chiefTp').textContent=short(chief.tp,56);
+      document.getElementById('chiefTp').title=chief.tp||'';
+      // confidence: first word only
+      const confShort=(chief.conf||'—').split(/[（(]/)[0].trim();
+      document.getElementById('chiefConf').textContent=confShort||'—';
       document.getElementById('confFill').style.width=confWidth(chief.conf)+'%';
       document.getElementById('chiefNote').textContent=
         (chief.time?chief.time+' 巡检':'') + ' · 个人观点，不构成投资建议';
@@ -586,8 +606,7 @@ body{overflow-x:hidden}
         </div>`;
       }).join('');
       document.getElementById('rankNote').textContent=
-        (scores.summary.updated?`看板更新 ${scores.summary.updated}`:'') +
-        (scores.summary.note?` · ${scores.summary.note.slice(0,48)}…`:'');
+        scores.summary.updated?`看板更新 ${scores.summary.updated} · 近7日胜率`:'近7日胜率';
     }
 
     // spark from snapshots
