@@ -2,736 +2,817 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#05070c">
-<title>黄金交易桌 · GROK DESK</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080810">
+<title>GOLD DESK · GROKBOT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#05070c; --panel:#0a0e18; --panel2:#0d1422;
-  --pink:#ff2d95; --cyan:#00f0ff; --green:#39ff14; --gold:#f5c542; --red:#ff3355; --blue:#4d7fff;
-  --tx:#e8f0ff; --mu:#7a8aa0; --line:rgba(0,240,255,.22);
-  --glow-cyan:0 0 12px rgba(0,240,255,.45),0 0 28px rgba(0,240,255,.15);
-  --glow-pink:0 0 12px rgba(255,45,149,.45),0 0 28px rgba(255,45,149,.15);
-  --glow-green:0 0 10px rgba(57,255,20,.4);
-  --glow-gold:0 0 10px rgba(245,197,66,.4);
+  --bg:#080810; --panel:#0a0a12; --panel2:#0e0e18;
+  --pink:#ff2d95; --pink2:#e860b0; --pink-dim:rgba(255,45,149,.45);
+  --green:#39ff14; --green2:#00ff66; --red:#ff3355; --amber:#f5c542; --cyan:#00e5ff;
+  --tx:#f0f0f8; --mu:#8a8498; --line:rgba(255,45,149,.55);
+  --glow-pink:0 0 10px rgba(255,45,149,.55),0 0 28px rgba(255,45,149,.22);
+  --glow-green:0 0 10px rgba(57,255,20,.45);
+  --mono:"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace;
 }
-*{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--tx);font-family:"SF Pro Display","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;min-height:100%}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--bg);color:var(--tx);font-family:var(--mono)}
 body{
   background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255,45,149,.12), transparent 50%),
-    radial-gradient(ellipse 60% 40% at 90% 80%, rgba(0,240,255,.08), transparent 45%),
-    radial-gradient(ellipse 50% 40% at 10% 70%, rgba(57,255,20,.06), transparent 40%),
+    radial-gradient(ellipse 70% 40% at 50% -5%, rgba(255,45,149,.18), transparent 55%),
+    radial-gradient(ellipse 40% 30% at 100% 100%, rgba(0,229,255,.06), transparent 40%),
     var(--bg);
   overflow-x:hidden;
 }
 body::before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.12) 3px);
-  opacity:.35;
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:50;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.04) 3px);
+  opacity:.7;
 }
-.wrap{position:relative;z-index:1;max-width:1440px;margin:0 auto;padding:14px 16px 40px}
-header{
-  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;
-  padding:10px 14px;margin-bottom:14px;
-  border:1px solid var(--line);border-radius:10px;
-  background:linear-gradient(135deg,rgba(10,14,24,.92),rgba(13,20,34,.85));
-  box-shadow:var(--glow-cyan), inset 0 0 40px rgba(0,240,255,.03);
+.frame .crt-vignette{
+  pointer-events:none;position:absolute;inset:0;z-index:3;
+  background:radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.45) 100%);
 }
-.brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.brand h1{
-  margin:0;font-size:22px;letter-spacing:.12em;font-weight:700;
-  background:linear-gradient(90deg,var(--cyan),var(--pink),var(--gold));
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  text-shadow:none;filter:drop-shadow(0 0 8px rgba(0,240,255,.5));
+.frame{
+  position:relative;z-index:1;max-width:1440px;margin:10px auto 24px;
+  border:3px solid var(--pink);border-radius:3px;
+  box-shadow:0 0 0 1px rgba(255,45,149,.35), var(--glow-pink), 0 0 60px rgba(255,45,149,.25), inset 0 0 80px rgba(255,45,149,.06);
+  background:linear-gradient(180deg,#0a0a14 0%,#06060c 100%);
+  overflow:hidden;
 }
-.brand .ver{font-size:11px;color:var(--cyan);opacity:.85;letter-spacing:.08em}
-.meta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:12px;color:var(--mu)}
-.meta .live{color:var(--green);text-shadow:var(--glow-green)}
-.meta .price{
-  font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;
-  color:var(--gold);text-shadow:var(--glow-gold);letter-spacing:.02em
+.frame::before,.frame::after{
+  content:"";position:absolute;width:18px;height:18px;border:2px solid var(--pink);z-index:5;pointer-events:none;
 }
-.meta .price.up{color:var(--green)}.meta .price.dn{color:var(--red)}
-.grid{
-  display:grid;gap:12px;
-  grid-template-columns:1.1fr 1.4fr 1fr;
-  grid-template-rows:auto auto auto;
+.frame::before{top:6px;left:6px;border-right:0;border-bottom:0}
+.frame::after{top:6px;right:6px;border-left:0;border-bottom:0}
+.frame .br-bl,.frame .br-br{
+  position:absolute;width:18px;height:18px;border:2px solid var(--pink);z-index:5;pointer-events:none;
 }
-.panel{
-  background:linear-gradient(160deg,rgba(10,14,24,.95),rgba(8,12,20,.9));
-  border:1px solid var(--line);border-radius:10px;padding:12px 14px;
-  position:relative;overflow:hidden;
-  box-shadow:inset 0 0 30px rgba(0,240,255,.04);
+.frame .br-bl{bottom:6px;left:6px;border-right:0;border-top:0}
+.frame .br-br{bottom:6px;right:6px;border-left:0;border-top:0}
+
+/* HEADER */
+.hdr{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:var(--pink);color:#0a0a10;padding:10px 14px 8px;min-height:44px;
 }
-.panel::after{
-  content:"";position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.7
+.hdr .left{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.hdr .logo{
+  font-family:"Press Start 2P",var(--mono);font-size:11px;letter-spacing:.04em;
+  text-shadow:0 0 8px rgba(0,0,0,.35);
 }
-.panel.pink-border{border-color:rgba(255,45,149,.35);box-shadow:var(--glow-pink), inset 0 0 30px rgba(255,45,149,.04)}
-.panel.green-border{border-color:rgba(57,255,20,.3)}
-.panel.gold-border{border-color:rgba(245,197,66,.35)}
-.ptitle{
-  display:flex;align-items:center;justify-content:space-between;gap:8px;
-  font-size:11px;letter-spacing:.16em;color:var(--cyan);margin-bottom:10px;text-transform:uppercase
+.hdr .tag{font-size:11px;font-weight:600;opacity:.85;letter-spacing:.08em}
+.hdr .right{display:flex;align-items:center;gap:14px;font-size:11px;font-weight:700;white-space:nowrap}
+.hdr .clk{font-variant-numeric:tabular-nums;letter-spacing:.06em}
+
+/* CARDS 2x4 */
+.cards-band{
+  background:linear-gradient(180deg,#ff3da0 0%, #ff2d95 40%, #e01f7e 100%);
+  padding:2px 10px 10px;
+  box-shadow:inset 0 10px 24px rgba(0,0,0,.22), 0 8px 30px rgba(255,45,149,.25);
 }
-.ptitle span.tag{font-size:10px;color:var(--mu);letter-spacing:.06em}
-#netPanel{grid-column:1;grid-row:1 / span 2;min-height:360px}
-#chiefPanel{grid-column:2;grid-row:1}
-#pricePanel{grid-column:3;grid-row:1}
-#viewsPanel{grid-column:2;grid-row:2;min-height:280px}
-#rankPanel{grid-column:3;grid-row:2}
-#sigPanel{grid-column:1 / -1;grid-row:3}
-canvas#net{width:100%;height:320px;display:block}
-.chief-dir{
-  font-size:36px;font-weight:800;letter-spacing:.08em;margin:4px 0 10px;
-  font-variant-numeric:tabular-nums
+.cards{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:7px;padding:0;
 }
-.chief-dir.long{color:var(--green);text-shadow:var(--glow-green)}
-.chief-dir.short{color:var(--red);text-shadow:0 0 12px rgba(255,51,85,.5)}
-.chief-dir.wait{color:var(--gold);text-shadow:var(--glow-gold)}
-.chief-dir.empty{color:var(--mu);font-size:18px;letter-spacing:.04em}
-.kv{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.kv.chief{grid-template-columns:1fr}
-.kv .cell{
-  background:rgba(0,240,255,.04);border:1px solid rgba(0,240,255,.12);
-  border-radius:6px;padding:8px 10px
+.card{
+  background:#07070e;border:1px solid #1a0a14;border-radius:8px;
+  padding:9px 11px;min-height:86px;position:relative;overflow:hidden;
+  box-shadow:0 3px 0 rgba(80,0,40,.45), inset 0 0 28px rgba(255,45,149,.07);
 }
-.kv .cell .lab{font-size:10px;color:var(--mu);letter-spacing:.1em;margin-bottom:4px}
-.kv .cell .val{font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--tx);word-break:break-word;line-height:1.45;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;max-height:5.8em}
-.conf-bar{height:6px;background:rgba(255,255,255,.08);border-radius:3px;margin-top:10px;overflow:hidden}
-.conf-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--cyan),var(--pink));box-shadow:var(--glow-pink);width:0;transition:width .6s}
-.conf-label{font-size:11px;color:var(--mu);margin-top:4px}
-#priceChart{width:100%;height:140px;display:block}
-.price-sub{font-size:11px;color:var(--mu);margin-top:6px}
-.list{max-height:260px;overflow:auto;scrollbar-width:thin;scrollbar-color:rgba(0,240,255,.3) transparent}
-.list::-webkit-scrollbar{width:4px}.list::-webkit-scrollbar-thumb{background:rgba(0,240,255,.35);border-radius:2px}
-.row{
-  display:grid;grid-template-columns:72px 1fr auto;gap:8px;align-items:start;
-  padding:8px 0;border-bottom:1px solid rgba(0,240,255,.08);font-size:12px
+.card::after{
+  content:"";position:absolute;top:0;left:10%;right:10%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--pink),transparent);opacity:.7
 }
-.row .t{color:var(--mu);font-variant-numeric:tabular-nums;font-size:11px}
-.row .n{color:var(--tx);font-weight:600}
-.row .d{font-size:11px;color:var(--mu);margin-top:2px;line-height:1.4}
-.badge{
-  font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 7px;border-radius:4px;
-  white-space:nowrap
+.card .ct{
+  display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;
 }
-.badge.long{color:var(--green);background:rgba(57,255,20,.1);border:1px solid rgba(57,255,20,.35)}
-.badge.short{color:var(--red);background:rgba(255,51,85,.1);border:1px solid rgba(255,51,85,.35)}
-.badge.wait{color:var(--gold);background:rgba(245,197,66,.1);border:1px solid rgba(245,197,66,.35)}
-.badge.unk{color:var(--mu);background:rgba(122,138,160,.1);border:1px solid rgba(122,138,160,.3)}
-.rank-row{
-  display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;
-  padding:7px 0;border-bottom:1px solid rgba(0,240,255,.08);font-size:12px
+.card .ct .t{font-size:10px;letter-spacing:.18em;color:#ff4aa8;font-weight:700;text-shadow:0 0 8px rgba(255,45,149,.45)}
+.card .ct .dot{width:7px;height:7px;border-radius:50%;background:var(--mu);box-shadow:0 0 6px currentColor}
+.card .ct .dot.on{background:var(--green);color:var(--green)}
+.card .ct .dot.warn{background:var(--amber);color:var(--amber)}
+.card .ct .dot.off{background:var(--red);color:var(--red)}
+.card .sub{font-size:9px;color:var(--mu);letter-spacing:.04em;margin-bottom:4px;min-height:12px}
+.card .big{
+  font-size:22px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.15;
+  color:var(--tx);text-shadow:0 0 12px rgba(255,45,149,.25);
 }
-.rank-row .no{color:var(--cyan);font-weight:700}
-.rank-row .pct{font-weight:700;font-variant-numeric:tabular-nums}
-.rank-row .pct.hi{color:var(--green)}.rank-row .pct.mid{color:var(--gold)}.rank-row .pct.lo{color:var(--red)}
-.rank-row .sm{font-size:10px;color:var(--mu)}
-.sig-stats{
-  display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;margin-bottom:10px
+.card .big.green{color:var(--green);text-shadow:var(--glow-green)}
+.card .big.red{color:var(--red)}
+.card .big.amber{color:var(--amber)}
+.card .big.cyan{color:var(--cyan)}
+.card .big.sm{font-size:15px}
+.card .foot{font-size:9px;color:var(--mu);margin-top:4px;line-height:1.35}
+.card .bar{height:4px;background:rgba(255,255,255,.08);border-radius:2px;margin-top:6px;overflow:hidden}
+.card .bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--pink),var(--cyan));width:0;transition:width .6s}
+
+/* MID */
+.mid{
+  display:grid;grid-template-columns:1.55fr .95fr;gap:8px;padding:10px 12px 8px;min-height:280px;
 }
-.sig-stats .big{font-size:28px;font-weight:800;color:var(--cyan);text-shadow:var(--glow-cyan);font-variant-numeric:tabular-nums}
-.sig-stats .lbl{font-size:12px;color:var(--mu)}
-.sig-table{width:100%;border-collapse:collapse;font-size:12px}
-.sig-table th{
-  text-align:left;color:var(--cyan);font-weight:600;letter-spacing:.08em;font-size:10px;
-  padding:6px 8px;border-bottom:1px solid rgba(0,240,255,.25)
+.pane{
+  background:var(--panel);border:1px solid var(--pink-dim);border-radius:6px;
+  position:relative;overflow:hidden;padding:8px 10px;
 }
-.sig-table td{padding:7px 8px;border-bottom:1px solid rgba(0,240,255,.08);font-variant-numeric:tabular-nums}
-.sig-table tr:hover td{background:rgba(0,240,255,.04)}
-.empty{color:var(--mu);font-size:13px;padding:16px 4px;text-align:center}
+.pane .pt{
+  font-size:10px;letter-spacing:.16em;color:var(--pink);font-weight:700;margin-bottom:6px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.pane .pt span{color:var(--mu);font-weight:500;letter-spacing:.06em;font-size:9px}
+#net{width:100%;height:220px;display:block}
+.cmd-brand{
+  position:absolute;left:12px;top:36px;z-index:2;pointer-events:none;
+  font-family:"Press Start 2P",var(--mono);font-size:18px;color:rgba(255,255,255,.08);
+  letter-spacing:.08em;line-height:1.4;
+}
+.cmd-brand small{display:block;font-size:8px;margin-top:6px;color:rgba(255,45,149,.35);letter-spacing:.2em}
+.desk-strip{
+  display:flex;gap:4px;margin-top:6px;height:18px;align-items:flex-end;
+}
+.desk-strip b{
+  flex:1;height:100%;border-radius:2px 2px 0 0;
+  background:linear-gradient(180deg,rgba(57,255,20,.55),rgba(255,45,149,.15));
+  opacity:.55;box-shadow:0 0 6px rgba(57,255,20,.25);
+  animation:blink 2.4s ease-in-out infinite;
+}
+.desk-strip b:nth-child(odd){animation-delay:.3s;opacity:.35;height:70%}
+.desk-strip b:nth-child(3n){background:linear-gradient(180deg,rgba(255,45,149,.7),rgba(0,229,255,.1));height:90%}
+@keyframes blink{0%,100%{filter:brightness(1)}50%{filter:brightness(1.4)}}
+
+.avatars{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 10px}
+.av{
+  width:42px;height:42px;border-radius:50%;border:2px solid var(--pink-dim);
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;font-weight:700;letter-spacing:.02em;
+  background:radial-gradient(circle at 30% 30%,#2a1a28,#0a0a12);
+  box-shadow:0 0 10px rgba(255,45,149,.25);color:var(--tx);position:relative;
+}
+.av.long{border-color:var(--green);box-shadow:0 0 10px rgba(57,255,20,.35)}
+.av.short{border-color:var(--red);box-shadow:0 0 10px rgba(255,51,85,.35)}
+.av.wait{border-color:var(--amber);box-shadow:0 0 10px rgba(245,197,66,.3)}
+.av.miss{border-color:#444;opacity:.45;filter:grayscale(.6)}
+.av .tip{
+  position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);
+  font-size:8px;color:var(--mu);white-space:nowrap;
+}
+.side-log{
+  font-size:10px;line-height:1.45;color:var(--mu);max-height:140px;overflow:hidden;
+  font-variant-numeric:tabular-nums;
+}
+.side-log .ln{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-bottom:1px solid rgba(255,45,149,.08);padding:2px 0}
+.side-log .ln em{color:var(--cyan);font-style:normal;margin-right:6px}
+.side-log .ln.ok{color:var(--green)}.side-log .ln.bad{color:var(--red)}.side-log .ln.warn{color:var(--amber)}
+
+/* TICKER */
+.ticker{
+  margin:0 12px 8px;height:28px;border:1px solid var(--pink-dim);border-radius:4px;
+  background:#06060c;overflow:hidden;display:flex;align-items:center;
+}
+.ticker .inner{
+  display:inline-block;white-space:nowrap;padding-left:100%;
+  animation:marquee 28s linear infinite;font-size:11px;letter-spacing:.04em;
+  color:var(--tx);font-weight:500;
+}
+.ticker .inner b{color:var(--pink);margin:0 6px}
+.ticker .inner .g{color:var(--green)}.ticker .inner .r{color:var(--red)}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+
+/* BALANCE */
+.bal{
+  margin:0 12px 8px;padding:10px 12px;border:1px solid var(--pink-dim);border-radius:6px;
+  background:var(--panel);position:relative;min-height:150px;
+}
+.bal .pt{font-size:10px;letter-spacing:.16em;color:var(--pink);font-weight:700;margin-bottom:4px;display:flex;justify-content:space-between}
+.bal .pt span{color:var(--mu);font-weight:500;letter-spacing:.04em;font-size:9px}
+.bal-wrap{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+#balChart{width:100%;height:110px;display:block}
+.bal-num{
+  font-size:34px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--green);
+  text-shadow:var(--glow-green),0 0 30px rgba(57,255,20,.35);text-align:right;min-width:160px;line-height:1.1
+}
+.bal-num small{display:block;font-size:9px;color:var(--mu);font-weight:500;margin-top:4px;letter-spacing:.04em;text-shadow:none}
+
+/* BOTTOM */
+.bot{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:8px;padding:0 12px 12px;min-height:200px;
+}
+#candle{width:100%;height:170px;display:block}
+.term{
+  font-size:11px;line-height:1.5;color:#c8c4d8;height:170px;overflow:auto;
+  background:#05050a;border:1px solid rgba(255,45,149,.25);border-radius:4px;
+  padding:8px 10px;font-variant-numeric:tabular-nums;
+  scrollbar-width:thin;scrollbar-color:rgba(255,45,149,.4) transparent;
+}
+.term .kh{color:var(--pink);margin-bottom:6px;letter-spacing:.1em;font-size:10px}
+.term .k{color:var(--cyan)}.term .v{color:var(--tx)}.term .c{color:var(--mu)}
+.term .row{display:grid;grid-template-columns:160px 1fr;gap:8px;padding:1px 0}
+
 footer{
-  margin-top:18px;text-align:center;font-size:11px;color:var(--mu);letter-spacing:.04em;line-height:1.6
+  text-align:center;padding:10px 12px 14px;font-size:10px;color:var(--mu);letter-spacing:.04em;line-height:1.6
 }
 footer a{color:var(--cyan);text-decoration:none}
-.scanline{
-  pointer-events:none;position:absolute;left:0;right:0;height:40px;
-  background:linear-gradient(180deg,transparent,rgba(0,240,255,.04),transparent);
-  animation:scan 4.5s linear infinite;opacity:.6
+.empty{color:var(--mu);font-size:12px;padding:20px;text-align:center}
+
+.scanband{
+  pointer-events:none;position:absolute;left:0;right:0;height:48px;z-index:4;
+  background:linear-gradient(180deg,transparent,rgba(255,45,149,.06),transparent);
+  animation:scan 5s linear infinite;
 }
-@keyframes scan{0%{top:-40px}100%{top:100%}}
-@keyframes pulse{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
-@keyframes flicker{0%,100%{opacity:1}92%{opacity:1}93%{opacity:.75}94%{opacity:1}96%{opacity:.85}}
-.brand h1{animation:flicker 5s infinite}
+@keyframes scan{0%{top:-48px}100%{top:100%}}
+@keyframes flicker{0%,100%{opacity:1}93%{opacity:.8}94%{opacity:1}96%{opacity:.88}}
+.hdr .logo{animation:flicker 6s infinite}
+
 @media (max-width:1100px){
-  .grid{grid-template-columns:1fr 1fr}
-  #netPanel{grid-column:1/-1;grid-row:auto}
-  #chiefPanel,#pricePanel,#viewsPanel,#rankPanel,#sigPanel{grid-column:auto;grid-row:auto}
-  #sigPanel{grid-column:1/-1}
-  canvas#net{height:260px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .mid,.bot,.bal-wrap{grid-template-columns:1fr}
+  .bal-num{text-align:left;margin-top:6px}
 }
 @media (max-width:700px){
-  .grid{grid-template-columns:1fr}
-  .brand h1{font-size:18px}
-  .chief-dir{font-size:28px}
-  .kv{grid-template-columns:1fr}
-  .meta .price{font-size:18px}
-  .sig-table{display:block;overflow-x:auto}
+  .hdr{flex-direction:column;align-items:flex-start}
+  .cards{grid-template-columns:1fr 1fr}
+  .card .big{font-size:18px}
+  .hdr .logo{font-size:9px}
 }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="brand">
-      <h1>GROK DESK · 黄金交易桌</h1>
-      <span class="ver">v1.0 · LIVE</span>
+<div class="frame">
+  <span class="br-bl"></span><span class="br-br"></span>
+  <div class="crt-vignette"></div>
+  <div class="scanband"></div>
+
+  <header class="hdr">
+    <div class="left">
+      <div class="logo">GOLD DESK + GROK</div>
+      <div class="tag">BOTS ANALYZE · YOU DECIDE</div>
     </div>
-    <div class="meta">
-      <div>现货 XAU <span id="livePrice" class="price">—</span></div>
-      <div id="priceSrc" class="live">拉取中…</div>
-      <div>数据更新 <span id="dataUpdated">—</span> <span style="opacity:.7">北京时间</span></div>
+    <div class="right">
+      <span id="hdrDay">—</span>
+      <span class="clk" id="hdrClk">--:--:-- CST</span>
     </div>
   </header>
 
-  <div class="grid">
-    <section class="panel pink-border" id="netPanel">
-      <div class="scanline"></div>
-      <div class="ptitle">NODE NET · 助手网络 <span class="tag">多绿 / 空红 / 观望灰金</span></div>
-      <canvas id="net" width="480" height="320"></canvas>
-      <div id="netLegend" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;font-size:10px;color:var(--mu)"></div>
-    </section>
+  <div class="cards-band"><div class="cards" id="cards">
+    <div class="card" id="cChief"><div class="ct"><span class="t">✦ CHIEF</span><span class="dot" id="dChief"></span></div><div class="sub">主管加权结论</div><div class="big sm" id="vChief">—</div><div class="foot" id="fChief">加载中…</div></div>
+    <div class="card" id="cScan"><div class="ct"><span class="t">◉ SCAN</span><span class="dot on" id="dScan"></span></div><div class="sub">finding what moves · XAU</div><div class="big amber" id="vScan">—</div><div class="foot" id="fScan">实时金价</div><div class="bar"><i id="bScan"></i></div></div>
+    <div class="card" id="cVet"><div class="ct"><span class="t">⚠ VET</span><span class="dot" id="dVet"></span></div><div class="sub">近30天结算胜率</div><div class="big" id="vVet">—</div><div class="foot" id="fVet">—</div><div class="bar"><i id="bVet"></i></div></div>
+    <div class="card" id="cSocial"><div class="ct"><span class="t">◈ SOCIAL</span><span class="dot on"></span></div><div class="sub">calls / 观点流</div><div style="display:flex;gap:8px;align-items:center"><div style="flex:1"><div class="big sm cyan" id="vSocial">—</div><div class="foot" id="fSocial">—</div></div><canvas id="socialMini" width="72" height="48" style="width:72px;height:48px;flex:0 0 auto"></canvas></div></div>
+    <div class="card" id="cSize"><div class="ct"><span class="t">$ SIZE</span><span class="dot on"></span></div><div class="sub">信号库总量</div><div class="big" id="vSize">—</div><div class="foot" id="fSize">signals</div></div>
+    <div class="card" id="cFills"><div class="ct"><span class="t">▶ FILLS</span><span class="dot" id="dFills"></span></div><div class="sub">近30天已结算</div><div class="big" id="vFills">—</div><div class="foot" id="fFills">—</div><div class="bar"><i id="bFills" style="background:linear-gradient(90deg,var(--red),var(--pink))"></i></div></div>
+    <div class="card" id="cRisk"><div class="ct"><span class="t">⚡ RISK</span><span class="dot warn"></span></div><div class="sub">closing · W / L</div><div class="big red" id="vRisk">—</div><div class="foot" id="fRisk">目标1+2 / 止损</div></div>
+    <div class="card" id="cCrawl"><div class="ct"><span class="t">🕷 CRAWLER</span><span class="dot" id="dCrawl"></span></div><div class="sub">8 助手巡检状态</div><div class="big sm" id="vCrawl">—</div><div class="foot" id="fCrawl">—</div></div>
+  </div></div>
 
-    <section class="panel gold-border" id="chiefPanel">
-      <div class="ptitle">CHIEF · 交易主管结论 <span class="tag" id="chiefTime">—</span></div>
-      <div id="chiefDir" class="chief-dir empty">主管尚未产出</div>
-      <div class="kv chief" id="chiefKV">
-        <div class="cell"><div class="lab">进场</div><div class="val" id="cEntry">—</div></div>
-        <div class="cell"><div class="lab">止损</div><div class="val" id="cSl">—</div></div>
-        <div class="cell"><div class="lab">目标</div><div class="val" id="cTp">—</div></div>
-        <div class="cell"><div class="lab">信心</div><div class="val" id="cConf">—</div></div>
-      </div>
-      <div class="conf-bar"><div class="conf-fill" id="confFill"></div></div>
-      <div class="conf-label" id="confNote"></div>
+  <div class="mid">
+    <section class="pane">
+      <div class="pt">COMMAND · 助手节点网 <span>多绿 / 空红 / 观望金 / 缺失灰</span></div>
+      <div class="cmd-brand">FOMO<small>GOLD DESK</small></div>
+      <canvas id="net" width="700" height="220"></canvas>
+      <div class="desk-strip" id="deskStrip" aria-hidden="true"></div>
     </section>
-
-    <section class="panel" id="pricePanel">
-      <div class="ptitle">SCAN · 金价走势 <span class="tag">price_snapshots + 实时</span></div>
-      <canvas id="priceChart" width="400" height="140"></canvas>
-      <div class="price-sub" id="priceSub">—</div>
+    <section class="pane">
+      <div class="pt">BOTS · 方向徽章 <span id="botsUpdated">—</span></div>
+      <div class="avatars" id="avatars"></div>
+      <div class="pt" style="margin-top:8px">LIVE FEED <span>calls</span></div>
+      <div class="side-log" id="sideLog"><div class="empty" style="padding:8px">加载中…</div></div>
     </section>
+  </div>
 
-    <section class="panel" id="viewsPanel">
-      <div class="ptitle">SOCIAL · 各方最新观点 <span class="tag">calls 最新</span></div>
-      <div class="list" id="viewsList"><div class="empty">加载中…</div></div>
+  <div class="ticker"><div class="inner" id="ticker">加载中…</div></div>
+
+  <section class="bal">
+    <div class="pt">BALANCE · 近30天结算得分曲线 <span>非实盘资金 · 目标1=+1 目标2=+1.5 止损=-1</span></div>
+    <div class="bal-wrap">
+      <canvas id="balChart" width="900" height="110"></canvas>
+      <div class="bal-num" id="balNum">—<small>结算得分（非实盘）</small></div>
+    </div>
+  </section>
+
+  <div class="bot">
+    <section class="pane">
+      <div class="pt">XAU CHART · 价格快照 <span id="chartSub">price_snapshots</span></div>
+      <canvas id="candle" width="700" height="170"></canvas>
     </section>
-
-    <section class="panel green-border" id="rankPanel">
-      <div class="ptitle">RISK · 准确率排行 <span class="tag">近 7 日博主</span></div>
-      <div id="rankList"><div class="empty">加载中…</div></div>
-    </section>
-
-    <section class="panel" id="sigPanel">
-      <div class="ptitle">FILLS · 近 30 天已结算信号 <span class="tag">目标1/目标2/止损</span></div>
-      <div class="sig-stats" id="sigStats"></div>
-      <div style="overflow-x:auto">
-        <table class="sig-table">
-          <thead>
-            <tr><th>时间</th><th>方向</th><th>进场</th><th>TP1</th><th>TP2</th><th>止损</th><th>信心</th><th>结果</th></tr>
-          </thead>
-          <tbody id="sigBody"></tbody>
-        </table>
-      </div>
-      <div id="sigEmpty" class="empty" style="display:none">暂无已结算信号</div>
+    <section class="pane">
+      <div class="pt">DESK LOG · thresholds <span>desk-log.md</span></div>
+      <div class="term" id="term"><div class="empty">加载中…</div></div>
     </section>
   </div>
 
   <footer>
-    个人观点，不构成投资建议 · 数据来自 gold-dashboard / 交易主管日志 / api.gold-api.com<br>
+    个人观点，不构成投资建议 · 绝不自动下单 · 数据：data.json / desk-log.md / blogger-scores.json / api.gold-api.com<br>
     <a href="./">指挥中心</a> · <a href="./desk.html">交易桌</a>
   </footer>
 </div>
+
 <script>
 (function(){
   const BOTS = [
-    {id:'tech', label:'技术分析', short:'技术'},
-    {id:'news', label:'新闻', short:'新闻'},
-    {id:'jin10', label:'金十数据', short:'金十'},
-    {id:'sent', label:'情绪资金', short:'情绪'},
-    {id:'inst', label:'机构', short:'机构'},
-    {id:'blog', label:'抖音博主', short:'博主'},
-    {id:'group', label:'抖音群', short:'群'},
-    {id:'score', label:'复盘打分', short:'复盘'}
+    {id:'tech', label:'技术', full:'技术分析'},
+    {id:'news', label:'新闻', full:'新闻'},
+    {id:'jin10', label:'金十', full:'金十数据'},
+    {id:'sent', label:'情绪', full:'情绪资金'},
+    {id:'inst', label:'机构', full:'机构'},
+    {id:'blog', label:'博主', full:'抖音博主'},
+    {id:'group', label:'群', full:'抖音群'},
+    {id:'score', label:'复盘', full:'复盘打分'}
   ];
 
-  function esc(s){
-    return String(s==null?'':s).replace(/[&<>"']/g, c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
-  }
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
   function dirClass(d){
-    const t = String(d||'');
-    if (/空|卖|空头|偏空|做空|看空/.test(t) && !/多空|中性/.test(t)) return 'short';
-    if (/多|买|多头|偏多|做多|看多|持多/.test(t) && !/多空|中性/.test(t)) return 'long';
-    if (/观望|中性|震荡|未明确|无明确|宏观/.test(t)) return 'wait';
+    const t=String(d||'');
+    if(/空|卖|空头|偏空|做空|看空/.test(t)&&!/多空|中性/.test(t)) return 'short';
+    if(/多|买|多头|偏多|做多|看多|持多/.test(t)&&!/多空|中性/.test(t)) return 'long';
+    if(/观望|中性|震荡|未明确|无明确|宏观|等待/.test(t)) return 'wait';
     return 'unk';
   }
-  function dirLabel(d){
-    const c = dirClass(d);
-    if (c==='long') return '多';
-    if (c==='short') return '空';
-    if (c==='wait') return '观望';
-    return '—';
+  function dirLabel(c){return c==='long'?'多':c==='short'?'空':c==='wait'?'观望':'—';}
+  function parseSH(t){
+    const m=String(t||'').match(/(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})(?::(\d{2}))?/);
+    if(!m) return 0;
+    return Date.UTC(+m[1],+m[2]-1,+m[3],+m[4]-8,+m[5],+(m[6]||0));
   }
-  function parseTaipei(t){
-    // "YYYY-MM-DD HH:MM" treated as Asia/Shanghai
-    if (!t) return 0;
-    const m = String(t).match(/(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
-    if (!m) return 0;
-    return Date.UTC(+m[1], +m[2]-1, +m[3], +m[4]-8, +m[5]);
+  function fmtSH(d){
+    const p=n=>String(n).padStart(2,'0');
+    // box is Asia/Shanghai
+    return `${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())} CST`;
   }
-  function daysAgo(n){
-    const d = new Date();
-    d.setUTCDate(d.getUTCDate()-n);
-    return d.getTime();
+  function daysAgoMs(n){return Date.now()-n*86400000;}
+
+  // clock
+  function tickClk(){
+    const d=new Date();
+    document.getElementById('hdrClk').textContent=fmtSH(d);
+    document.getElementById('hdrDay').textContent=
+      `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')} · 北京`;
+  }
+  tickClk(); setInterval(tickClk,1000);
+
+  // strip desks
+  const strip=document.getElementById('deskStrip');
+  for(let i=0;i<16;i++) strip.appendChild(document.createElement('b'));
+
+  async function loadJSON(url){
+    const r=await fetch(url,{cache:'no-store'});
+    if(!r.ok) throw new Error(url+' '+r.status);
+    return r.json();
+  }
+  async function loadText(url){
+    const r=await fetch(url,{cache:'no-store'});
+    if(!r.ok) throw new Error(url+' '+r.status);
+    return r.text();
   }
 
-  // ——— Node network ———
+  function settledScore(status){
+    if(status==='目标2') return 1.5;
+    if(status==='目标1') return 1;
+    if(status==='止损') return -1;
+    return null;
+  }
+
+  function parseChief(log){
+    // Extract latest weighted conclusion block
+    const out={dir:null,entry:null,sl:null,tp:null,conf:null,time:null,bots:{}};
+    const tm=log.match(/##\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})/);
+    if(tm) out.time=tm[1];
+    const dirM=log.match(/\*\*方向[：:]\s*([^*\n]+)\*\*/);
+    if(dirM) out.dir=dirM[1].trim();
+    const entryM=log.match(/\*\*进场区间[：:]\s*([^*\n]+)\*\*/);
+    if(entryM) out.entry=entryM[1].trim();
+    const slM=log.match(/\*\*止损[：:]\s*([^*\n]+)\*\*/);
+    if(slM) out.sl=slM[1].trim();
+    const tpM=log.match(/\*\*目标[：:]\s*([^*\n]+)\*\*/);
+    if(tpM) out.tp=tpM[1].trim();
+    const confM=log.match(/\*\*信心[：:]\s*([^*\n]+)\*\*/);
+    if(confM) out.conf=confM[1].trim();
+
+    // bot cache status from table rows
+    const map=[
+      [/技术分析/, 'tech'],
+      [/新闻助手|黄金新闻/, 'news'],
+      [/金十/, 'jin10'],
+      [/情绪资金/, 'sent'],
+      [/机构/, 'inst'],
+      [/抖音黄金博主|抖音博主/, 'blog'],
+      [/抖音群/, 'group'],
+      [/复盘打分|复盘/, 'score']
+    ];
+    // From 「缓存结论摘要」sections
+    const missSet=new Set();
+    if(/新闻[\s\S]{0,40}今日缺失/.test(log)||/新闻助手[\s\S]{0,80}\*\*今日缺失\*\*/.test(log)) missSet.add('news');
+    if(/机构[\s\S]{0,40}今日缺失/.test(log)||/机构助手[\s\S]{0,80}\*\*今日缺失\*\*/.test(log)) missSet.add('inst');
+
+    // crude direction hints from sections
+    const longBlock=(log.match(/\*\*多[\s\S]*?(?=\*\*空|\*\*观望|$)/)||[])[0]||'';
+    const shortBlock=(log.match(/\*\*空[\s\S]*?(?=\*\*观望|$)/)||[])[0]||'';
+    const waitBlock=(log.match(/\*\*观望[\s\S]*?(?=###|$)/)||[])[0]||'';
+    function hit(block, re){return re.test(block);}
+    BOTS.forEach(b=>{
+      if(missSet.has(b.id)){ out.bots[b.id]={dir:'缺失', cls:'miss'}; return; }
+      // default unk
+      let cls='unk', dir='—';
+      const nameRe=new RegExp(b.full.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+      if(hit(longBlock, nameRe)||hit(longBlock, new RegExp(b.label))){ cls='long'; dir='偏多'; }
+      if(hit(shortBlock, nameRe)||hit(shortBlock, new RegExp(b.label))){ cls='short'; dir='偏空'; }
+      if(hit(waitBlock, nameRe)||hit(waitBlock, new RegExp(b.label))){ cls='wait'; dir='观望'; }
+      // special known lines
+      if(b.id==='blog' && /抖音黄金博主[\s\S]{0,40}观望/.test(log)){ cls='wait'; dir='观望'; }
+      if(b.id==='score'){ cls='wait'; dir='看板'; }
+      out.bots[b.id]={dir, cls};
+    });
+    return out;
+  }
+
   function drawNet(botsState){
-    const canvas = document.getElementById('net');
-    const parent = canvas.parentElement;
-    const w = Math.max(280, parent.clientWidth - 28);
-    const h = window.innerWidth < 700 ? 240 : 320;
-    canvas.width = w * devicePixelRatio;
-    canvas.height = h * devicePixelRatio;
-    canvas.style.width = w + 'px';
-    canvas.style.height = h + 'px';
-    const ctx = canvas.getContext('2d');
-    ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
+    const canvas=document.getElementById('net');
+    const parent=canvas.parentElement;
+    const w=Math.max(300, parent.clientWidth-20);
+    const h=220;
+    const dpr=devicePixelRatio||1;
+    canvas.width=w*dpr; canvas.height=h*dpr;
+    canvas.style.width=w+'px'; canvas.style.height=h+'px';
+    const ctx=canvas.getContext('2d');
+    ctx.setTransform(dpr,0,0,dpr,0,0);
     ctx.clearRect(0,0,w,h);
 
-    const cx = w/2, cy = h/2 + 6;
-    const R = Math.min(w,h)*0.34;
-    const colors = {long:'#39ff14', short:'#ff3355', wait:'#f5c542', unk:'#7a8aa0'};
+    // grid floor
+    ctx.strokeStyle='rgba(255,45,149,.08)';
+    ctx.lineWidth=1;
+    for(let y=h*0.55;y<h;y+=10){
+      ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(w,y); ctx.stroke();
+    }
 
-    // soft grid
-    ctx.strokeStyle = 'rgba(0,240,255,.06)';
-    ctx.lineWidth = 1;
-    for (let x=20;x<w;x+=28){ ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,h); ctx.stroke(); }
-    for (let y=20;y<h;y+=28){ ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(w,y); ctx.stroke(); }
-
-    const nodes = botsState.map((b,i)=>{
-      const a = -Math.PI/2 + (i/botsState.length)*Math.PI*2;
-      return { ...b, x: cx + Math.cos(a)*R, y: cy + Math.sin(a)*R };
+    const cx=w*0.5, cy=h*0.42;
+    const nodes=[{id:'chief',label:'主管',x:cx,y:cy,cls:botsState.chiefCls||'wait'}];
+    const R=Math.min(w,h)*0.36;
+    BOTS.forEach((b,i)=>{
+      const a=-Math.PI/2 + (i/BOTS.length)*Math.PI*2;
+      const st=botsState.bots[b.id]||{cls:'miss'};
+      nodes.push({id:b.id,label:b.label,x:cx+Math.cos(a)*R*1.15,y:cy+Math.sin(a)*R*0.85,cls:st.cls});
     });
 
-    const t = performance.now()/1000;
+    const col={long:'#39ff14',short:'#ff3355',wait:'#f5c542',miss:'#555566',unk:'#8a8498'};
     // links
-    nodes.forEach((n,i)=>{
-      const pulse = 0.35 + 0.35*Math.sin(t*2 + i);
+    const t=performance.now()/1000;
+    nodes.slice(1).forEach((n,i)=>{
       ctx.beginPath();
-      ctx.moveTo(n.x, n.y);
-      ctx.lineTo(cx, cy);
-      ctx.strokeStyle = (colors[n.side]||colors.unk).replace(')',`,${0.25+pulse*0.35})`).replace('rgb','rgba').replace('#', '');
-      // simpler:
-      ctx.strokeStyle = n.side==='long' ? `rgba(57,255,20,${0.2+pulse*0.35})`
-        : n.side==='short' ? `rgba(255,51,85,${0.2+pulse*0.35})`
-        : n.side==='wait' ? `rgba(245,197,66,${0.2+pulse*0.35})`
-        : `rgba(122,138,160,${0.15+pulse*0.25})`;
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
-      // traveling dot
-      const p = (Math.sin(t*1.6 + i*0.7)+1)/2;
-      const dx = n.x + (cx-n.x)*p, dy = n.y + (cy-n.y)*p;
-      ctx.beginPath(); ctx.arc(dx,dy,2.2,0,Math.PI*2);
-      ctx.fillStyle = colors[n.side]||colors.unk; ctx.fill();
+      ctx.moveTo(cx,cy); ctx.lineTo(n.x,n.y);
+      ctx.strokeStyle=col[n.cls]||col.unk;
+      ctx.globalAlpha=0.25+0.2*Math.sin(t*2+i);
+      ctx.lineWidth=1.2; ctx.stroke(); ctx.globalAlpha=1;
+      // pulse dot
+      const p=(Math.sin(t*3+i)+1)/2;
+      const px=cx+(n.x-cx)*p, py=cy+(n.y-cy)*p;
+      ctx.beginPath(); ctx.arc(px,py,2.2,0,Math.PI*2);
+      ctx.fillStyle=col[n.cls]||col.unk; ctx.fill();
     });
-
-    // center chief
-    const cg = ctx.createRadialGradient(cx,cy,4,cx,cy,28);
-    cg.addColorStop(0,'rgba(0,240,255,.9)');
-    cg.addColorStop(1,'rgba(255,45,149,.15)');
-    ctx.beginPath(); ctx.arc(cx,cy,18+3*Math.sin(t*3),0,Math.PI*2);
-    ctx.fillStyle = cg; ctx.fill();
-    ctx.strokeStyle = 'rgba(0,240,255,.8)'; ctx.lineWidth = 2; ctx.stroke();
-    ctx.fillStyle = '#e8f0ff'; ctx.font = 'bold 11px sans-serif';
-    ctx.textAlign='center'; ctx.textBaseline='middle';
-    ctx.fillText('主管', cx, cy);
-
-    // outer nodes
-    nodes.forEach(n=>{
-      ctx.beginPath(); ctx.arc(n.x,n.y,11,0,Math.PI*2);
-      ctx.fillStyle = '#0a0e18'; ctx.fill();
-      ctx.strokeStyle = colors[n.side]||colors.unk; ctx.lineWidth = 2; ctx.stroke();
-      ctx.shadowColor = colors[n.side]||colors.unk; ctx.shadowBlur = 10;
-      ctx.beginPath(); ctx.arc(n.x,n.y,4,0,Math.PI*2);
-      ctx.fillStyle = colors[n.side]||colors.unk; ctx.fill();
-      ctx.shadowBlur = 0;
-      ctx.fillStyle = '#c8d4e8'; ctx.font = '10px sans-serif';
-      ctx.textAlign='center'; ctx.textBaseline='top';
-      ctx.fillText(n.short, n.x, n.y+14);
+    // nodes
+    nodes.forEach((n,i)=>{
+      const r=i===0?16:11;
+      ctx.beginPath(); ctx.arc(n.x,n.y,r,0,Math.PI*2);
+      ctx.fillStyle='#0a0a12';
+      ctx.strokeStyle=col[n.cls]||col.unk;
+      ctx.lineWidth=i===0?2.5:1.6;
+      ctx.shadowColor=col[n.cls]||col.unk;
+      ctx.shadowBlur=i===0?16:8;
+      ctx.fill(); ctx.stroke();
+      ctx.shadowBlur=0;
+      ctx.fillStyle=varTx();
+      ctx.font='600 10px IBM Plex Mono, monospace';
+      ctx.textAlign='center'; ctx.textBaseline='middle';
+      ctx.fillStyle='#f0f0f8';
+      ctx.fillText(n.label, n.x, n.y);
     });
-
-    const leg = document.getElementById('netLegend');
-    leg.innerHTML = botsState.map(b=>{
-      const col = colors[b.side]||colors.unk;
-      return `<span style="display:inline-flex;align-items:center;gap:4px"><i style="width:8px;height:8px;border-radius:50%;background:${col};box-shadow:0 0 6px ${col};display:inline-block"></i>${esc(b.label)} · ${esc(b.dirText||'—')}</span>`;
-    }).join('');
+    function varTx(){return '#f0f0f8';}
   }
 
-  let netState = BOTS.map(b=>({...b, side:'unk', dirText:'—'}));
-  let netRaf = 0;
-  function loopNet(){
-    drawNet(netState);
-    netRaf = requestAnimationFrame(loopNet);
-  }
+  let netState={chiefCls:'wait',bots:{}};
+  function loopNet(){ drawNet(netState); drawSocialMini(); requestAnimationFrame(loopNet); }
+  requestAnimationFrame(loopNet);
 
-  // ——— Price chart ———
-  function drawPrice(points, live){
-    const canvas = document.getElementById('priceChart');
-    const parent = canvas.parentElement;
-    const w = Math.max(200, parent.clientWidth - 28);
-    const h = 140;
-    canvas.width = w * devicePixelRatio;
-    canvas.height = h * devicePixelRatio;
-    canvas.style.width = w + 'px';
-    canvas.style.height = h + 'px';
-    const ctx = canvas.getContext('2d');
-    ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
+  function drawBalance(points, total){
+    const canvas=document.getElementById('balChart');
+    const parent=canvas.parentElement;
+    const w=Math.max(280, parent.clientWidth-160);
+    const h=110;
+    const dpr=devicePixelRatio||1;
+    canvas.width=w*dpr; canvas.height=h*dpr;
+    canvas.style.width=w+'px'; canvas.style.height=h+'px';
+    const ctx=canvas.getContext('2d');
+    ctx.setTransform(dpr,0,0,dpr,0,0);
     ctx.clearRect(0,0,w,h);
-    const sub = document.getElementById('priceSub');
-    if (!points.length){
-      sub.textContent = '暂无价格快照';
-      ctx.fillStyle = '#7a8aa0'; ctx.font='12px sans-serif';
-      ctx.fillText('无数据', w/2-18, h/2);
+    if(!points.length){
+      ctx.fillStyle='#8a8498'; ctx.font='12px IBM Plex Mono'; ctx.fillText('暂无结算数据', 12, h/2);
       return;
     }
-    const vals = points.map(p=>p.price);
-    if (live!=null) vals.push(live);
-    let min = Math.min(...vals), max = Math.max(...vals);
-    if (max-min < 1){ min -= 2; max += 2; }
-    const pad = 8;
-    const xAt = i => pad + (w-2*pad) * (i / Math.max(1, points.length-1 + (live!=null?1:0)));
-    const yAt = v => pad + (h-2*pad) * (1 - (v-min)/(max-min));
-
+    const ys=points.map(p=>p.y);
+    let min=Math.min(...ys,0), max=Math.max(...ys,0);
+    if(min===max){min-=1;max+=1;}
+    const pad=8;
+    const xAt=i=>pad+(i/(points.length-1||1))*(w-pad*2);
+    const yAt=v=>h-pad-((v-min)/(max-min))*(h-pad*2);
+    // zero line
+    ctx.strokeStyle='rgba(255,45,149,.2)'; ctx.beginPath();
+    ctx.moveTo(0,yAt(0)); ctx.lineTo(w,yAt(0)); ctx.stroke();
     // fill
     ctx.beginPath();
-    points.forEach((p,i)=>{ const x=xAt(i), y=yAt(p.price); if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y); });
-    if (live!=null) ctx.lineTo(xAt(points.length), yAt(live));
-    const lastX = xAt(points.length - 1 + (live!=null?1:0));
-    ctx.lineTo(lastX, h-pad); ctx.lineTo(pad, h-pad); ctx.closePath();
-    const grd = ctx.createLinearGradient(0,0,0,h);
-    grd.addColorStop(0,'rgba(0,240,255,.25)'); grd.addColorStop(1,'rgba(0,240,255,0)');
-    ctx.fillStyle = grd; ctx.fill();
-
+    points.forEach((p,i)=>{ const x=xAt(i),y=yAt(p.y); i?ctx.lineTo(x,y):ctx.moveTo(x,y); });
+    ctx.lineTo(xAt(points.length-1),h); ctx.lineTo(xAt(0),h); ctx.closePath();
+    ctx.fillStyle='rgba(57,255,20,.12)'; ctx.fill();
+    // line
     ctx.beginPath();
-    points.forEach((p,i)=>{ const x=xAt(i), y=yAt(p.price); if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y); });
-    if (live!=null) ctx.lineTo(xAt(points.length), yAt(live));
-    ctx.strokeStyle = '#00f0ff'; ctx.lineWidth = 2; ctx.shadowColor='#00f0ff'; ctx.shadowBlur=8; ctx.stroke();
-    ctx.shadowBlur=0;
-
-    const last = live!=null ? live : points[points.length-1].price;
-    ctx.fillStyle = '#f5c542'; ctx.font='bold 12px sans-serif';
-    ctx.fillText(last.toFixed(1), lastX - 48, yAt(last) - 8);
-    sub.textContent = `${points[0].time} → ${points[points.length-1].time}` + (live!=null?` · 实时 ${live.toFixed(1)}`:'') + ` · 区间 ${min.toFixed(1)}–${max.toFixed(1)}`;
+    points.forEach((p,i)=>{ const x=xAt(i),y=yAt(p.y); i?ctx.lineTo(x,y):ctx.moveTo(x,y); });
+    ctx.strokeStyle='#39ff14'; ctx.lineWidth=2; ctx.shadowColor='#39ff14'; ctx.shadowBlur=8; ctx.stroke(); ctx.shadowBlur=0;
+    // volume bars
+    points.forEach((p,i)=>{
+      const x=xAt(i); const bh=Math.min(14, 4+Math.abs(p.dy||0)*4);
+      ctx.fillStyle=p.dy>=0?'rgba(57,255,20,.45)':'rgba(255,51,85,.45)';
+      ctx.fillRect(x-1.5, h-bh, 3, bh);
+    });
+    document.getElementById('balNum').innerHTML=
+      (total>=0?'+':'')+total.toFixed(1)+'<small>结算得分（非实盘）</small>';
   }
 
-  // ——— Parse supervisor log ———
-  function parseChiefLog(text){
-    if (!text || !String(text).trim()) return null;
-    // latest section: split by ## heading with datetime
-    const parts = String(text).split(/\n(?=##\s+\d{4}-\d{2}-\d{2})/);
-    let latest = parts[parts.length-1] || text;
-    // if first part is title only, use last meaningful
-    for (let i=parts.length-1;i>=0;i--){
-      if (/加权综合|方向[：:]/.test(parts[i])) { latest = parts[i]; break; }
+  function drawCandle(snaps){
+    const canvas=document.getElementById('candle');
+    const parent=canvas.parentElement;
+    const w=Math.max(280, parent.clientWidth-20);
+    const h=170;
+    const dpr=devicePixelRatio||1;
+    canvas.width=w*dpr; canvas.height=h*dpr;
+    canvas.style.width=w+'px'; canvas.style.height=h+'px';
+    const ctx=canvas.getContext('2d');
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,w,h);
+    if(!snaps.length){
+      ctx.fillStyle='#8a8498'; ctx.font='12px IBM Plex Mono'; ctx.fillText('暂无价格快照',12,h/2); return;
     }
-    const timeM = latest.match(/##\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})/);
-    const dirM = latest.match(/\*\*方向[：:]\s*([^**\n]+)\*\*/);
-    const entryM = latest.match(/\*\*进场[^\n*]*[：:]\s*([^*\n]+)\*\*/);
-    const slM = latest.match(/\*\*止损[：:]\s*([^*\n]+)\*\*/);
-    const tpM = latest.match(/\*\*目标[：:]\s*([^*\n]+)\*\*/);
-    const confM = latest.match(/\*\*信心[：:]\s*([^*\n]+)\*\*/);
-    if (!dirM && !entryM) return { empty:true, raw: latest.slice(0,200) };
-    return {
-      time: timeM ? timeM[1] : '',
-      direction: dirM ? dirM[1].trim() : '',
-      entry: entryM ? entryM[1].trim() : '',
-      sl: slM ? slM[1].trim() : '',
-      tp: tpM ? tpM[1].trim() : '',
-      confidence: confM ? confM[1].trim() : '',
-      raw: latest
-    };
+    const prices=snaps.map(s=>+s.price).filter(Number.isFinite);
+    let min=Math.min(...prices), max=Math.max(...prices);
+    if(min===max){min-=1;max+=1;}
+    const pad=10;
+    const xAt=i=>pad+(i/(snaps.length-1||1))*(w-pad*2);
+    const yAt=v=>h-pad-((v-min)/(max-min))*(h-pad*2);
+    // grid
+    ctx.strokeStyle='rgba(255,255,255,.06)';
+    for(let i=0;i<4;i++){ const y=pad+i*((h-pad*2)/3); ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(w,y); ctx.stroke(); }
+    // area
+    ctx.beginPath();
+    snaps.forEach((s,i)=>{ const y=yAt(+s.price); i?ctx.lineTo(xAt(i),y):ctx.moveTo(xAt(i),y); });
+    ctx.lineTo(xAt(snaps.length-1),h); ctx.lineTo(xAt(0),h); ctx.closePath();
+    ctx.fillStyle='rgba(255,45,149,.08)'; ctx.fill();
+    // line + pseudo candles
+    const up=prices[prices.length-1]>=prices[0];
+    ctx.beginPath();
+    snaps.forEach((s,i)=>{ const y=yAt(+s.price); i?ctx.lineTo(xAt(i),y):ctx.moveTo(xAt(i),y); });
+    ctx.strokeStyle=up?'#39ff14':'#ff3355'; ctx.lineWidth=1.8; ctx.shadowColor=ctx.strokeStyle; ctx.shadowBlur=6; ctx.stroke(); ctx.shadowBlur=0;
+    // candle sticks from consecutive points
+    for(let i=1;i<snaps.length;i++){
+      const o=+snaps[i-1].price, c=+snaps[i].price;
+      const x=xAt(i); const y0=yAt(o), y1=yAt(c);
+      const bull=c>=o;
+      ctx.strokeStyle=bull?'#39ff14':'#ff3355';
+      ctx.beginPath(); ctx.moveTo(x,Math.min(y0,y1)-3); ctx.lineTo(x,Math.max(y0,y1)+3); ctx.stroke();
+      ctx.fillStyle=bull?'rgba(57,255,20,.85)':'rgba(255,51,85,.85)';
+      const top=Math.min(y0,y1), bh=Math.max(2,Math.abs(y1-y0));
+      ctx.fillRect(x-3, top, 6, bh);
+    }
+    // last price label
+    const last=prices[prices.length-1];
+    ctx.fillStyle='#f0f0f8'; ctx.font='600 11px IBM Plex Mono';
+    ctx.fillText(last.toFixed(1), w-70, yAt(last)-6);
   }
 
-  function confToPct(c){
-    const t = String(c||'');
-    if (/高/.test(t) && !/中|低/.test(t)) return 80;
-    if (/中高/.test(t)) return 65;
-    if (/中低|中等偏低/.test(t)) return 40;
-    if (/中/.test(t)) return 55;
-    if (/低/.test(t)) return 25;
-    const n = t.match(/(\d{1,3})/);
-    if (n) return Math.min(100, +n[1]);
-    return 0;
+  async function fetchGold(){
+    try{
+      const r=await fetch('https://api.gold-api.com/price/XAU',{cache:'no-store'});
+      if(!r.ok) throw new Error('gold-api '+r.status);
+      const j=await r.json();
+      const price=j.price??j.ask??j.bid;
+      if(price==null) throw new Error('no price');
+      return {price:+price, src:'gold-api'};
+    }catch(e){
+      return null;
+    }
   }
 
-  // Infer bot sides from log + calls
-  function inferBotStates(chief, calls, agents){
-    const states = BOTS.map(b=>({...b, side:'unk', dirText:'—'}));
-    const text = (chief && chief.raw) || '';
-    // from log sections
-    const mapHints = [
-      {id:'tech', re:/技术分析助手[^\n]{0,40}/g, block:/技术日报[^\n]*([^\n]+)/},
-      {id:'jin10', re:/金十[^\n]{0,60}/},
-      {id:'sent', re:/情绪资金[^\n]{0,60}/},
-      {id:'blog', re:/抖音黄金博主[^\n]{0,80}/},
-      {id:'group', re:/抖音群助手[^\n]{0,80}|大飞群主|阿然群主/},
-      {id:'news', re:/新闻助手|新闻\/机构今日缺失/},
-      {id:'inst', re:/机构助手|新闻\/机构今日缺失/},
-      {id:'score', re:/复盘/}
-    ];
-    // Parse multi/空/观望 bullet blocks
-    function sideFromChunk(chunk){
-      if (!chunk) return 'unk';
-      if (/观望|中性/.test(chunk) && !/偏多|偏空|看多|看空/.test(chunk)) return 'wait';
-      if (/偏空|看空|做空|空情景|短线偏空/.test(chunk)) return 'short';
-      if (/偏多|看多|做多|多情景|略偏多|偏上|持多/.test(chunk)) return 'long';
-      if (/观望/.test(chunk)) return 'wait';
-      return dirClass(chunk);
+  
+  function drawSocialMini(){
+    const c=document.getElementById('socialMini'); if(!c) return;
+    const ctx=c.getContext('2d'); const w=72,h=48; const dpr=devicePixelRatio||1;
+    c.width=w*dpr; c.height=h*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,w,h);
+    const cx=w/2, cy=h/2; const t=performance.now()/1000;
+    const n=7;
+    for(let i=0;i<n;i++){
+      const a=-Math.PI/2+i/n*Math.PI*2+t*0.3;
+      const r=16+4*Math.sin(t+i);
+      const x=cx+Math.cos(a)*r, y=cy+Math.sin(a)*r*0.75;
+      ctx.beginPath(); ctx.moveTo(cx,cy); ctx.lineTo(x,y);
+      ctx.strokeStyle='rgba(0,229,255,.45)'; ctx.stroke();
+      ctx.beginPath(); ctx.arc(x,y,2,0,Math.PI*2); ctx.fillStyle='#00e5ff'; ctx.fill();
+    }
+    ctx.beginPath(); ctx.arc(cx,cy,3,0,Math.PI*2); ctx.fillStyle='#ff2d95'; ctx.fill();
+  }
+
+  async function boot(){
+    let data, scores, log;
+    try{
+      [data, scores, log] = await Promise.all([
+        loadJSON('./data.json'),
+        loadJSON('./blogger-scores.json').catch(()=>null),
+        loadText('./desk-log.md').catch(()=>'')
+      ]);
+    }catch(e){
+      document.body.insertAdjacentHTML('beforeend','<p class="empty">数据加载失败：'+esc(e.message)+'</p>');
+      return;
     }
 
-    // Extract from structured log bullets under 多/空/观望
-    const longBlock = (text.match(/\*\*多[^*]*\*\*([\s\S]*?)(?=\*\*空|\*\*观望|$)/)||[])[1]||'';
-    const shortBlock = (text.match(/\*\*空[^*]*\*\*([\s\S]*?)(?=\*\*观望|\*\*分歧|$)/)||[])[1]||'';
-    const waitBlock = (text.match(/\*\*观望[^*]*\*\*([\s\S]*?)(?=\*\*分歧|\*\*准确率|$)/)||[])[1]||'';
+    const chief=parseChief(log||'');
+    netState.chiefCls=dirClass(chief.dir||'观望');
+    netState.bots=chief.bots||{};
 
-    function assignFromBlocks(id, keys){
-      const st = states.find(s=>s.id===id);
-      if (!st) return;
-      for (const k of keys){
-        if (longBlock.includes(k)){ st.side='long'; st.dirText='偏多'; return; }
-        if (shortBlock.includes(k)){ st.side='short'; st.dirText='偏空'; return; }
-        if (waitBlock.includes(k)){ st.side='wait'; st.dirText='观望'; return; }
+    // CHIEF card
+    const dc=dirClass(chief.dir);
+    const vChief=document.getElementById('vChief');
+    if(chief.dir){
+      vChief.textContent=chief.dir;
+      vChief.className='big sm '+(dc==='long'?'green':dc==='short'?'red':'amber');
+      document.getElementById('dChief').className='dot '+(dc==='long'?'on':dc==='short'?'off':'warn');
+      document.getElementById('fChief').textContent=
+        (chief.time?chief.time+' · ':'')+'信心 '+(chief.conf||'—');
+    }else{
+      vChief.textContent='暂无数据';
+      vChief.className='big sm';
+      document.getElementById('fChief').textContent='desk-log 无加权结论';
+    }
+
+    // signals stats
+    const sigs=data.signals||[];
+    const since=daysAgoMs(30);
+    const settled=sigs.filter(s=>{
+      const sc=settledScore(s.status);
+      return sc!=null && parseSH(s.time)>=since;
+    });
+    const wins=settled.filter(s=>s.status==='目标1'||s.status==='目标2');
+    const losses=settled.filter(s=>s.status==='止损');
+    const winRate=settled.length? wins.length/settled.length : null;
+
+    document.getElementById('vSize').textContent=sigs.length.toLocaleString();
+    document.getElementById('fSize').textContent='updated '+(data.updated||'—')+' 北京时间';
+
+    if(settled.length){
+      document.getElementById('vFills').textContent=String(settled.length);
+      document.getElementById('fFills').textContent=`W ${wins.length} / L ${losses.length}`;
+      document.getElementById('dFills').className='dot on';
+      document.getElementById('bFills').style.width=Math.min(100, settled.length*2)+'%';
+      document.getElementById('vRisk').textContent=`${wins.length}W ${losses.length}L`;
+      document.getElementById('vRisk').className='big '+(wins.length>=losses.length?'green':'red');
+      document.getElementById('fRisk').textContent='近30天已结算';
+      if(winRate!=null){
+        document.getElementById('vVet').textContent=(winRate*100).toFixed(0)+'%';
+        document.getElementById('vVet').className='big '+(winRate>=0.55?'green':winRate>=0.4?'amber':'red');
+        document.getElementById('fVet').textContent=`样本 ${settled.length} · 目标1/2 vs 止损`;
+        document.getElementById('dVet').className='dot '+(winRate>=0.5?'on':'warn');
+        document.getElementById('bVet').style.width=(winRate*100)+'%';
+      }
+    }else{
+      document.getElementById('vFills').textContent='暂无数据';
+      document.getElementById('vRisk').textContent='暂无数据';
+      document.getElementById('vVet').textContent='暂无数据';
+      document.getElementById('fVet').textContent='近30天无已结算';
+    }
+
+    // SOCIAL
+    const calls=(data.calls||[]).slice().sort((a,b)=>parseSH(b.time)-parseSH(a.time));
+    document.getElementById('vSocial').textContent=calls.length?`tracking ${Math.min(calls.length,99)}`:'暂无数据';
+    document.getElementById('fSocial').textContent=calls[0]?`最新 ${calls[0].time} · ${calls[0].source_name||''}`:'—';
+
+    // CRAWLER bots
+    const miss=BOTS.filter(b=>(chief.bots[b.id]||{}).cls==='miss').length;
+    const known=BOTS.length-miss;
+    document.getElementById('vCrawl').textContent=`${known}/${BOTS.length} 有缓存`;
+    document.getElementById('fCrawl').textContent=miss?`${miss} 助手今日缺失`:'巡检缓存齐';
+    document.getElementById('dCrawl').className='dot '+(miss? 'warn':'on');
+
+    // avatars
+    const av=document.getElementById('avatars');
+    av.innerHTML=BOTS.map(b=>{
+      const st=chief.bots[b.id]||{cls:'miss',dir:'缺失'};
+      return `<div class="av ${esc(st.cls)}" title="${esc(b.full)}">${esc(b.label)}<span class="tip">${esc(dirLabel(st.cls)==='—'?st.dir:dirLabel(st.cls))}</span></div>`;
+    }).join('');
+    document.getElementById('botsUpdated').textContent=chief.time||'—';
+
+    // side log from calls
+    const side=document.getElementById('sideLog');
+    if(!calls.length){ side.innerHTML='<div class="empty" style="padding:8px">暂无数据</div>'; }
+    else{
+      side.innerHTML=calls.slice(0,12).map(c=>{
+        const cls=dirClass(c.direction);
+        const tag=cls==='long'?'ok':cls==='short'?'bad':cls==='wait'?'warn':'';
+        return `<div class="ln ${tag}"><em>${esc((c.time||'').slice(5,16))}</em>${esc(c.source_name||'')} · ${esc(dirLabel(cls))} · ${esc((c.advice||c.direction||'').slice(0,42))}</div>`;
+      }).join('');
+    }
+
+    // ticker
+    const parts=[];
+    parts.push(`CHIEF ${chief.dir||'暂无'} · CONF ${chief.conf||'—'}`);
+    if(settled.length) parts.push(`FILLS ${settled.length} · WIN ${(winRate*100).toFixed(0)}% · ${wins.length}W/${losses.length}L`);
+    parts.push(`SIGNALS ${sigs.length}`);
+    const lastSig=sigs[sigs.length-1];
+    if(lastSig) parts.push(`LAST #${lastSig.id} ${lastSig.direction} @ ${lastSig.price_at}`);
+    calls.slice(0,5).forEach(c=>parts.push(`${c.source_name}: ${(c.direction||'').slice(0,20)}`));
+    parts.push('个人观点，不构成投资建议');
+    document.getElementById('ticker').innerHTML=parts.map((p,i)=> (i?'<b>·</b>':'')+esc(p)).join('');
+
+    // balance curve
+    const chron=settled.slice().sort((a,b)=>parseSH(a.time)-parseSH(b.time));
+    let acc=0; const pts=[];
+    chron.forEach(s=>{
+      const dy=settledScore(s.status)||0; acc+=dy;
+      pts.push({t:s.time,y:acc,dy});
+    });
+    if(pts.length===1) pts.unshift({t:pts[0].t,y:0,dy:0});
+    drawBalance(pts, acc);
+
+    // price chart
+    const snaps=(data.price_snapshots||[]).slice(-80);
+    drawCandle(snaps);
+    document.getElementById('chartSub').textContent=
+      snaps.length?`${snaps[0].time} → ${snaps[snaps.length-1].time}`:'暂无数据';
+
+    // live price
+    async function refreshPrice(){
+      const g=await fetchGold();
+      const el=document.getElementById('vScan');
+      if(g){
+        el.textContent=g.price.toFixed(1);
+        const prev=snaps.length?+snaps[snaps.length-1].price:g.price;
+        el.className='big '+(g.price>=prev?'green':'red');
+        document.getElementById('fScan').textContent=`${g.src} · 相对快照 ${g.price>=prev?'↑':'↓'} · 北京时间`;
+        document.getElementById('bScan').style.width='72%';
+        document.getElementById('dScan').className='dot on';
+      }else if(snaps.length){
+        const p=+snaps[snaps.length-1].price;
+        el.textContent=p.toFixed(1);
+        el.className='big amber';
+        document.getElementById('fScan').textContent='gold-api 暂不可用 · 用快照 '+snaps[snaps.length-1].time;
+      }else{
+        el.textContent='暂无数据';
+        document.getElementById('fScan').textContent='无实时价、无快照';
+        document.getElementById('dScan').className='dot off';
       }
     }
-    assignFromBlocks('tech', ['技术分析','技术日报']);
-    assignFromBlocks('jin10', ['金十']);
-    assignFromBlocks('sent', ['情绪资金']);
-    assignFromBlocks('blog', ['抖音黄金博主','15m']);
-    assignFromBlocks('group', ['抖音群','大飞','阿然群']);
-    assignFromBlocks('news', ['新闻']);
-    assignFromBlocks('inst', ['机构']);
-    assignFromBlocks('score', ['复盘','看板']);
+    await refreshPrice();
+    setInterval(refreshPrice, 15000);
 
-    // If news/inst marked 今日缺失 in log
-    if (/新闻\/机构今日缺失|新闻助手[^\n]*今日缺失/.test(text)){
-      const n = states.find(s=>s.id==='news'); if (n && n.side==='unk'){ n.dirText='今日缺失'; }
-      const i = states.find(s=>s.id==='inst'); if (i && i.side==='unk'){ i.dirText='今日缺失'; }
-    }
-
-    // Bloggers / groups from latest calls
-    const latestBy = {};
-    (calls||[]).forEach(c=>{ latestBy[c.source_name]=c; });
-    const blogCalls = (calls||[]).filter(c=>/抖音|博主|作品|视频/.test(c.source_type||'') || /^[0-9]号/.test(c.source_name||''));
-    const groupCalls = (calls||[]).filter(c=>/会员群|群/.test(c.source_type||'') || /会员|群/.test(c.source_name||''));
-    if (blogCalls.length){
-      const last = blogCalls[blogCalls.length-1];
-      // majority of last 5 unique bloggers
-      const seen = new Map();
-      for (let i=blogCalls.length-1;i>=0 && seen.size<5;i--){
-        const c = blogCalls[i];
-        const key = c.source_name.replace(/（.*）/,'');
-        if (!seen.has(key)) seen.set(key, c);
-      }
-      let long=0,short=0,wait=0;
-      seen.forEach(c=>{
-        const s = dirClass(c.direction);
-        if (s==='long') long++; else if (s==='short') short++; else wait++;
+    // terminal from desk-log
+    const term=document.getElementById('term');
+    if(!log || !log.trim()){
+      term.innerHTML='<div class="kh">desk-log.md</div><div class="empty">暂无数据</div>';
+    }else{
+      const lines=log.split('\n').filter(l=>l.trim()).slice(0,80);
+      const rows=[];
+      rows.push(`<div class="kh"># desk-log.md · ${esc(chief.time||'—')}</div>`);
+      // key-value style for conclusion
+      const kvs=[
+        ['direction', chief.dir||'暂无数据'],
+        ['entry', chief.entry||'暂无数据'],
+        ['stop_loss', chief.sl||'暂无数据'],
+        ['targets', chief.tp||'暂无数据'],
+        ['confidence', chief.conf||'暂无数据'],
+        ['bots_cached', `${known}/${BOTS.length}`],
+        ['bots_missing', miss?BOTS.filter(b=>(chief.bots[b.id]||{}).cls==='miss').map(b=>b.label).join(','):'none'],
+        ['settled_30d', String(settled.length)],
+        ['win_rate_30d', winRate==null?'暂无数据':(winRate*100).toFixed(1)+'%'],
+        ['disclaimer', '个人观点，不构成投资建议']
+      ];
+      kvs.forEach(([k,v])=>{
+        rows.push(`<div class="row"><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span></div>`);
       });
-      const st = states.find(s=>s.id==='blog');
-      if (st && st.side==='unk'){
-        if (long>short && long>wait){ st.side='long'; st.dirText=`偏多(${long}/${seen.size})`; }
-        else if (short>long && short>wait){ st.side='short'; st.dirText=`偏空(${short}/${seen.size})`; }
-        else { st.side='wait'; st.dirText=`分歧/观望`; }
-      }
-    }
-    if (groupCalls.length){
-      const last = groupCalls[groupCalls.length-1];
-      const st = states.find(s=>s.id==='group');
-      if (st && st.side==='unk'){
-        st.side = dirClass(last.direction);
-        st.dirText = dirLabel(last.direction);
-      }
+      rows.push(`<div class="c" style="margin-top:8px"># raw excerpt</div>`);
+      lines.slice(0,25).forEach(l=>{
+        rows.push(`<div class="c">${esc(l).slice(0,100)}</div>`);
+      });
+      term.innerHTML=rows.join('');
     }
 
-    // chief direction paints center context only; leave bots as is
-    return states;
-  }
-
-  function renderChief(chief){
-    const dirEl = document.getElementById('chiefDir');
-    if (!chief || chief.empty){
-      dirEl.className = 'chief-dir empty';
-      dirEl.textContent = '主管尚未产出';
-      document.getElementById('cEntry').textContent = '—';
-      document.getElementById('cSl').textContent = '—';
-      document.getElementById('cTp').textContent = '—';
-      document.getElementById('cConf').textContent = '—';
-      document.getElementById('confFill').style.width = '0%';
-      document.getElementById('confNote').textContent = chief && chief.raw ? '日志存在但未解析到加权综合' : '未找到 desk-log.md / gold-desk/log.md';
-      document.getElementById('chiefTime').textContent = '—';
-      return;
+    // blogger scores footnote into RISK foot if helpful
+    if(scores && scores.summary && scores.summary.rows && scores.summary.rows.length){
+      const top=scores.summary.rows[0];
+      document.getElementById('fRisk').textContent += ` · 博主榜首 ${top.name} ${(top.win7d*100).toFixed(0)}%`;
     }
-    const dc = dirClass(chief.direction);
-    dirEl.className = 'chief-dir ' + (dc==='long'?'long':dc==='short'?'short':'wait');
-    dirEl.textContent = chief.direction || '—';
-    const setVal=(id,v)=>{const el=document.getElementById(id); el.textContent=v||'—'; el.title=v||'';};
-    setVal('cEntry', chief.entry);
-    setVal('cSl', chief.sl);
-    setVal('cTp', chief.tp);
-    setVal('cConf', chief.confidence);
-    const pct = confToPct(chief.confidence);
-    document.getElementById('confFill').style.width = pct + '%';
-    document.getElementById('confNote').textContent = pct ? `信心条按文案映射约 ${pct}%（非精确打分）` : '';
-    document.getElementById('chiefTime').textContent = chief.time ? (chief.time + ' 北京') : '—';
+
+    window.addEventListener('resize', ()=>{
+      drawNet(netState);
+      drawBalance(pts, acc);
+      drawCandle(snaps);
+    });
   }
 
-  function renderViews(calls){
-    const box = document.getElementById('viewsList');
-    if (!calls || !calls.length){ box.innerHTML = '<div class="empty">暂无观点</div>'; return; }
-    // latest per source_name
-    const map = new Map();
-    calls.forEach(c=> map.set(c.source_name, c));
-    const rows = Array.from(map.values()).sort((a,b)=> (b.time||'').localeCompare(a.time||'')).slice(0,18);
-    box.innerHTML = rows.map(c=>{
-      const dc = dirClass(c.direction);
-      const badge = dc==='long'?'long':dc==='short'?'short':dc==='wait'?'wait':'unk';
-      return `<div class="row">
-        <div class="t">${esc(c.time||'')}</div>
-        <div><div class="n">${esc(c.source_name||'')}</div><div class="d">${esc((c.direction||'')+(c.levels? ' · '+c.levels:'').slice(0,120))}</div></div>
-        <span class="badge ${badge}">${esc(dirLabel(c.direction))}</span>
-      </div>`;
-    }).join('');
-  }
-
-  function renderRank(summary){
-    const box = document.getElementById('rankList');
-    const rows = (summary && summary.rows) || [];
-    if (!rows.length){ box.innerHTML = '<div class="empty">暂无排行</div>'; return; }
-    const note = summary.note ? `<div class="sm" style="margin-bottom:8px;color:var(--mu)">${esc(summary.note)}</div>` : '';
-    box.innerHTML = note + rows.map((r,i)=>{
-      const w = r.win7d;
-      const pctTxt = w==null ? '—' : ((w*100).toFixed(1)+'%');
-      const cls = w==null ? '' : w>=0.5 ? 'hi' : w>=0.3 ? 'mid' : 'lo';
-      const samp = r.samples!=null ? `样本 ${r.samples}` : '';
-      const warn = (r.samples!=null && r.samples<5) ? ' · 样本偏少' : '';
-      return `<div class="rank-row">
-        <div class="no">${i+1}</div>
-        <div><div>${esc(r.name)}</div><div class="sm">${esc(samp+warn)}${r.note? ' · '+esc(r.note):''}</div></div>
-        <div class="pct ${cls}">${pctTxt}</div>
-      </div>`;
-    }).join('');
-  }
-
-  function renderSignals(signals){
-    const cutoff = daysAgo(30);
-    const recent = (signals||[]).filter(s=> parseTaipei(s.time) >= cutoff);
-    const settled = recent.filter(s=> ['目标1','目标2','止损'].includes(s.status));
-    const wins = settled.filter(s=> s.status==='目标1' || s.status==='目标2');
-    const wr = settled.length ? (wins.length/settled.length*100) : null;
-    const stats = document.getElementById('sigStats');
-    stats.innerHTML = `
-      <div><span class="big">${settled.length}</span> <span class="lbl">已结算（近30天）</span></div>
-      <div><span class="big">${wr==null?'—':wr.toFixed(1)+'%'}</span> <span class="lbl">胜率 = (目标1+目标2) ÷ 已结算 · 样本 ${settled.length}</span></div>
-      <div><span class="lbl">目标1 ${wins.filter(s=>s.status==='目标1').length} · 目标2 ${wins.filter(s=>s.status==='目标2').length} · 止损 ${settled.filter(s=>s.status==='止损').length}</span></div>
-    `;
-    const body = document.getElementById('sigBody');
-    const empty = document.getElementById('sigEmpty');
-    if (!settled.length){
-      body.innerHTML = '';
-      empty.style.display = 'block';
-      return;
-    }
-    empty.style.display = 'none';
-    const show = settled.slice().sort((a,b)=> (b.time||'').localeCompare(a.time||'')).slice(0,40);
-    body.innerHTML = show.map(s=>{
-      const dc = dirClass(s.direction);
-      const badge = dc==='long'?'long':dc==='short'?'short':dc==='wait'?'wait':'unk';
-      const stColor = s.status==='止损' ? 'var(--red)' : 'var(--green)';
-      return `<tr>
-        <td>${esc(s.time||'')}</td>
-        <td><span class="badge ${badge}">${esc(s.direction||'')}</span></td>
-        <td>${esc(s.entry??'—')}</td>
-        <td>${esc(s.tp1??'—')}</td>
-        <td>${esc(s.tp2??'—')}</td>
-        <td>${esc(s.sl??'—')}</td>
-        <td>${esc(s.confidence??'—')}</td>
-        <td style="color:${stColor};font-weight:700">${esc(s.status||'')}</td>
-      </tr>`;
-    }).join('');
-  }
-
-  let livePrice = null;
-  let pricePoints = [];
-
-  async function fetchLivePrice(){
-    try{
-      const r = await fetch('https://api.gold-api.com/price/XAU', {cache:'no-store'});
-      if (!r.ok) throw new Error('http '+r.status);
-      const j = await r.json();
-      livePrice = Number(j.price);
-      const el = document.getElementById('livePrice');
-      el.textContent = livePrice.toFixed(1);
-      el.className = 'price';
-      const src = document.getElementById('priceSrc');
-      src.textContent = 'gold-api 实时';
-      src.className = 'live';
-      drawPrice(pricePoints, livePrice);
-    }catch(e){
-      document.getElementById('priceSrc').textContent = pricePoints.length ? '实时失败，用快照' : '金价不可用';
-      document.getElementById('priceSrc').className = '';
-      if (pricePoints.length){
-        const last = pricePoints[pricePoints.length-1].price;
-        const el = document.getElementById('livePrice');
-        el.textContent = Number(last).toFixed(1);
-        el.className = 'price';
-      }
-    }
-  }
-
-  async function loadAll(){
-    let data=null, scores=null, logText='';
-    try{
-      const r = await fetch('./data.json', {cache:'no-store'});
-      data = await r.json();
-    }catch(e){
-      document.getElementById('viewsList').innerHTML = '<div class="empty">data.json 加载失败</div>';
-    }
-    try{
-      const r = await fetch('./blogger-scores.json', {cache:'no-store'});
-      scores = await r.json();
-    }catch(e){}
-    try{
-      const r = await fetch('./desk-log.md', {cache:'no-store'});
-      if (r.ok) logText = await r.text();
-    }catch(e){}
-
-    if (data){
-      document.getElementById('dataUpdated').textContent = data.updated || '—';
-      const allSnaps = data.price_snapshots||[];
-      const cutoffT = (()=>{const d=new Date(); d.setUTCDate(d.getUTCDate()-2); return d.getTime();})();
-      let snaps = allSnaps.filter(p=>parseTaipei(p.time)>=cutoffT);
-      if (snaps.length < 8) snaps = allSnaps.slice(-48);
-      pricePoints = snaps.map(p=>({time:p.time, price:Number(p.price)})).filter(p=>!isNaN(p.price));
-      drawPrice(pricePoints, livePrice);
-      renderViews(data.calls||[]);
-      renderSignals(data.signals||[]);
-      const chief = parseChiefLog(logText);
-      renderChief(chief);
-      netState = inferBotStates(chief, data.calls||[], data.agents||[]);
-    } else {
-      renderChief(parseChiefLog(logText));
-    }
-    if (scores) renderRank(scores.summary);
-    else document.getElementById('rankList').innerHTML = '<div class="empty">blogger-scores 不可用</div>';
-  }
-
-  window.addEventListener('resize', ()=>{ drawPrice(pricePoints, livePrice); });
-  loopNet();
-  loadAll().then(fetchLivePrice);
-  setInterval(fetchLivePrice, 60000);
-  setInterval(loadAll, 60000);
+  boot();
 })();
 </script>
 </body>
