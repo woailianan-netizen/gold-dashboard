@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03 21:24",
+  "updated": "2026-11-03 21:28",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -6038,6 +6038,18 @@
       "reaction": "消息出来后金价、油价暂时平稳，需观察亚欧盘反应",
       "link": "https://x.com/FirstSquawk/status/2117417209438077337",
       "note": "来源：FirstSquawk转WSJ https://x.com/FirstSquawk/status/2117417209438077337 ；financialjuice https://x.com/financialjuice/status/2117417152567464216 ；中国央行外汇存准 https://x.com/FirstSquawk/status/2117418700852904324"
+    },
+    {
+      "time": "2026-11-03 21:15",
+      "title": "伊朗革命卫队称又有3艘油轮在霍尔木兹触雷爆炸；特朗普确认昨夜打了伊朗设施、选后打不打「再看」",
+      "name": "伊朗官媒/革命卫队海军（约20:34台北起传出，zerohedge 21:15台北转发）：今晨起3艘关闭定位、走「未经授权航道」的油轮在霍尔木兹海峡触雷，发生爆炸和大火；伊方单方说法，船名和伤亡未公布，暂无UKMTO等独立证实。同时特朗普接受福克斯采访（DeItaone 21:15–21:26台北）：确认「昨晚很漂亮地打了」伊朗新建的防空设施，「不想杀很多人」，被问选后对伊朗怎么做答「再看」；另称已停掉对以色列40亿美元援助。盘前布伦特约110.45（ApexWire转述，未核实）。",
+      "category": "地缘",
+      "impact": "多空交织",
+      "expected": "多空交织：霍尔木兹航运袭击再升级、特朗普不排除选后再动手，避险买盘利多黄金；但油价反弹会抬升通胀和加息预期，压制黄金；属伊方说法、未独立证实",
+      "actual": "现货约3934.0（gold-api 21:27台北），消息后未见明显波动",
+      "reaction": "金价在3930–3940震荡，暂无明显反应",
+      "link": "https://x.com/zerohedge/status/2117606580531220657",
+      "note": "来源：zerohedge https://x.com/zerohedge/status/2117606580531220657 ；DeItaone特朗普福克斯采访 https://x.com/DeItaone/status/2117609274188898338 ；停以色列援助 https://x.com/DeItaone/status/2117607583616037348"
     }
   ],
   "activity": [
