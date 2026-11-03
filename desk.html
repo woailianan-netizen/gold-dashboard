@@ -92,12 +92,13 @@ canvas#net{width:100%;height:320px;display:block}
 .chief-dir.wait{color:var(--gold);text-shadow:var(--glow-gold)}
 .chief-dir.empty{color:var(--mu);font-size:18px;letter-spacing:.04em}
 .kv{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.kv.chief{grid-template-columns:1fr}
 .kv .cell{
   background:rgba(0,240,255,.04);border:1px solid rgba(0,240,255,.12);
   border-radius:6px;padding:8px 10px
 }
 .kv .cell .lab{font-size:10px;color:var(--mu);letter-spacing:.1em;margin-bottom:4px}
-.kv .cell .val{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--tx);word-break:break-word}
+.kv .cell .val{font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--tx);word-break:break-word;line-height:1.45;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;max-height:5.8em}
 .conf-bar{height:6px;background:rgba(255,255,255,.08);border-radius:3px;margin-top:10px;overflow:hidden}
 .conf-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--cyan),var(--pink));box-shadow:var(--glow-pink);width:0;transition:width .6s}
 .conf-label{font-size:11px;color:var(--mu);margin-top:4px}
@@ -196,7 +197,7 @@ footer a{color:var(--cyan);text-decoration:none}
     <section class="panel gold-border" id="chiefPanel">
       <div class="ptitle">CHIEF · 交易主管结论 <span class="tag" id="chiefTime">—</span></div>
       <div id="chiefDir" class="chief-dir empty">主管尚未产出</div>
-      <div class="kv" id="chiefKV">
+      <div class="kv chief" id="chiefKV">
         <div class="cell"><div class="lab">进场</div><div class="val" id="cEntry">—</div></div>
         <div class="cell"><div class="lab">止损</div><div class="val" id="cSl">—</div></div>
         <div class="cell"><div class="lab">目标</div><div class="val" id="cTp">—</div></div>
@@ -575,10 +576,11 @@ footer a{color:var(--cyan);text-decoration:none}
     const dc = dirClass(chief.direction);
     dirEl.className = 'chief-dir ' + (dc==='long'?'long':dc==='short'?'short':'wait');
     dirEl.textContent = chief.direction || '—';
-    document.getElementById('cEntry').textContent = chief.entry || '—';
-    document.getElementById('cSl').textContent = chief.sl || '—';
-    document.getElementById('cTp').textContent = chief.tp || '—';
-    document.getElementById('cConf').textContent = chief.confidence || '—';
+    const setVal=(id,v)=>{const el=document.getElementById(id); el.textContent=v||'—'; el.title=v||'';};
+    setVal('cEntry', chief.entry);
+    setVal('cSl', chief.sl);
+    setVal('cTp', chief.tp);
+    setVal('cConf', chief.confidence);
     const pct = confToPct(chief.confidence);
     document.getElementById('confFill').style.width = pct + '%';
     document.getElementById('confNote').textContent = pct ? `信心条按文案映射约 ${pct}%（非精确打分）` : '';
@@ -707,7 +709,10 @@ footer a{color:var(--cyan);text-decoration:none}
 
     if (data){
       document.getElementById('dataUpdated').textContent = data.updated || '—';
-      const snaps = (data.price_snapshots||[]).slice(-48);
+      const allSnaps = data.price_snapshots||[];
+      const cutoffT = (()=>{const d=new Date(); d.setUTCDate(d.getUTCDate()-2); return d.getTime();})();
+      let snaps = allSnaps.filter(p=>parseTaipei(p.time)>=cutoffT);
+      if (snaps.length < 8) snaps = allSnaps.slice(-48);
       pricePoints = snaps.map(p=>({time:p.time, price:Number(p.price)})).filter(p=>!isNaN(p.price));
       drawPrice(pricePoints, livePrice);
       renderViews(data.calls||[]);
