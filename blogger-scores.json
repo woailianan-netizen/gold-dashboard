@@ -1481,6 +1481,24 @@
    "call_id": 304,
    "raw_levels": "如果晚上金毛不乱搞 80能上去",
    "trade_day": "2026-11-04"
+  },
+  {
+   "id": 62,
+   "no": 3,
+   "name": "阿然爱囤金",
+   "time": "2026-11-04 18:14",
+   "direction": "中性（压力4080回落再探底后北上）",
+   "entry": "未提",
+   "stop": "未提",
+   "target": "未提",
+   "price_at_call": 4043.2,
+   "price_note": "gold-api 18:42 约4043.2；页面只显示相对时间（约18:12–18:16）",
+   "source": "https://www.douyin.com/video/7704257476933274920",
+   "result": "不计分",
+   "call_id": 305,
+   "raw_levels": "黄金反转需筑底，可能承压回落至4080，再探底后北上",
+   "trade_day": "2026-11-04",
+   "note": "中性且与16:31观点重复"
   }
  ],
  "summary": {
