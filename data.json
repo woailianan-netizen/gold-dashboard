@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04 10:12",
+  "updated": "2026-11-04 10:21",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -6258,6 +6258,18 @@
       "reaction": "金价窄幅偏弱，美股期货小涨",
       "link": "https://x.com/i/status/2117762865658462464",
       "note": "来源：https://x.com/i/status/2117762865658462464 ；https://x.com/i/status/2117767922596864416 ；与11-03 04:06「选后不急着打」同一口径，属再次确认"
+    },
+    {
+      "time": "2026-11-04 10:10",
+      "title": "美国中期选举：DDHQ预测民主党夺回众议院控制权",
+      "name": "Decision Desk HQ（经 zerohedge 10:10、DeItaone 10:15 台北转发）预测民主党赢得美国众议院多数。参议院未定，CNBC 称德州参议院 Talarico 对 Paxton「倾向民主党」，民主党横扫两院的可能性上升。此前彭博称民主党横扫预期令美元和美股期货走低、美债走强。",
+      "category": "政治",
+      "impact": "利多",
+      "expected": "偏利多：国会分裂或横扫都会限制特朗普的财政和关税议程，美元偏弱、美债收益率回落，对黄金有利；但赢众议院市场早已定价约九成，边际影响有限，参议院结果才是下一个变数",
+      "actual": "现货约3945.6（gold-api 2026-11-04 10:20台北），消息后基本持平，未破3935/3970",
+      "reaction": "美元、美股期货此前已走低，金价反应平淡",
+      "link": "https://x.com/DeItaone/status/2117802876651352419",
+      "note": "来源：https://x.com/zerohedge/status/2117801692032905264 ；https://x.com/DeItaone/status/2117802876651352419 ；https://x.com/CNBC/status/2117802384563064878"
     }
   ],
   "activity": [
