@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04 12:06",
+  "updated": "2026-11-04 12:12",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -6306,6 +6306,30 @@
       "reaction": "美元、美股期货此前已走低，金价反应平淡",
       "link": "https://x.com/DeItaone/status/2117802876651352419",
       "note": "来源：https://x.com/zerohedge/status/2117801692032905264 ；https://x.com/DeItaone/status/2117802876651352419 ；https://x.com/CNBC/status/2117802384563064878"
+    },
+    {
+      "time": "2026-11-04 12:00",
+      "title": "伊朗革命卫队称霍尔木兹附近四艘油轮触雷起火",
+      "name": "路透 12:00台北：伊朗革命卫队（IRGC）称霍尔木兹海峡附近有四艘油轮触雷起火。此前（11-03 晚）IRGC 称三艘油轮触雷、英国海事贸易行动办公室（UKMTO）确认一艘油轮被不明弹体击中，本次数量升级。同时段 zerohedge 转以色列情报称伊朗可能用化学武器（01:53 已报过同类消息）。",
+      "category": "地缘",
+      "impact": "多空交织",
+      "expected": "多空交织：海峡航运风险升级，避险买盘偏利多；但油价上行抬通胀和加息预期偏利空。按用户口径不单边标利多",
+      "actual": "现货约3949.3（gold-api 2026-11-04 12:09台北），较12:00约3935.1上涨约14美元",
+      "reaction": "金价12:00后短线拉升，上破3940/3945",
+      "link": "https://x.com/Reuters/status/2117829343778889915",
+      "note": "来源：https://x.com/Reuters/status/2117829343778889915 ；https://x.com/zerohedge/status/2117829298509709505"
+    },
+    {
+      "time": "2026-11-04 12:06",
+      "title": "民主党 Talarico 拿下德州参议院席位，离夺回参众两院更近一步",
+      "name": "路透/CNBC/华尔街日报 12:06–12:09台北：美国媒体预测民主党 James Talarico 击败 Ken Paxton 赢得德州参议院席位，是1994年后民主党首次赢得德州全州选举；堪萨斯参议院也由民主党 Hamilton 拿下。路透称民主党更接近同时夺回参众两院。彭博称美债全线走强。",
+      "category": "政治",
+      "impact": "利多",
+      "expected": "偏利多：民主党横扫两院会更大程度限制特朗普的财政和关税议程，美元偏弱、美债收益率回落，对黄金有利；但参议院控制权尚未最终确定",
+      "actual": "现货约3949.3（gold-api 2026-11-04 12:09台北）",
+      "reaction": "美债走强，金价同期走高",
+      "link": "https://x.com/Reuters/status/2117831079335718953",
+      "note": "来源：https://x.com/Reuters/status/2117830788020605229 ；https://x.com/CNBC/status/2117830717296030097 ；https://x.com/business/status/2117829291593314480"
     }
   ],
   "activity": [
