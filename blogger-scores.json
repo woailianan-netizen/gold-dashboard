@@ -1610,12 +1610,22 @@
       "price_at_call": 4092.8,
       "price_note": "gold-api 08:32 约4092.8；群消息约07:37-07:55，取本轮现价",
       "source": "抖音 黄金会员专属通知1群/2群 群主约07:55",
-      "result": "待判定",
+      "result": "对",
       "call_id": 308,
       "raw_direction": "今天会反复冲击80以上；低点看50附近",
       "raw_levels": "80以上；低点50附近",
       "trade_day": "2026-11-05",
-      "note": "支撑原话「50附近」一并记录"
+      "note": "支撑原话「50附近」一并记录",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4092.8（gold-api）。目标「80以上」=4080，日高4146.92先碰到；无止损",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 66,
@@ -1629,12 +1639,22 @@
       "price_at_call": 4092.8,
       "price_note": "gold-api 08:32 约4092.8",
       "source": "抖音 阿然专属会员1群/2群 群主08:18长图",
-      "result": "待判定",
+      "result": "不计分",
       "call_id": 309,
       "raw_direction": "短线偏多头（多方炮）；中线承压回落二次探底必然，没必要追高",
       "raw_levels": "3900附近双底或跌倒3975附近头肩底",
       "trade_day": "2026-11-05",
-      "note": "短线与中线方向不同，记一条综合；原油看空另述不计金价分"
+      "note": "短线与中线方向不同，记一条综合；原油看空另述不计金价分",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4092.8（gold-api）。短线偏多与中线看回落方向不单一，按规则不计分",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 67,
@@ -1648,12 +1668,22 @@
       "price_at_call": null,
       "price_note": "正文未打开，发布时间未精确到分钟；本轮现价4092.8仅供参考，待补当时价",
       "source": "抖音作品标题 7704217563757268345 / 7704229484845977977",
-      "result": "待判定",
+      "result": "不计分",
       "call_id": 310,
       "raw_direction": "稳得住3950有效反弹，稳不住需耐心；回落至少日内50-64",
       "raw_levels": "3950；日内50-64伦敦金",
       "trade_day": "2026-11-04",
-      "note": "仅标题时入库；正文已补见call316"
+      "note": "仅标题时入库；正文已补见call316",
+      "basis": "交易日11-04（北京11-04 07:00至次日06:00）：最高4070.66、最低3919.65、收盘4060.02（Investing.com）；发布时价格未取到（gold-api）。仅标题入库且方向中性偏回落；正文已在#68计分，按中性/重复不计分",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-04",
+        "high": 4070.66,
+        "low": 3919.65,
+        "close": 4060.02,
+        "open": 3928.48,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 68,
@@ -1667,12 +1697,22 @@
       "price_at_call": null,
       "price_note": "发布时间早于取样、当时价未取到；本轮现价4092.1仅供参考",
       "source": "https://www.douyin.com/video/7704274866808378470",
-      "result": "待判定",
+      "result": "偏错",
       "call_id": 315,
       "raw_direction": "拉涨后看回落",
       "raw_levels": "4070-4089",
       "trade_day": "2026-11-04",
-      "note": "压力记在 raw_levels；无明确进场/止损/目标"
+      "note": "压力记在 raw_levels；无明确进场/止损/目标",
+      "basis": "交易日11-04（北京11-04 07:00至次日06:00）：最高4070.66、最低3919.65、收盘4060.02（Investing.com）；发布时价格未取到（gold-api）。方向空/偏回落，无进场止损目标；当时期货约4052（Yahoo GC=F 19:00棒），现货约低8–10美元；收盘4060.02较当时约上行，与「空/偏回落」相反",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-04",
+        "high": 4070.66,
+        "low": 3919.65,
+        "close": 4060.02,
+        "open": 3928.48,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 69,
@@ -1686,12 +1726,22 @@
       "price_at_call": 4095.7,
       "price_note": "gold-api 08:56 约4095.7；群约08:29",
       "source": "抖音 黄金会员专属通知1群/2群 群主约08:29",
-      "result": "待判定",
+      "result": "对",
       "call_id": 319,
       "raw_direction": "上行趋势；高点看80以上；回调不会大",
       "raw_levels": "80以上",
       "trade_day": "2026-11-05",
-      "note": "与07:55同向，强调回调不大、高抛低吸"
+      "note": "与07:55同向，强调回调不大、高抛低吸",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4095.7（gold-api）。目标「80以上」=4080，日高4146.92碰到；无止损",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 70,
@@ -1705,11 +1755,21 @@
       "price_at_call": 4095.7,
       "price_note": "gold-api 08:56 约4095.7",
       "source": "抖音 阿然专属会员1群/2群 群主08:26长图",
-      "result": "待判定",
+      "result": "偏错",
       "call_id": 320,
       "raw_direction": "多头强势，做空逆势；靠近4100空还没到不急",
       "raw_levels": "黄4030-4120；白银50.5-54目标54",
-      "trade_day": "2026-11-05"
+      "trade_day": "2026-11-05",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4095.7（gold-api）。方向短线偏多，无清晰止损目标；收盘4088.80较发布时约-6.9美元，与「偏多」相反",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 71,
@@ -1723,11 +1783,22 @@
       "price_at_call": 4095.7,
       "price_note": "gold-api 08:56 约4095.7",
       "source": "抖音 阿然专属会员1群/2群 群主08:31长图",
-      "result": "待判定",
+      "result": "不计分",
       "call_id": 321,
       "raw_direction": "4100锁利，4000下补，3700-3800留筹",
       "raw_levels": "4100；4000；3700-3800",
-      "trade_day": "2026-11-05"
+      "trade_day": "2026-11-05",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4095.7（gold-api）。积存金锁利/补仓规划（中期仓位安排），无明确日内进场止损目标，按中期无点位观点不计分",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      },
+      "note": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4"
     },
     {
       "id": 72,
@@ -1741,12 +1812,22 @@
       "price_at_call": 4098.5,
       "price_note": "gold-api 01:08:30Z ≈4098.5（北京09:08）",
       "source": "抖音作品 https://www.douyin.com/video/7704486840892842084",
-      "result": "待判定",
+      "result": "偏错",
       "call_id": 323,
       "raw_direction": "一路上行趋势 谁也挡不住",
       "raw_levels": "未提",
       "trade_day": "2026-11-05",
-      "note": "有明确偏多方向、无具体点位；相对08:29群观点同向延续"
+      "note": "有明确偏多方向、无具体点位；相对08:29群观点同向延续",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4098.5（gold-api）。方向多，无目标止损；收盘4088.80较发布时约-9.7美元，与「多」相反",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 73,
@@ -1760,12 +1841,22 @@
       "price_at_call": 4110.5,
       "price_note": "gold-api 01:18:00Z ≈4110.5（北京09:18）",
       "source": "抖音 黄金会员专属通知1群/2群 群主约09:15「还得继续上冲」",
-      "result": "待判定",
+      "result": "偏错",
       "call_id": 324,
       "raw_direction": "还得继续上冲",
       "raw_levels": "未提",
       "trade_day": "2026-11-05",
-      "note": "有明确偏多方向、无具体点位；相对09:03作品/08:29群同向延续"
+      "note": "有明确偏多方向、无具体点位；相对09:03作品/08:29群同向延续",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4110.5（gold-api）。方向多，无目标止损；收盘4088.80较发布时约-21.7美元，与「多」相反",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 74,
@@ -1779,12 +1870,22 @@
       "price_at_call": 4127.399902,
       "price_note": "gold-api 2026-11-05T02:24:30Z ≈4127.4（北京10:24）",
       "source": "抖音 黄金会员专属通知1群/2群 群主约10:05–10:22",
-      "result": "待判定",
+      "result": "偏错",
       "call_id": 327,
       "raw_direction": "上行趋势；4200以上不用问割不割；这周看4180；但是30-50需要磨",
       "raw_levels": "4180；4200；30-50（原话未写全价）",
       "trade_day": "2026-11-05",
-      "note": "有明确偏多与点位；相对09:15/09:27为调整（补周目标4180）；「30-50」照抄不推算"
+      "note": "有明确偏多与点位；相对09:15/09:27为调整（补周目标4180）；「30-50」照抄不推算",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4127.4（gold-api）。方向多，周目标4180日高4146.92未到，无止损；收盘4088.80较发布时约-38.6美元，与「多」相反",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 75,
@@ -1798,12 +1899,22 @@
       "price_at_call": 4136.2,
       "price_note": "gold-api 2026-11-05T02:51:30Z ≈4136.2（北京10:51）",
       "source": "抖音 3号 阿然爱囤金 作品 https://www.douyin.com/video/7704512714592374035",
-      "result": "待判定",
+      "result": "偏对",
       "call_id": 328,
       "raw_direction": "趋势反转信号强烈但微型反转不结实，还会二次探底；技术面日线没出底，黄还会下去注底；避免贪婪，等回调后再考虑买入；需注底后北上；字幕「4300一定能看到」",
       "raw_levels": "最低点3870（已发生低点）；反弹超过250美元；4300（字幕）",
       "trade_day": "2026-11-05",
-      "note": "相对08:26群里短线偏多、不急空为调整：转为警惕追高、等二次探底；与08:18中线二次探底一致"
+      "note": "相对08:26群里短线偏多、不急空为调整：转为警惕追高、等二次探底；与08:18中线二次探底一致",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4136.2（gold-api）。方向短线看回调/二次探底（等回调再买），无进场止损；收盘4088.80较发布时约-47.4美元，与「看回调」一致",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 76,
@@ -1817,12 +1928,22 @@
       "price_at_call": 4134.0,
       "price_note": "gold-api 2026-11-05T03:32:01Z ≈4134.0（北京11:32）",
       "source": "抖音 1号 大飞论长短 作品 https://www.douyin.com/video/7704523406088402038",
-      "result": "待判定",
+      "result": "不计分",
       "call_id": 329,
       "raw_direction": "130-150区间震荡，多头止盈，不建议高抛低吸",
       "raw_levels": "150；130-150；80（原话未写全价）",
       "trade_day": "2026-11-05",
-      "note": "相对10:22群里偏多（这周看4180）为调整：今日转区间震荡、多头止盈；点位照抄不推算"
+      "note": "相对10:22群里偏多（这周看4180）为调整：今日转区间震荡、多头止盈；点位照抄不推算",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4134.0（gold-api）。方向中性（130-150区间震荡、多头止盈），按中性不计分",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 77,
@@ -1836,12 +1957,22 @@
       "price_at_call": 4134.9,
       "price_note": "gold-api 2026-11-05T11:28:31Z ≈4134.9（北京19:28）",
       "source": "抖音 7号 大宝上海金融 作品 https://www.douyin.com/video/7704618719560912171",
-      "result": "待判定",
+      "result": "偏错",
       "call_id": 331,
       "raw_direction": "偏多持有，不追高，回踩加仓",
       "raw_levels": "无具体点位",
       "trade_day": "2026-11-05",
-      "note": "相对09:50中性找方向 → 调整为偏多"
+      "note": "相对09:50中性找方向 → 调整为偏多",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4134.9（gold-api）。方向偏多，无目标止损；收盘4088.80较发布时约-46.1美元，与「偏多」相反",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 78,
@@ -1855,12 +1986,22 @@
       "price_at_call": 4134.9,
       "price_note": "gold-api 2026-11-05T11:28:31Z ≈4134.9（北京19:28）",
       "source": "抖音会员群 1号 大飞论长短 黄金会员专属通知1群/2群",
-      "result": "待判定",
+      "result": "偏错",
       "call_id": 333,
       "raw_direction": "多，30-50减持消化后再拉",
       "raw_levels": "30-50（原话未写全价）",
       "trade_day": "2026-11-05",
-      "note": "相对11:25区间震荡多头止盈 → 调整为明确减持区后再拉"
+      "note": "相对11:25区间震荡多头止盈 → 调整为明确减持区后再拉",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4134.9（gold-api）。方向多，无清晰止损目标；收盘4088.80较发布时约-46.1美元，与「多」相反",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 79,
@@ -1874,12 +2015,22 @@
       "price_at_call": 4134.9,
       "price_note": "gold-api 2026-11-05T11:28:31Z ≈4134.9（北京19:28）",
       "source": "抖音会员群 3号 阿然爱囤金 阿然专属会员1群/2群",
-      "result": "待判定",
+      "result": "偏对",
       "call_id": 334,
       "raw_direction": "到4180-4200承压回落概率99%",
       "raw_levels": "已破4060；4180-4200",
       "trade_day": "2026-11-05",
-      "note": "相对10:44别太贪婪/4300能看到 → 调整为短线上方高压回落预期；部分长图看不清"
+      "note": "相对10:44别太贪婪/4300能看到 → 调整为短线上方高压回落预期；部分长图看不清",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4134.9（gold-api）。方向短线看承压回落，压力4180-4200日高4146.92未到；无止损；收盘4088.80较发布时约-46.1美元，与「回落」一致",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 80,
@@ -1893,12 +2044,22 @@
       "price_at_call": 4128.899902,
       "price_note": "gold-api 2026-11-05T12:10:32Z ≈4128.9（北京20:10）",
       "source": "抖音 2号 七王爷 作品 https://www.douyin.com/video/7704654284957654885",
-      "result": "待判定",
+      "result": "偏错",
       "call_id": 335,
       "raw_direction": "偏回落后接多；周五谨慎",
       "raw_levels": "4095-4080；4030-4055",
       "trade_day": "2026-11-05",
-      "note": "相对16:12心态无点位→调整为回落接多区间"
+      "note": "相对16:12心态无点位→调整为回落接多区间",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4128.9（gold-api）。偏多（回落后接），接多区4095-4080/4030-4055日低4061.40已碰到，无止损目标；收盘4088.80较发布时约-40.1美元，与「偏多」相反",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 81,
@@ -1912,12 +2073,22 @@
       "price_at_call": 4128.899902,
       "price_note": "gold-api 2026-11-05T12:10:32Z ≈4128.9（北京20:10）",
       "source": "抖音会员群 1号 大飞论长短 黄金会员专属通知1群/2群",
-      "result": "待判定",
+      "result": "偏错",
       "call_id": 336,
       "raw_direction": "看非农前破80否；破则撤离；50不破利好破则利空都跑",
       "raw_levels": "80；40；4180-4200；50（原话未写全价）",
       "trade_day": "2026-11-05",
-      "note": "相对18:50「30-50减持后再拉」→调整：非农前明确减持与破80撤离；时间由相对时间推约20:05"
+      "note": "相对18:50「30-50减持后再拉」→调整：非农前明确减持与破80撤离；时间由相对时间推约20:05",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4128.9（gold-api）。方向仍标多（非农前减持、破80撤离），高看4180日高未到；收盘4088.80较发布时约-40.1美元，与「多」相反",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 82,
@@ -1931,12 +2102,22 @@
       "price_at_call": 4129.600098,
       "price_note": "gold-api 2026-11-05T12:19:02Z ≈4129.6（北京20:19）",
       "source": "抖音会员群 1号 大飞论长短 黄金会员专属通知1群/2群",
-      "result": "待判定",
+      "result": "对",
       "call_id": 337,
       "raw_direction": "破46为大肉但上行易回撤；适当离场；50破否",
       "raw_levels": "4146；46；50（原话未写全价）",
       "trade_day": "2026-11-05",
-      "note": "相对20:05「非农前破80撤离、高位40/4180-4200、看50」→调整：新增4146止单堆积为关键"
+      "note": "相对20:05「非农前破80撤离、高位40/4180-4200、看50」→调整：新增4146止单堆积为关键",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4129.6（gold-api）。目标盯破4146，日高4146.92碰到；无止损；Yahoo GC=F 11:00棒高4155.8对应现货高点时段，随后回撤",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 83,
@@ -1950,12 +2131,22 @@
       "price_at_call": 4126.600098,
       "price_note": "gold-api 2026-11-05T12:31:32Z ≈4126.6（北京20:31）",
       "source": "抖音会员群 1号 大飞论长短 黄金会员专属通知1群/2群",
-      "result": "待判定",
+      "result": "不计分",
       "call_id": 338,
       "raw_direction": "缺劲等油下美指下；duo投护着；破46都一样",
       "raw_levels": "46；坡位上方（原话未写全价）",
       "trade_day": "2026-11-05",
-      "note": "相对20:16「4146止单堆积/减持」→调整：仍盯46，改强调多头护盘+等催化"
+      "note": "相对20:16「4146止单堆积/减持」→调整：仍盯46，改强调多头护盘+等催化",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4126.6（gold-api）。相对20:16（#82）同向微调（仍盯破4146+多头护盘），按重复观点不计分；4146已在#82计「对」",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 84,
@@ -1969,12 +2160,22 @@
       "price_at_call": 4118.200195,
       "price_note": "gold-api 2026-11-05T12:40:02Z ≈4118.2（北京20:40）",
       "source": "抖音会员群 1号 大飞论长短 黄金会员专属通知1群/2群",
-      "result": "待判定",
+      "result": "偏错",
       "call_id": 339,
       "raw_direction": "30-50可以走一部分；一部分等破",
       "raw_levels": "30-50",
       "trade_day": "2026-11-05",
-      "note": "相对20:23「duo投护盘等催化」→调整：明确30-50部分止盈，剩余等破"
+      "note": "相对20:23「duo投护盘等催化」→调整：明确30-50部分止盈，剩余等破",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4118.2（gold-api）。方向标多（4130-4150减一部分、剩余等破），无止损；收盘4088.80较发布时约-29.4美元，与「多」相反",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     },
     {
       "id": 85,
@@ -2007,92 +2208,77 @@
       "price_at_call": 4112.600098,
       "price_note": "gold-api 2026-11-05T15:08:02Z ≈4112.600098（北京23:08取样）",
       "source": "抖音会员群 1号 大飞论长短 黄金会员专属通知1群/2群",
-      "result": "待判定",
+      "result": "偏错",
       "call_id": 342,
       "raw_direction": "减持了的人 第一波看90少量 第二波看50",
       "raw_levels": "90；50（原话未写全价）",
       "trade_day": "2026-11-05",
-      "note": "相对21:18「30-50减持/回撤再接」→调整：明确减持后回补两档90少量/50"
+      "note": "相对21:18「30-50减持/回撤再接」→调整：明确减持后回补两档90少量/50",
+      "basis": "交易日11-05（北京11-05 07:00至次日06:00）：最高4146.92、最低4061.4、收盘4088.8（Investing.com）；发布时约4112.6（gold-api）。方向多（减持后回补），「90/50」原话未写全价不推算，无止损目标；收盘4088.80较发布时约-23.8美元，与「多」相反",
+      "judged_at": "2026-11-06 06:40",
+      "day_ohlc": {
+        "trade_day": "2026-11-05",
+        "high": 4146.92,
+        "low": 4061.4,
+        "close": 4088.8,
+        "open": 4065.73,
+        "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
+      }
     }
   ],
   "summary": {
-    "updated": "2026-11-05 06:40",
-    "note": "按近7天（10-29起发布）胜率排序；对=1分、偏对=0.5分、偏错/错=0分，胜率=得分÷可判定条数；中性、条件单未成交、方向不单一、重复观点、中期无点位观点不计分。价格来源：Investing.com XAU/USD 日线。",
+    "updated": "2026-11-06 06:40",
+    "note": "按近7天（10-30起发布）胜率排序；对=1分、偏对=0.5分、偏错/错=0分，胜率=得分÷可判定条数；中性、条件单未成交、方向不单一、重复观点、中期无点位观点不计分。价格来源：Investing.com XAU/USD 日线。",
     "rows": [
       {
         "no": 1,
         "name": "1号 大飞论长短",
-        "win7d": 0.2857142857142857,
-        "right7d": 4,
-        "wrong7d": 3,
-        "winAll": 0.2916666666666667,
-        "rightAll": 7,
-        "wrongAll": 5,
-        "samples": 7,
-        "samplesAll": 12,
+        "win7d": 0.3125,
+        "right7d": 7,
+        "wrong7d": 9,
+        "winAll": 0.29545454545454547,
+        "rightAll": 10,
+        "wrongAll": 12,
+        "samples": 16,
+        "samplesAll": 22,
         "detail": {
-          "对": 0,
+          "对": 3,
           "偏对": 4,
-          "偏错": 3,
+          "偏错": 9,
           "错": 0
         },
         "detailAll": {
-          "对": 0,
+          "对": 3,
           "偏对": 7,
-          "偏错": 4,
+          "偏错": 11,
           "错": 1
         },
-        "note": "（对0、偏对4、偏错3、错0）；累计12条，胜率29%"
+        "note": "（对3、偏对4、偏错9、错0）；累计22条，胜率30%"
       },
       {
         "no": 3,
         "name": "3号 阿然爱囤金",
-        "win7d": 0.21428571428571427,
+        "win7d": 0.1875,
         "right7d": 3,
-        "wrong7d": 4,
-        "winAll": 0.35714285714285715,
-        "rightAll": 9,
-        "wrongAll": 5,
-        "samples": 7,
-        "samplesAll": 14,
+        "wrong7d": 5,
+        "winAll": 0.35294117647058826,
+        "rightAll": 11,
+        "wrongAll": 6,
+        "samples": 8,
+        "samplesAll": 17,
         "detail": {
           "对": 0,
           "偏对": 3,
-          "偏错": 3,
+          "偏错": 4,
           "错": 1
         },
         "detailAll": {
           "对": 1,
-          "偏对": 8,
-          "偏错": 4,
+          "偏对": 10,
+          "偏错": 5,
           "错": 1
         },
-        "note": "（对0、偏对3、偏错3、错1）；累计14条，胜率36%"
-      },
-      {
-        "no": 2,
-        "name": "2号 七王爷",
-        "win7d": 0.16666666666666666,
-        "right7d": 1,
-        "wrong7d": 2,
-        "winAll": 0.16666666666666666,
-        "rightAll": 1,
-        "wrongAll": 2,
-        "samples": 3,
-        "samplesAll": 3,
-        "detail": {
-          "对": 0,
-          "偏对": 1,
-          "偏错": 2,
-          "错": 0
-        },
-        "detailAll": {
-          "对": 0,
-          "偏对": 1,
-          "偏错": 2,
-          "错": 0
-        },
-        "note": "样本不足（对0、偏对1、偏错2、错0）；累计3条，胜率17%"
+        "note": "（对0、偏对3、偏错4、错1）；累计17条，胜率35%"
       },
       {
         "no": 7,
@@ -2100,11 +2286,11 @@
         "win7d": 0.125,
         "right7d": 1,
         "wrong7d": 3,
-        "winAll": 0.08333333333333333,
+        "winAll": 0.07142857142857142,
         "rightAll": 1,
-        "wrongAll": 5,
+        "wrongAll": 6,
         "samples": 4,
-        "samplesAll": 6,
+        "samplesAll": 7,
         "detail": {
           "对": 0,
           "偏对": 1,
@@ -2114,18 +2300,43 @@
         "detailAll": {
           "对": 0,
           "偏对": 1,
-          "偏错": 5,
+          "偏错": 6,
           "错": 0
         },
-        "note": "样本不足（对0、偏对1、偏错3、错0）；累计6条，胜率8%"
+        "note": "样本不足（对0、偏对1、偏错3、错0）；累计7条，胜率7%"
+      },
+      {
+        "no": 2,
+        "name": "2号 七王爷",
+        "win7d": 0.0,
+        "right7d": 0,
+        "wrong7d": 3,
+        "winAll": 0.1,
+        "rightAll": 1,
+        "wrongAll": 4,
+        "samples": 3,
+        "samplesAll": 5,
+        "detail": {
+          "对": 0,
+          "偏对": 0,
+          "偏错": 3,
+          "错": 0
+        },
+        "detailAll": {
+          "对": 0,
+          "偏对": 1,
+          "偏错": 4,
+          "错": 0
+        },
+        "note": "样本不足（对0、偏对0、偏错3、错0）；累计5条，胜率10%"
       },
       {
         "no": 4,
         "name": "4号 飞哥说财",
-        "win7d": null,
+        "win7d": 0.0,
         "right7d": 0,
         "wrong7d": 0,
-        "winAll": null,
+        "winAll": 0.0,
         "rightAll": 0,
         "wrongAll": 0,
         "samples": 0,
@@ -2142,15 +2353,15 @@
           "偏错": 0,
           "错": 0
         },
-        "note": "样本不足（无可判定观点）"
+        "note": "近7天无样本；样本不足（对0、偏对0、偏错0、错0）；累计0条，胜率0%"
       },
       {
         "no": 5,
         "name": "5号 财经汪院长",
-        "win7d": null,
+        "win7d": 0.0,
         "right7d": 0,
         "wrong7d": 0,
-        "winAll": null,
+        "winAll": 0.0,
         "rightAll": 0,
         "wrongAll": 0,
         "samples": 0,
@@ -2167,12 +2378,12 @@
           "偏错": 0,
           "错": 0
         },
-        "note": "样本不足（无可判定观点）"
+        "note": "近7天无样本；样本不足（对0、偏对0、偏错0、错0）；累计0条，胜率0%"
       },
       {
         "no": 6,
         "name": "6号 当铺财经",
-        "win7d": null,
+        "win7d": 0.0,
         "right7d": 0,
         "wrong7d": 0,
         "winAll": 0.5,
@@ -2192,7 +2403,7 @@
           "偏错": 0,
           "错": 0
         },
-        "note": "样本不足（近7天无可判定；累计1条：对0、偏对1、偏错0、错0，胜率50%）"
+        "note": "近7天无样本；样本不足（对0、偏对0、偏错0、错0）；累计1条，胜率50%"
       }
     ]
   }
