@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05 21:43",
+  "updated": "2026-11-05 21:49",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -27779,6 +27779,13 @@
       "task": "博主监控",
       "status": "无新",
       "summary": "21:37 七位作品与四群均无新于基准；基准不变；group_read_to 21:37；现货4119.9 gold-api；盒子网络",
+      "notified": false
+    },
+    {
+      "time": "2026-11-05 21:49",
+      "task": "博主监控",
+      "status": "无新内容",
+      "summary": "7位博主作品与4群均无新；基准不变；group_read_to 21:48；现货4125.8 gold-api",
       "notified": false
     }
   ],
