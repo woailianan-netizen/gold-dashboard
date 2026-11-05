@@ -1653,7 +1653,26 @@
       "raw_direction": "稳得住3950有效反弹，稳不住需耐心；回落至少日内50-64",
       "raw_levels": "3950；日内50-64伦敦金",
       "trade_day": "2026-11-04",
-      "note": "仅标题，正文未取到"
+      "note": "仅标题时入库；正文已补见call316"
+    },
+    {
+      "id": 68,
+      "no": 2,
+      "name": "七王爷",
+      "time": "2026-11-04 19:21",
+      "direction": "空/偏回落（顶部压力后看回落）",
+      "entry": "未提",
+      "stop": "未提",
+      "target": "未提",
+      "price_at_call": null,
+      "price_note": "发布时间早于取样、当时价未取到；本轮现价4092.1仅供参考",
+      "source": "https://www.douyin.com/video/7704274866808378470",
+      "result": "待判定",
+      "call_id": 315,
+      "raw_direction": "拉涨后看回落",
+      "raw_levels": "4070-4089",
+      "trade_day": "2026-11-04",
+      "note": "压力记在 raw_levels；无明确进场/止损/目标"
     }
   ],
   "summary": {
