@@ -1728,6 +1728,25 @@
       "raw_direction": "4100锁利，4000下补，3700-3800留筹",
       "raw_levels": "4100；4000；3700-3800",
       "trade_day": "2026-11-05"
+    },
+    {
+      "id": 72,
+      "no": 1,
+      "name": "大飞论长短",
+      "time": "2026-11-05 09:03",
+      "direction": "多",
+      "entry": "未提",
+      "stop": "未提",
+      "target": "未提",
+      "price_at_call": 4098.5,
+      "price_note": "gold-api 01:08:30Z ≈4098.5（北京09:08）",
+      "source": "抖音作品 https://www.douyin.com/video/7704486840892842084",
+      "result": "待判定",
+      "call_id": 323,
+      "raw_direction": "一路上行趋势 谁也挡不住",
+      "raw_levels": "未提",
+      "trade_day": "2026-11-05",
+      "note": "有明确偏多方向、无具体点位；相对08:29群观点同向延续"
     }
   ],
   "summary": {
