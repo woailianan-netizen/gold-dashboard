@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05 22:54",
+  "updated": "2026-11-05 22:59",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -27856,6 +27856,13 @@
       "task": "博主监控",
       "status": "无新",
       "summary": "7位作品与4群均无新；现货4099.6 gold-api；checks/douyin-check-1105-2248.json",
+      "notified": false
+    },
+    {
+      "time": "2026-11-05 22:59",
+      "task": "黄金突发新闻",
+      "status": "无新内容",
+      "summary": "22:39–22:58 无重要新突发；纳指100跌3%金价随跌至4108，属市场反应非新消息",
       "notified": false
     }
   ],
