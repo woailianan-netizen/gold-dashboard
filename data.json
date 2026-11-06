@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06 13:15",
+  "updated": "2026-11-06 13:23",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -7921,6 +7921,13 @@
       "task": "博主监控",
       "status": "无新",
       "summary": "7位作品无新于基准；4群cutoff 12:25后无群主新消息；checks/douyin-check-1106-1307.json",
+      "notified": false
+    },
+    {
+      "time": "2026-11-06 13:23",
+      "task": "黄金突发新闻监控",
+      "status": "无新内容",
+      "summary": "13:04–13:22 无重要突发；特朗普/官方0帖；油价美伊/赫格塞思视频等为续线；现货4039.1",
       "notified": false
     }
   ],
