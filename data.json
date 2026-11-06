@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06 12:44",
+  "updated": "2026-11-06 12:59",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -7907,6 +7907,13 @@
       "task": "博主监控",
       "status": "无新可报",
       "summary": "大飞两群12:25「假如踏空就让他空」与call354重复；作品无新；group_read_to 12:25",
+      "notified": false
+    },
+    {
+      "time": "2026-11-06 12:59",
+      "task": "博主监控",
+      "status": "无新内容",
+      "summary": "7位作品无新于基准；4群cutoff 12:25后无群主新消息；现货约4047.2 gold-api",
       "notified": false
     }
   ],
