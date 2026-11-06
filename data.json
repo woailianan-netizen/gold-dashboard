@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06 19:13",
+  "updated": "2026-11-06 19:25",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7562,6 +7562,14 @@
       "task": "博主监控",
       "status": "无新可报",
       "summary": "18:52轮：7位无新于基准；4群18:50后无群主新消息（call360/call361去重）；二次验证码未过但browser_ok；现货约4067.7",
+      "notified": false
+    },
+    {
+      "time": "2026-11-06 19:25",
+      "task": "突发新闻",
+      "text": "窗19:05–19:25无重要突发；特朗普/官方无新；DeItaone SoftBank/微软抗议等非金；油价/伊朗续色；NFP与Bowman仍待",
+      "summary": "无重要新内容",
+      "status": "ok",
       "notified": false
     }
   ],
