@@ -1792,6 +1792,12 @@
       "price": 4045.2,
       "source": "gold-api",
       "note": "AI信号#1395"
+    },
+    {
+      "time": "2026-11-06 12:56",
+      "price": 4047.2,
+      "source": "gold-api",
+      "note": "AI信号#1396"
     }
   ],
   "calls": [
