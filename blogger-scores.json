@@ -2224,6 +2224,42 @@
         "open": 4065.73,
         "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-06 06:40 北京取数）；先后顺序参考 Yahoo COMEX GC=F 小时线（期货约比现货高8–10美元）；发布时价格为看板 gold-api.com 快照"
       }
+    },
+    {
+      "id": 87,
+      "no": 1,
+      "name": "大飞论长短",
+      "time": "2026-11-06 02:16",
+      "direction": "空（过了30可以抛）",
+      "entry": "未提",
+      "stop": "未提",
+      "target": "过了30可以抛",
+      "price_at_call": 4103.600098,
+      "price_note": "gold-api 2026-11-06T00:11:03Z ≈4103.6（北京08:11）（凌晨观点，入库价）",
+      "source": "抖音会员群 1号 大飞论长短 黄金会员专属通知1群/2群",
+      "result": "待判定",
+      "call_id": 344,
+      "raw_direction": "过了30可以抛",
+      "raw_levels": "30（原话未写全价）",
+      "note": "相对22:52「减持后回补90/50」→调整：上方抛"
+    },
+    {
+      "id": 88,
+      "no": 1,
+      "name": "大飞论长短",
+      "time": "2026-11-06 08:10",
+      "direction": "空（不接/减持；拉起来就跑）",
+      "entry": "未提（今天不建议接）",
+      "stop": "未提",
+      "target": "破了冲20；高在4100附近",
+      "price_at_call": 4103.600098,
+      "price_note": "gold-api 2026-11-06T00:11:03Z ≈4103.6（北京08:11）",
+      "source": "抖音会员群 1号 大飞论长短 黄金会员专属通知1群/2群",
+      "result": "待判定",
+      "call_id": 345,
+      "raw_direction": "今天先不接；还是减持；拉起来一会就跑",
+      "raw_levels": "4100附近；冲20",
+      "note": "相对02:16「过了30可以抛」→调整加强为空：不接/减持/反弹就跑；相对昨夜回补观点为反转"
     }
   ],
   "summary": {
