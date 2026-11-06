@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06 17:10",
+  "updated": "2026-11-06 17:22",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -8208,6 +8208,13 @@
       "task": "博主监控",
       "status": "无新内容",
       "summary": "7位作品无新于基准；4群 cutoff 17:00后无群主新消息；group_read_to 17:00；checks/douyin-check-1106-1707.json；现货约4079.5 gold-api",
+      "notified": false
+    },
+    {
+      "time": "2026-11-06 17:22",
+      "task": "黄金突发新闻监控",
+      "status": "无新内容",
+      "summary": "17:06–17:21窗：特朗普/官方/DeItaone无新帖；Hegseth与伊朗油续线；油价因缓和预期回落等非硬事件；Bowman与NFP未到；现货4079.9",
       "notified": false
     }
   ],
