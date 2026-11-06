@@ -8142,72 +8142,6 @@
       "last_active": "2026-10-23 18:20"
     },
     {
-      "name": "OpenClaw（龙虾）",
-      "type": "TG机器人",
-      "status": "在线",
-      "note": "19:23刷新仍偏弱：支撑4120–4125/4100–4105，压力4150/4170–4180；CPI前观望",
-      "team": "外援",
-      "role": "TG机器人：新闻、数据、独立判断",
-      "call_source": "OpenClaw",
-      "last_active": "2026-10-14 19:23"
-    },
-    {
-      "name": "Hermes（爱马仕）",
-      "type": "TG机器人",
-      "status": "可用",
-      "note": "已恢复；伦敦金小时观察",
-      "team": "外援",
-      "role": "TG机器人：新闻、数据、独立判断",
-      "call_source": "Hermes",
-      "last_active": "2026-10-14 19:11"
-    },
-    {
-      "name": "Claude+codex",
-      "type": "AI助手",
-      "status": "在线",
-      "note": "交叉验证、润色",
-      "team": "外援",
-      "role": "交叉验证、润色、数据整理",
-      "call_source": "Claude+codex",
-      "last_active": "2026-10-24 08:28"
-    },
-    {
-      "name": "黄金新闻助手",
-      "type": "AI助手",
-      "status": "已创建",
-      "note": "新闻与数据",
-      "team": "专职助手",
-      "role": "抓取新闻与宏观数据",
-      "call_source": "黄金新闻助手"
-    },
-    {
-      "name": "黄金机构助手",
-      "type": "AI助手",
-      "status": "已创建",
-      "note": "投行/WGC观点",
-      "team": "专职助手",
-      "role": "跟踪投行/WGC机构观点",
-      "call_source": "黄金机构助手"
-    },
-    {
-      "name": "黄金视频文案助手",
-      "type": "AI助手",
-      "status": "已创建",
-      "note": "生成每日视频话术与图文",
-      "team": "专职助手",
-      "role": "生成每日视频话术与图文",
-      "call_source": "黄金视频文案助手"
-    },
-    {
-      "name": "黄金复盘打分助手",
-      "type": "AI助手",
-      "status": "已创建",
-      "note": "对照实际走势为观点打分",
-      "team": "专职助手",
-      "role": "对照实际走势为观点打分",
-      "call_source": "黄金复盘打分助手"
-    },
-    {
       "name": "黄金情绪资金助手",
       "type": "AI助手",
       "status": "已创建",
@@ -8224,12 +8158,6 @@
       "team": "专职助手",
       "role": "技术面点位、趋势判断",
       "call_source": "黄金技术分析助手"
-    },
-    {
-      "name": "X 与美国媒体监控",
-      "type": "新闻监控",
-      "status": "监控中",
-      "note": "特朗普、美联储、白宫、财政部、路透/彭博/WSJ/NYT/FT/CNBC"
     },
     {
       "name": "金十数据助手",
