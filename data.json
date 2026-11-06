@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06 12:30",
+  "updated": "2026-11-06 12:40",
   "price_snapshots": [
     {
       "time": "2026-10-14 13:43",
@@ -1786,6 +1786,12 @@
       "price": 4042.6,
       "source": "gold-api",
       "note": "AI信号#1394"
+    },
+    {
+      "time": "2026-11-06 12:40",
+      "price": 4045.2,
+      "source": "gold-api",
+      "note": "AI信号#1395"
     }
   ],
   "calls": [
