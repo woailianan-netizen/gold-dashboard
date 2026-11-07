@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07 22:51",
+  "updated": "2026-11-07 23:01",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -8605,6 +8605,13 @@
       "task": "博主监控",
       "status": "无新内容",
       "summary": "七位作品无可靠新作（checks/douyin-bloggers-1107-2248.json；基准不变；作品区异常均标unreliable）；四群待群助手回报（douyin-groups-1107-2248.json 占位，group_read_to 仍20:19）。现货约4072.1。",
+      "notified": false
+    },
+    {
+      "time": "2026-11-07 23:01",
+      "task": "博主监控",
+      "status": "无新内容",
+      "summary": "22:58轮：7位主页作品区仍服务异常，无法确认新作，基准不变；四群待抖音群助手回报",
       "notified": false
     }
   ],
