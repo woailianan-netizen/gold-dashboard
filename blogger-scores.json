@@ -13,8 +13,8 @@
     {
       "no": 3,
       "name": "阿然爱囤金",
-      "last_call_id": 365,
-      "last_time": "2026-11-06 21:47"
+      "last_call_id": 374,
+      "last_time": "2026-11-07 10:29"
     },
     {
       "no": 4,
@@ -32,7 +32,9 @@
     },
     {
       "no": 7,
-      "name": "大宝上海金融"
+      "name": "大宝上海金融",
+      "last_call_id": 373,
+      "last_time": "2026-11-07 10:12"
     }
   ],
   "records": [
@@ -2670,6 +2672,46 @@
         "open": 4086.13,
         "source": "Investing.com XAU/USD 日线（https://www.investing.com/currencies/xau-usd-historical-data，2026-11-07 06:40 北京取数，Day's Range 4029.07–4106.94、收盘4070.31）；发布时价格为看板 gold-api.com 快照；盘中路径辅助参考 gold-api 快照"
       }
+    },
+    {
+      "id": 102,
+      "no": 7,
+      "name": "大宝上海金融",
+      "time": "2026-11-07 10:12",
+      "direction": "偏多（央行连续增持、长期托底）",
+      "entry": "未提",
+      "stop": "未提",
+      "target": "未提",
+      "price_at_call": 4072.100098,
+      "price_note": "gold-api updatedAt 2026-11-07T02:45:36Z ≈4072.100098",
+      "source": "抖音作品 https://www.douyin.com/video/7705246580168923584",
+      "source_link": "https://www.douyin.com/video/7705246580168923584",
+      "result": "待判定",
+      "call_id": 373,
+      "raw_direction": "偏多（长期托底信号明确）",
+      "raw_levels": "无具体点位",
+      "note": "相对call369中性非农解读→调整为偏多宏观托底；无进场止损目标",
+      "trade_day": "2026-11-07"
+    },
+    {
+      "id": 103,
+      "no": 3,
+      "name": "阿然爱囤金",
+      "time": "2026-11-07 10:29",
+      "direction": "空（北上有限、二次探底、下周先下后上）",
+      "entry": "未提",
+      "stop": "未提",
+      "target": "3870（可能回调至此，照抄）",
+      "price_at_call": 4072.100098,
+      "price_note": "gold-api updatedAt 2026-11-07T02:45:36Z ≈4072.100098",
+      "source": "抖音作品 https://www.douyin.com/video/7705250965141736740",
+      "source_link": "https://www.douyin.com/video/7705250965141736740",
+      "result": "待判定",
+      "call_id": 374,
+      "raw_direction": "空；二次探底概率大；下周可能先下后上",
+      "raw_levels": "3870",
+      "note": "相对call365短线偏空二次探底→调整（同向，补3870）；封面11.7 10:00；页面11:29按+1h记约10:29",
+      "trade_day": "2026-11-07"
     }
   ],
   "summary": {
