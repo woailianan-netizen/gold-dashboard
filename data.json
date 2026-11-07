@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07 06:41",
+  "updated": "2026-11-07 08:12",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -6758,6 +6758,19 @@
       "link": "https://www.cnbc.com/2026/11/06/jobs-report-october-2026.html",
       "source": "BLS / CNBC / @DeItaone / @LiveSquawk / @FT / @WSJ",
       "note": "快讯：https://x.com/DeItaone/status/2118697658403467340 ；明细：https://x.com/LiveSquawk/status/2118698626524627191 ；收益率：https://x.com/DeItaone/status/2118698045030420941 ；FT：https://x.com/FT/status/2118698491664814116 ；WSJ：https://x.com/WSJ/status/2118698861296259251 ；CNBC：https://www.cnbc.com/2026/11/06/jobs-report-october-2026.html"
+    },
+    {
+      "time": "2026-11-07 02:10",
+      "title": "旧金山联储主席戴利：预计还需进一步收紧政策",
+      "name": "旧金山联储主席玛丽·戴利（Mary Daly）周五接受CNBC采访称，「我的预期是我们还得进一步收紧政策」；「何时、加多少仍待定，但很可能还需要更多，我也准备好这么做」。她称10月非农是「对美国工人的好消息」，但美国人仍在「高通胀跑步机」上，实际工资跟不上物价。她支持上周按兵不动，因不确定性高，偏好渐进。戴利明年有FOMC投票权。",
+      "category": "央行",
+      "impact": "利空",
+      "expected": "利空黄金：非农后联储官员明确「还得再紧」，巩固12月加息预期与美元/美债收益率上行叙事，压制金价；但时点未定，冲击弱于数据本身",
+      "actual": "讲话时段约美东下午；今早（台北08:11）现货约4072.1（gold-api 2026-11-07T00:11:35Z），相对非农后低点已反抽",
+      "reaction": "今早现货约4072，隔夜已消化非农；戴利表态偏确认鹰派路径，未另见即时跳空",
+      "link": "https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html",
+      "source": "CNBC / @FirstSquawk / @DeItaone / Bloomberg",
+      "note": "快讯：https://x.com/FirstSquawk/status/2118768004599333198 「WILL HAVE TO TIGHTEN POLICY FURTHER」；https://x.com/DeItaone/status/2118766805418123390 ；彭博摘要帖 https://x.com/business/status/2118850948667699366 ；CNBC全文 https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html 。隔夜例行未跑，本轮补报。"
     }
   ],
   "activity": [
@@ -7787,6 +7800,13 @@
       "status": "完成",
       "summary": "判定15条(87-101)：偏对6/偏错3/不计分6，待判定清零；近7天排行第一1号大飞论长短胜率33%（对3偏对8/样本21）",
       "notified": false
+    },
+    {
+      "time": "2026-11-07 08:12",
+      "task": "黄金突发新闻",
+      "status": "完成",
+      "summary": "隔夜补报：旧金山联储戴利CNBC称还需进一步收紧；Miller人事/伊朗谈制裁等未达门槛；现货约4072",
+      "notified": true
     }
   ],
   "agents": [
