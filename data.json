@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07 11:15",
+  "updated": "2026-11-07 11:22",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -8160,6 +8160,13 @@
       "task": "博主监控",
       "status": "无新内容",
       "summary": "七位作品无新（4/6 unreliable）；四群群主无新（大飞约10:16／阿然21:47），group_read_to 11:17。现货约4072.1。",
+      "notified": false
+    },
+    {
+      "time": "2026-11-07 11:22",
+      "task": "黄金突发新闻监控",
+      "status": "无新内容",
+      "summary": "11:04–11:21：无达报送门槛新突发；特朗普/Fed/白宫/财政部/DeItaone无新帖；卫报等再推周五Qeshm minor打击属已覆盖；现货4072.1",
       "notified": false
     }
   ],
