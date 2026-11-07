@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07 21:57",
+  "updated": "2026-11-07 22:20",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -8570,6 +8570,13 @@
       "task": "博主监控",
       "status": "无新作",
       "summary": "七位作品区服务异常均标unreliable，基准不变；四群待抖音群助手回报（group_read_to仍20:19）。现货约4072.1。",
+      "notified": false
+    },
+    {
+      "time": "2026-11-07 22:20",
+      "task": "博主监控",
+      "status": "无可靠新作",
+      "summary": "七位作品区服务异常均标unreliable基准不变；四群本轮均load_failed不推进20:19；现货约4072.1",
       "notified": false
     }
   ],
