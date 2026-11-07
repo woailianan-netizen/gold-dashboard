@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07 08:43",
+  "updated": "2026-11-07 08:53",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7853,6 +7853,13 @@
       "task": "黄金突发新闻监控",
       "status": "无新内容",
       "summary": "08:19–08:42无达报送门槛；特朗普X/Fed/白宫/财政部/DeItaone无新；Truth仍Miller/伊朗旧帖；FirstSquawk WSJ美伊分歧续色；现货4072.1",
+      "notified": false
+    },
+    {
+      "time": "2026-11-07 08:53",
+      "task": "博主监控",
+      "status": "无新",
+      "summary": "08:55群主无新；主页作品区降级不可信，搜索2/3/1未见高于基准新作，基准未改；现货约4072.1",
       "notified": false
     }
   ],
