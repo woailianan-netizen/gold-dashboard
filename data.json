@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08 16:56",
+  "updated": "2026-11-08 17:12",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -9014,6 +9014,13 @@
       "task": "博主监控",
       "status": "无新作",
       "summary": "7位博主无新作，基准不变",
+      "notified": false
+    },
+    {
+      "time": "2026-11-08 17:12",
+      "task": "博主监控",
+      "status": "无新作",
+      "summary": "17:08 7位无新作，基准不变",
       "notified": false
     }
   ],
