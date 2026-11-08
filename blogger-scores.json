@@ -2746,6 +2746,26 @@
    "raw_levels": "4200（突破难度大）",
    "note": "相对call374不变（同向偏空、先下后上）；周日发布，按下一交易日判定",
    "trade_day": "2026-11-09"
+  },
+  {
+   "id": 106,
+   "no": 7,
+   "name": "大宝上海金融",
+   "time": "2026-11-08 19:06",
+   "direction": "偏空震荡（区间内高空低多）",
+   "entry": "未提",
+   "stop": "未提",
+   "target": "未提（压力4147、支撑4000）",
+   "price_at_call": 4072.100098,
+   "price_note": "gold-api updatedAt 2026-11-08T11:23:22Z ≈4072.1（周末休市）",
+   "source": "抖音作品 https://www.douyin.com/video/7705755471097407040",
+   "source_link": "https://www.douyin.com/video/7705755471097407040",
+   "result": "待判定",
+   "call_id": 378,
+   "raw_direction": "下周金银走势预计偏弱震荡；偏空不等于顺畅下跌",
+   "raw_levels": "黄金4147有效验证点、4000分水岭；白银53-53.5元阻力、50美元支撑",
+   "note": "相对call375偏多→调整为偏空震荡；周日发布，按下一交易日判定",
+   "trade_day": "2026-11-09"
   }
  ],
  "summary": {
