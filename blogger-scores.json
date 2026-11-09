@@ -2766,6 +2766,24 @@
    "raw_levels": "黄金4147有效验证点、4000分水岭；白银53-53.5元阻力、50美元支撑",
    "note": "相对call375偏多→调整为偏空震荡；周日发布，按下一交易日判定",
    "trade_day": "2026-11-09"
+  },
+  {
+   "id": 107,
+   "no": 1,
+   "name": "大飞论长短",
+   "time": "2026-11-09 09:51（页面显示，晚于本机时间，存疑）",
+   "direction": "多（黄金走势向上）",
+   "entry": "未提",
+   "stop": "未提",
+   "target": "未提（高点看130以上）",
+   "price_at_call": 4101.2,
+   "price_note": "gold-api updatedAt 2026-11-09T00:58:53Z",
+   "source": "抖音作品 https://www.douyin.com/video/7705968069298246995",
+   "source_link": "https://www.douyin.com/video/7705968069298246995",
+   "result": "待判定",
+   "raw_direction": "黄金走势向上",
+   "raw_levels": "高点看130以上",
+   "trade_day": "2026-11-09"
   }
  ],
  "summary": {
