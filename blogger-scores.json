@@ -3070,9 +3070,21 @@
    "price_note": "gold-api 2026-11-10T03:01:30Z 约4113.0（发布前约2分钟）",
    "source": "https://www.douyin.com/video/7706373140468747571",
    "result": "待判定",
-   "raw_levels": "无点位；黄白未突破前高，4小时MACD顶背离，日线类头肩顶，白银或瀑布式下跌；今晚CPI或不乐观",
+   "raw_levels": "无点位；AI摘要原话：黄白未突破前高，4小时级别MACD顶背离，建议等待二次探底；黄金日线结构类似「头尖底」，白银可能瀑布式下跌；今晚CPI或不乐观",
    "note": "作品「今晚CPI，黄白怎么说」",
    "trade_day": "2026-11-10"
+  },
+  {
+   "no": 3,
+   "name": "3号 阿然爱囤金",
+   "time": "2026-11-10 11:03",
+   "direction": "空(等二次探底)",
+   "entry": "未提",
+   "stop": "未提",
+   "target": "未提",
+   "price": "约4113",
+   "result": "待判定",
+   "url": "https://www.douyin.com/user/MS4wLjABAAAAGkPlZLxAPaSlCboN0BfooXFTz1t0PTCUyFyYdtaohHdDrf_czlYdbbIxsu1byXy_ 作品7706373140468747571"
   }
  ],
  "summary": {
