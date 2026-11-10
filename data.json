@@ -7465,6 +7465,19 @@
       "source": "路透转述华尔街日报（19:10台北）",
       "reaction": "金价约4076.6（gold-api 19:22），暂无明显反应",
       "actual": "金价约4076.6（gold-api 19:22），暂无明显反应"
+    },
+    {
+      "time": "2026-11-10 20:35",
+      "name": "阿拉伯电视台（Al Hadath）援引消息人士：伊朗同意美方要求，降低高浓缩铀水平（未获官方证实）",
+      "title": "阿拉伯电视台（Al Hadath）援引消息人士：伊朗同意美方要求，降低高浓缩铀水平（未获官方证实）",
+      "category": "地缘",
+      "impact": "中性",
+      "expected": "多空交织：美伊谈判出现实质让步，避险溢价回吐，偏空；但油价进一步回落能减轻通胀和加息压力，偏支撑；属消息人士说法，伊朗官方此前多次否认谈判",
+      "link": "https://x.com/FirstSquawk/status/2120133208432169208",
+      "url": "https://x.com/FirstSquawk/status/2120133208432169208",
+      "source": "First Squawk 转述 Al Hadath（20:35台北）",
+      "reaction": "金价约4078.9（gold-api 20:53），暂无明显反应",
+      "actual": "金价约4078.9（gold-api 20:53），暂无明显反应"
     }
   ],
   "activity": [
