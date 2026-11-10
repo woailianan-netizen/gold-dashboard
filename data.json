@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10 21:24",
+  "updated": "2026-11-10 21:31",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7478,6 +7478,19 @@
       "source": "First Squawk 转述 Al Hadath（20:35台北）",
       "reaction": "金价约4078.9（gold-api 20:53），暂无明显反应",
       "actual": "金价约4078.9（gold-api 20:53），暂无明显反应"
+    },
+    {
+      "time": "2026-11-10 21:30",
+      "name": "美国10月CPI高于预期：环比+0.4%（预期+0.3%，前值+0.6%）；核心CPI环比+0.3%（预期+0.2%，前值+0.3%）",
+      "category": "宏观",
+      "impact": "利空",
+      "expected": "利空黄金（通胀偏热，强化12月加息预期，美元和美债收益率易走高）",
+      "actual": "已公布；公布时现货约4073.1（gold-api 13:31Z）",
+      "reaction": "已公布；公布时现货约4073.1（gold-api 13:31Z）",
+      "source": "Walter Bloomberg / zerohedge / First Squawk",
+      "url": "https://x.com/DeItaone/status/2120147204849406230",
+      "link": "https://x.com/DeItaone/status/2120147204849406230",
+      "note": "来源：DeItaone 21:30、zerohedge 21:30、FirstSquawk 21:30 台北"
     }
   ],
   "activity": [
