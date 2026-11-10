@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10 21:32",
+  "updated": "2026-11-10 21:37",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7491,6 +7491,32 @@
       "url": "https://x.com/DeItaone/status/2120147204849406230",
       "link": "https://x.com/DeItaone/status/2120147204849406230",
       "note": "来源：DeItaone 21:30、zerohedge 21:30、FirstSquawk 21:30 台北"
+    },
+    {
+      "time": "2026-11-10 21:36",
+      "name": "CPI偏热后市场反应：交易员加码押注12月加息50个基点、到2027年中至少加息两次；美国2至5年期美债收益率日内升至少10个基点；白银跌3%至51.51",
+      "category": "市场",
+      "impact": "利空",
+      "expected": "利空黄金（加息预期升温、收益率走高）",
+      "actual": "已发生",
+      "reaction": "已发生",
+      "source": "First Squawk / zerohedge / Walter Bloomberg",
+      "url": "https://x.com/FirstSquawk/status/2120148485811138716",
+      "link": "https://x.com/FirstSquawk/status/2120148485811138716",
+      "note": "来源：FirstSquawk 21:32、21:36，zerohedge 21:37，DeItaone 21:32 台北"
+    },
+    {
+      "time": "2026-11-10 21:33",
+      "name": "鲁比奥称对伊朗的经济施压很有效，现在不需要大规模作战行动",
+      "category": "地缘",
+      "impact": "多空交织",
+      "expected": "多空交织（地缘降温削弱避险买盘，但也压低油价和通胀担忧）",
+      "actual": "已发生",
+      "reaction": "已发生",
+      "source": "Walter Bloomberg / First Squawk",
+      "url": "https://x.com/DeItaone/status/2120147703283798381",
+      "link": "https://x.com/DeItaone/status/2120147703283798381",
+      "note": "来源：DeItaone 21:32、FirstSquawk 21:33 台北"
     }
   ],
   "activity": [
