@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10 22:14",
+  "updated": "2026-11-10 22:23",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7517,6 +7517,19 @@
       "url": "https://x.com/DeItaone/status/2120147703283798381",
       "link": "https://x.com/DeItaone/status/2120147703283798381",
       "note": "来源：DeItaone 21:32、FirstSquawk 21:33 台北"
+    },
+    {
+      "time": "2026-11-10 22:14",
+      "name": "胡塞武装军方发声明，称今天共进行四次行动：打击利雅得哈立德国王机场、东西输油管道泵站、利雅得金融中心，以及阿布盖格（Abqaiq）的阿美石油设施。阿布盖格是全球最大的原油处理厂；这是胡塞方的单方说法，沙特尚未证实阿布盖格受损",
+      "category": "地缘",
+      "impact": "多空交织",
+      "expected": "多空交织：海湾能源设施受袭会推升避险情绪，但也可能推高油价和通胀，强化加息预期；目前未证实，影响待观察",
+      "actual": "已发生（胡塞单方声明，未获证实）",
+      "reaction": "已发生（胡塞单方声明，未获证实）",
+      "source": "First Squawk / Walter Bloomberg / CGTN",
+      "url": "https://x.com/FirstSquawk/status/2120158078809387014",
+      "link": "https://x.com/FirstSquawk/status/2120158078809387014",
+      "note": "来源：DeItaone 22:12、FirstSquawk 22:14、CGTN Europe 22:13 台北"
     }
   ],
   "activity": [
