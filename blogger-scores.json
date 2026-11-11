@@ -3298,6 +3298,21 @@
    "source": "https://www.douyin.com/video/7706710204775238975",
    "result": "待判定",
    "raw_levels": "CPI利空，黄白跳水，跌破关键位置4026，空头趋势，目标位3900；关注3900-4000和3700-3800区间"
+  },
+  {
+   "id": 126,
+   "no": 7,
+   "name": "大宝上海金融",
+   "time": "2026-11-11 上午(页面时间未取到)",
+   "direction": "空",
+   "entry": "未提",
+   "stop": "未提",
+   "target": "未提",
+   "price_at_call": null,
+   "price_note": "约4034(gold-api)",
+   "source": "https://www.douyin.com/video/7706566520454177088",
+   "result": "待判定",
+   "raw_levels": "黄金四小时图呈m顶形态，支撑位在4030美元，白银支撑位51.3美元，跌破支撑位后可能继续下跌"
   }
  ],
  "summary": {
