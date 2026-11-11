@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11 20:31",
+  "updated": "2026-11-11 20:45",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7582,6 +7582,19 @@
       "source": "Walter Bloomberg（@DeItaone）快讯",
       "link": "https://x.com/DeItaone/status/2120476671543226863",
       "url": "https://x.com/DeItaone/status/2120476671543226863"
+    },
+    {
+      "time": "2026-11-11 20:23",
+      "name": "美银：10月CPI偏热几乎确保美联储12月加息，并可能加50基点",
+      "title": "美银：10月CPI偏热几乎确保美联储12月加息，并可能加50基点",
+      "category": "央行",
+      "impact": "利空",
+      "expected": "利空黄金：大行押注12月加息甚至加50基点，推高美元和美债收益率，压制无息黄金",
+      "actual": "已发生；现货约4043.7（gold-api 2026-11-11T12:43:29Z）",
+      "reaction": "已发生；现货约4043.7（gold-api 2026-11-11T12:43:29Z）",
+      "source": "Walter Bloomberg（@DeItaone）快讯",
+      "link": "https://x.com/DeItaone/status/2120492687576994289",
+      "url": "https://x.com/DeItaone/status/2120492687576994289"
     }
   ],
   "activity": [
