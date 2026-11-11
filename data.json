@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11 18:51",
+  "updated": "2026-11-11 19:27",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7569,6 +7569,19 @@
       "source": "First Squawk",
       "link": "https://x.com/FirstSquawk/status/2120394143713398804",
       "url": "https://x.com/FirstSquawk/status/2120394143713398804"
+    },
+    {
+      "time": "2026-11-11 19:20",
+      "name": "库什纳：俄乌阿布扎比会谈达成史上最大规模换俘协议（人数明日敲定），乌克兰安全保障取得良好进展，并寻求欧洲加入谈判；塔斯社称威特科夫、库什纳可能很快访俄",
+      "title": "库什纳：俄乌阿布扎比会谈达成史上最大规模换俘协议（人数明日敲定），乌克兰安全保障取得良好进展，并寻求欧洲加入谈判；塔斯社称威特科夫、库什纳可能很快访俄",
+      "category": "地缘",
+      "impact": "利空",
+      "expected": "偏利空黄金：俄乌和谈出现实质进展，避险需求降温；但最终协议未落地，影响有限",
+      "actual": "已发生；现货约4056.0（gold-api 2026-11-11T11:25:29Z）",
+      "reaction": "已发生；现货约4056.0（gold-api 2026-11-11T11:25:29Z）",
+      "source": "Walter Bloomberg（@DeItaone）快讯",
+      "link": "https://x.com/DeItaone/status/2120476671543226863",
+      "url": "https://x.com/DeItaone/status/2120476671543226863"
     }
   ],
   "activity": [
