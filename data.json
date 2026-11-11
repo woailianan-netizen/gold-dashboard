@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11 20:45",
+  "updated": "2026-11-11 22:00",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7595,6 +7595,19 @@
       "source": "Walter Bloomberg（@DeItaone）快讯",
       "link": "https://x.com/DeItaone/status/2120492687576994289",
       "url": "https://x.com/DeItaone/status/2120492687576994289"
+    },
+    {
+      "time": "2026-11-11 21:57",
+      "name": "俄方首席对乌谈判代表梅金斯基：看起来我们离和平更近了（国际文传电讯社）",
+      "title": "俄方首席对乌谈判代表梅金斯基：看起来我们离和平更近了（国际文传电讯社）",
+      "category": "地缘",
+      "impact": "利空",
+      "expected": "偏利空黄金：俄方也释放和谈乐观信号，避险需求降温；同时美元走强（日元跌至159.59），但协议未落地，影响有限",
+      "actual": "已发生；现货约4037.7（gold-api 2026-11-11T13:58:29Z）",
+      "reaction": "已发生；现货约4037.7（gold-api 2026-11-11T13:58:29Z）",
+      "source": "Walter Bloomberg（@DeItaone）快讯",
+      "link": "https://x.com/DeItaone/status/2120516288686756311",
+      "url": "https://x.com/DeItaone/status/2120516288686756311"
     }
   ],
   "activity": [
