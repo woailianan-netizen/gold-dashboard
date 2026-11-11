@@ -3313,6 +3313,21 @@
    "source": "https://www.douyin.com/video/7706566520454177088",
    "result": "待判定",
    "raw_levels": "黄金四小时图呈m顶形态，支撑位在4030美元，白银支撑位51.3美元，跌破支撑位后可能继续下跌"
+  },
+  {
+   "id": 127,
+   "no": 7,
+   "name": "大宝上海金融",
+   "time": "2026-11-11 14:44",
+   "direction": "中性（震荡，谨慎）",
+   "entry": "未提",
+   "stop": "未提",
+   "target": "黄金再下看100美元",
+   "price_at_call": null,
+   "price_note": "约4056-4060(gold-api)",
+   "source": "https://www.douyin.com/video/7706785729976856000",
+   "result": "待判定",
+   "raw_levels": "短暂跌破4030又拉回之上，暂以震荡思路；上方4100附近；黄金再下看100美元"
   }
  ],
  "summary": {
