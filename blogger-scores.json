@@ -3238,6 +3238,36 @@
     "source": "Yahoo Finance COMEX黄金期货 GC=F 5分钟线（北京11-10 06:00至11-11 05:59；现货比期货低约1–8美元）"
    },
    "judged_at": "2026-11-11 06:50"
+  },
+  {
+   "id": 122,
+   "no": 3,
+   "name": "阿然爱囤金",
+   "time": "2026-11-11 07:34",
+   "direction": "空",
+   "entry": "4055-4065南下",
+   "stop": "4080",
+   "target": "4000",
+   "price_at_call": null,
+   "price_note": "待补",
+   "source": "抖音 阿然专属会员1群、2群 11-11 07:34 今日外盘思路图（群消息无链接）",
+   "result": "待判定",
+   "raw_levels": "黄4055-4065南下，止损4080，目标4000；白52-52.5南下，止损53，目标51"
+  },
+  {
+   "id": 123,
+   "no": 1,
+   "name": "大飞论长短",
+   "time": "2026-11-10 22:30",
+   "direction": "偏多（分批布局）",
+   "entry": "30-50（原话省略位数）",
+   "stop": "未提",
+   "target": "未提",
+   "price_at_call": null,
+   "price_note": "待补",
+   "source": "https://www.douyin.com/video/7706550162068850771",
+   "result": "待判定",
+   "raw_levels": "建议在30-50区间布局黄金，分批进出"
   }
  ],
  "summary": {
