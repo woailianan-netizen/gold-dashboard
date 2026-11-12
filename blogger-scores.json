@@ -3398,6 +3398,22 @@
    "price_note": "gold-api 00:07Z",
    "source": "douyin-group:阿然专属会员1群/2群 2026-11-12 07:49 长图",
    "raw_levels": "外盘高空，下看3950、3900"
+  },
+  {
+   "id": 132,
+   "no": 3,
+   "name": "阿然爱囤金",
+   "time": "2026-11-12 08:06",
+   "direction": "空",
+   "entry": "4015-4025高空",
+   "stop": "4035",
+   "target": "3950；3900附近分批建多",
+   "result": "待判定",
+   "basis": "",
+   "price_at_call": 3975.4,
+   "price_note": "gold-api 08:15",
+   "source": "douyin-group:阿然专属会员1群/2群 2026-11-12 08:06 长图",
+   "raw_levels": "白银52-52.5高空目标50止损53；不建议追空；积存金3950补回，3700-3800留子弹"
   }
  ],
  "summary": {
