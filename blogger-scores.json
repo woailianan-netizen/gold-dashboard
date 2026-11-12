@@ -3430,6 +3430,22 @@
    "price_note": "待补",
    "source": "https://www.douyin.com/video/7706929380278995091",
    "raw_levels": "只考虑支撑位置4000-39开头；人民币85开头更安全"
+  },
+  {
+   "id": 134,
+   "no": 7,
+   "name": "大宝上海金融",
+   "time": "2026-11-12 09:36",
+   "direction": "空（偏反弹空）",
+   "entry": "压力区原文“403–4040”、入场原文“403美元上方”（疑漏字）",
+   "stop": "4045",
+   "target": "3968／3930",
+   "result": "待判定",
+   "basis": "",
+   "price_at_call": 3996.4,
+   "price_note": "gold-api 09:25（最近记录）",
+   "source": "https://www.douyin.com/video/7707092837339075816",
+   "raw_levels": "白银51.1–51.3不破可轻仓低吸、止损50.8，跌破51不硬扛"
   }
  ],
  "summary": {
