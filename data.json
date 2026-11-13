@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13 21:23",
+  "updated": "2026-11-13 21:43",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7858,6 +7858,34 @@
       "url": "https://x.com/DeItaone/status/2121231126538723812",
       "actual": "待观察",
       "note": "来源：@DeItaone 21:17–21:21 台北"
+    },
+    {
+      "time": "2026-11-13 21:36",
+      "name": "美国10月PPI略低于预期，交易员下调美联储加息押注",
+      "title": "PPI略低于预期，市场减少加息押注",
+      "category": "宏观",
+      "impact": "利多",
+      "expected": "PPI环比0.3%低于预期0.4%、同比6.5%低于6.6%（核心持平预期），加息预期回落，利多黄金；但10年期美债收益率仍在5.14%上方高位",
+      "source": "@DeItaone / @zerohedge",
+      "link": "https://x.com/DeItaone/status/2121235754093253022",
+      "url": "https://x.com/DeItaone/status/2121235754093253022",
+      "reaction": "待观察",
+      "actual": "待观察",
+      "note": "来源：@DeItaone 21:30、21:36 台北"
+    },
+    {
+      "time": "2026-11-13 21:41",
+      "name": "美联储古尔斯比（CNBC）：通胀已扩散到不受能源驱动的类别",
+      "title": "古尔斯比：通胀已扩散到非能源类别",
+      "category": "央行",
+      "impact": "利空",
+      "expected": "反驳“只是能源冲击”的说法，支持继续收紧，利空黄金",
+      "source": "@DeItaone（CNBC采访）",
+      "link": "https://x.com/DeItaone/status/2121236896726577575",
+      "url": "https://x.com/DeItaone/status/2121236896726577575",
+      "reaction": "待观察",
+      "actual": "待观察",
+      "note": "来源：@DeItaone 21:41 台北"
     }
   ],
   "activity": [
