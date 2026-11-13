@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13 16:49",
+  "updated": "2026-11-13 17:23",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7816,6 +7816,20 @@
       "link": "https://x.com/Reuters/status/2121148586259792114",
       "url": "https://x.com/Reuters/status/2121148586259792114",
       "note": "来源：@Reuters 15:50 台北；https://x.com/Reuters/status/2121148586259792114"
+    },
+    {
+      "time": "2026-11-13 17:20",
+      "name": "彭博/金融时报：IEA月报称海湾出口恢复，全球石油市场自伊朗战争以来首次转为供应过剩",
+      "title": "IEA：石油市场转为供应过剩",
+      "category": "市场",
+      "impact": "利多",
+      "expected": "偏利多：油价承压缓和通胀和加息预期，对黄金是支撑；但海湾局势缓和也会削弱避险买盘，力度有限",
+      "source": "Bloomberg / FT",
+      "link": "https://x.com/business/status/2121171224860537114",
+      "url": "https://x.com/business/status/2121171224860537114",
+      "reaction": "金价约3902.6（gold-api 17:18）",
+      "actual": "金价约3902.6（gold-api 17:18）",
+      "note": "来源：@business 17:20 台北；@FT 17:13 https://x.com/FT/status/2121169673068662852"
     }
   ],
   "activity": [
