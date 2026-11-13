@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13 21:57",
+  "updated": "2026-11-13 22:15",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7900,6 +7900,20 @@
       "reaction": "待观察",
       "actual": "待观察",
       "note": "来源：@DeItaone 21:48–21:49、@Reuters 21:50 台北"
+    },
+    {
+      "time": "2026-11-13 22:06",
+      "name": "美银：预测新增2027年1月加息25个基点，现预计2026年12月、2027年1月和3月各加息一次",
+      "title": "美银上调美联储加息预测至三次",
+      "category": "央行",
+      "impact": "利空",
+      "expected": "大行上调加息路径，推高美元和美债收益率预期，利空黄金",
+      "source": "@DeItaone",
+      "link": "https://x.com/DeItaone/status/2121243303551062466",
+      "url": "https://x.com/DeItaone/status/2121243303551062466",
+      "reaction": "待观察",
+      "actual": "待观察",
+      "note": "来源：@DeItaone 22:06 台北"
     }
   ],
   "activity": [
