@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13 15:52",
+  "updated": "2026-11-13 15:58",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7803,6 +7803,19 @@
       "expected": "加息预期升温，美元和美债收益率走强，压制无息黄金；彭博同时称金价在一年低点附近",
       "link": "https://x.com/business/status/2121075663822033340",
       "reaction": "路透：美元随美债收益率走高"
+    },
+    {
+      "time": "2026-11-13 15:50",
+      "name": "路透：伊朗称一艘LNG运输船在霍尔木兹海峡触雷爆炸",
+      "category": "地缘",
+      "impact": "多空交织",
+      "expected": "多空交织：霍尔木兹航运风险升温有避险买盘，但推升油气价格、加重通胀和加息预期，压制金价",
+      "reaction": "已发生（伊方说法，待独立证实）；金价约3904.6（gold-api 15:57）暂无明显反应",
+      "actual": "已发生（伊方说法，待独立证实）；金价约3904.6（gold-api 15:57）暂无明显反应",
+      "source": "Reuters",
+      "link": "https://x.com/Reuters/status/2121148586259792114",
+      "url": "https://x.com/Reuters/status/2121148586259792114",
+      "note": "来源：@Reuters 15:50 台北；https://x.com/Reuters/status/2121148586259792114"
     }
   ],
   "activity": [
