@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13 17:23",
+  "updated": "2026-11-13 17:40",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7830,6 +7830,20 @@
       "reaction": "金价约3902.6（gold-api 17:18）",
       "actual": "金价约3902.6（gold-api 17:18）",
       "note": "来源：@business 17:20 台北；@FT 17:13 https://x.com/FT/status/2121169673068662852"
+    },
+    {
+      "time": "2026-11-13 17:30",
+      "name": "路透：伊朗革命卫队称打击了美军在巴林的预警雷达",
+      "title": "伊朗革命卫队称打击美军巴林雷达",
+      "category": "地缘",
+      "impact": "多空交织",
+      "expected": "多空交织：伊美直接冲突升级带来避险买盘，但海湾风险推升油价、加重通胀和加息预期，压制金价；且与同时的IEA供应过剩报告相抵",
+      "source": "Reuters",
+      "link": "https://x.com/Reuters/status/2121173743405789206",
+      "url": "https://x.com/Reuters/status/2121173743405789206",
+      "reaction": "伊方说法，待美方证实；金价约3904.6（gold-api 17:40）暂无明显反应",
+      "actual": "伊方说法，待美方证实；金价约3904.6（gold-api 17:40）暂无明显反应",
+      "note": "来源：@Reuters 17:30 台北"
     }
   ],
   "activity": [
