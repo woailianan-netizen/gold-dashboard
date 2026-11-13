@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13 21:43",
+  "updated": "2026-11-13 21:57",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7886,6 +7886,20 @@
       "reaction": "待观察",
       "actual": "待观察",
       "note": "来源：@DeItaone 21:41 台北"
+    },
+    {
+      "time": "2026-11-13 21:48",
+      "name": "Axios：内塔尼亚胡施压特朗普恢复对伊朗军事打击，摩萨德局长赴华盛顿会见中情局局长和白宫特使；同时IAEA报告对伊朗浓缩铀工厂日益担忧",
+      "title": "以色列施压特朗普恢复对伊战争",
+      "category": "地缘",
+      "impact": "多空交织",
+      "expected": "多空交织：美伊战事若重启带来避险买盘，但霍尔木兹和油价风险会推高通胀与加息预期，压制金价；目前只是施压和会谈，美方未表态",
+      "source": "@DeItaone（Axios）/ @Reuters",
+      "link": "https://x.com/DeItaone/status/2121239011838624175",
+      "url": "https://x.com/DeItaone/status/2121239011838624175",
+      "reaction": "待观察",
+      "actual": "待观察",
+      "note": "来源：@DeItaone 21:48–21:49、@Reuters 21:50 台北"
     }
   ],
   "activity": [
