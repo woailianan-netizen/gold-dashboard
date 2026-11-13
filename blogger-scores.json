@@ -3574,6 +3574,38 @@
    "price_note": "发布时（16:48）现货约3942.0（gold-api）",
    "source": "https://www.douyin.com/video/7707204584246900324",
    "raw_levels": "70位置分批建立多头；上方20个点是护石位置；3890是可能触及的区域"
+  },
+  {
+   "id": 143,
+   "no": 2,
+   "name": "七王爷",
+   "time": "2026-11-12 22:44",
+   "direction": "多",
+   "entry": "实物关注3858–3870区域",
+   "stop": "未提",
+   "target": "内盘退出目标4000–4020",
+   "result": "待判定",
+   "basis": "",
+   "price_at_call": null,
+   "price_note": "待补",
+   "source": "https://www.douyin.com/video/7707295958531302821",
+   "raw_levels": "实物关注3858–3870区域，内盘退出目标4000–4020（页面AI摘要）"
+  },
+  {
+   "id": 144,
+   "no": 3,
+   "name": "阿然爱囤金",
+   "time": "2026-11-13 10:22",
+   "direction": "多",
+   "entry": "3800–3900附近震荡；3700极限加仓",
+   "stop": "未提",
+   "target": "未提",
+   "result": "待判定",
+   "basis": "",
+   "price_at_call": null,
+   "price_note": "待补",
+   "source": "https://www.douyin.com/video/7707475767436856627",
+   "raw_levels": "预计3800–3900附近震荡，称3700为极限并计划届时加仓（页面AI摘要）"
   }
  ],
  "summary": {
