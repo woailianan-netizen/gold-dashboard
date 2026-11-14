@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14 19:09",
+  "updated": "2026-11-14 19:12",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7941,6 +7941,20 @@
       "expected": "大国会晤若缓和贸易和俄乌局势，避险需求下降偏空；具体成果未出，暂中性",
       "link": "https://x.com/business/status/2121395201927155994",
       "reaction": ""
+    },
+    {
+      "time": "2026-11-14 19:10",
+      "name": "路透（消息人士）：特朗普告诉顾问，除非伊朗有新的挑衅，否则可能暂缓对伊朗的打击",
+      "title": "特朗普或暂缓对伊朗打击",
+      "category": "地缘",
+      "impact": "多空交织",
+      "expected": "降温信号：避险买盘减弱偏空；但也压低油价和通胀，减轻加息压力偏多；与昨晚内塔尼亚胡施压恢复打击的消息相反，周末休市，周一开盘看反应",
+      "link": "https://x.com/Reuters/status/2121561297468735914",
+      "url": "https://x.com/Reuters/status/2121561297468735914",
+      "source": "Reuters",
+      "reaction": "周末休市，金价停在约3887.60（gold-api）",
+      "actual": "周末休市，金价停在约3887.60（gold-api）",
+      "note": "来源：@Reuters 19:10 台北；https://x.com/Reuters/status/2121561297468735914"
     }
   ],
   "activity": [
