@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15 11:07",
+  "updated": "2026-11-15 11:14",
   "price_snapshots": [
     {
       "time": "2026-10-20 09:30",
@@ -7955,6 +7955,16 @@
       "reaction": "周末休市，金价停在约3887.60（gold-api）",
       "actual": "周末休市，金价停在约3887.60（gold-api）",
       "note": "来源：@Reuters 19:10 台北；https://x.com/Reuters/status/2121561297468735914"
+    },
+    {
+      "time": "2026-11-15 11:10",
+      "title": "路透：沙特联军拦截射向利雅得的导弹及东部省无人机",
+      "name": "路透：沙特联军拦截射向利雅得的导弹及东部省无人机",
+      "category": "地缘",
+      "impact": "多空交织",
+      "expected": "海湾冲突再升级、产油区东部省遭袭：避险托底金价，但油价上涨推高通胀和加息预期压制金价；周末休市，看周一开盘反应",
+      "link": "https://www.reuters.com/world/middle-east/saudi-led-coalition-intercepts-missiles-towards-riyadh-drones-eastern-province-2026-11-15/",
+      "reaction": "周末休市，待周一开盘"
     }
   ],
   "activity": [
